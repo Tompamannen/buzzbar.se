@@ -2178,24 +2178,3 @@ footer::before {
               linear-gradient(180deg, #2b3038 0%, #3a404b 100%);
   z-index:-1;
 }
-/* ===== Hero Image version ===== */
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  object-fit: cover;
-  width: 500px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.hero-image:hover {
-  transform: scale(1.03);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
-}
