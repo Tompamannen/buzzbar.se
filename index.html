@@ -2,25 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buzzbar – Natural Energy</title>
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to Buzzbar</h1>
-    <p>Creating natural energy and nutritional value ✨</p>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="#">Buzzbar</a>
+      <ul class="nav-menu">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#science">Science</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-background"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">New</span>
+        <h1 class="hero-title">Clean, steady energy — without the crash.</h1>
+        <p class="hero-subtitle">Buzzbar combines natural ingredients with smart nutrition.</p>
+        <div class="hero-actions">
+          <a href="#products" class="cta-primary">See Products</a>
+          <a href="#science" class="cta-secondary">How it works</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div><strong>0g</strong><span>Added sugar</span></div>
+        <div><strong>10g</strong><span>Protein</span></div>
+        <div><strong>Vegan</strong><span>Friendly</span></div>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About Buzzbar</h2>
-      <p>We’re building something exciting — stay tuned for more!</p>
-    </section>
-  </main>
+  <!-- Products -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Products</span>
+        <h2>Pick your boost</h2>
+        <p class="section-subtitle">Energy, Focus, and Recovery blends.</p>
+      </div>
 
-  <footer>
-    <p>© 2025 Buzzbar</p>
+      <div class="products-carousel">
+        <article class="product-card">
+          <div class="product-visual"><img src="https://via.placeholder.com/320x220" alt="Energy Bar"></div>
+          <div class="product-info">
+            <h3>Energy</h3>
+            <p class="product-tagline">Bright, uplifting, sustained.</p>
+            <ul class="product-specs">
+              <li>Green tea caffeine</li>
+              <li>B-vitamins</li>
+              <li>Electrolytes</li>
+            </ul>
+            <a class="cta-primary" href="#">Buy now</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-visual"><img src="https://via.placeholder.com/320x220" alt="Focus Bar"></div>
+          <div class="product-info">
+            <h3>Focus</h3>
+            <p class="product-tagline">Calm clarity to get things done.</p>
+            <ul class="product-specs">
+              <li>L-theanine</li>
+              <li>Lion’s mane</li>
+              <li>Magnesium</li>
+            </ul>
+            <a class="cta-primary" href="#">Buy now</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-visual"><img src="https://via.placeholder.com/320x220" alt="Recovery Bar"></div>
+          <div class="product-info">
+            <h3>Recovery</h3>
+            <p class="product-tagline">Rebuild and recharge.</p>
+            <ul class="product-specs">
+              <li>10g plant protein</li>
+              <li>Electrolytes</li>
+              <li>Vitamin C & E</li>
+            </ul>
+            <a class="cta-primary" href="#">Buy now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Science -->
+  <section id="science" class="science-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Science</span>
+        <h2>Backed by ingredients that work</h2>
+        <p class="section-subtitle">Designed for steady energy and smooth focus.</p>
+      </div>
+      <div class="science-grid">
+        <div class="card"><h3>Green Tea + L-theanine</h3><p>Balanced stimulation without jitters.</p></div>
+        <div class="card"><h3>Electrolytes</h3><p>Hydration to keep you going.</p></div>
+        <div class="card"><h3>Adaptogens</h3><p>Support resilience to stress.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="story-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Story</span>
+        <h2>Built for real life</h2>
+        <p class="section-subtitle">We started Buzzbar to replace crashy snacks with something smarter.</p>
+      </div>
+      <div class="story-grid">
+        <div class="card"><h3>Quality first</h3><p>We source clean, traceable ingredients.</p></div>
+        <div class="card"><h3>Taste matters</h3><p>Balanced flavor with no aftertaste.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact">
+    <div class="footer-content container">
+      <div>
+        <h3>Buzzbar</h3>
+        <p>Clean energy, smarter nutrition.</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p><a href="mailto:hello@buzzbar.se">hello@buzzbar.se</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Buzzbar</div>
   </footer>
+
 </body>
 </html>
+
