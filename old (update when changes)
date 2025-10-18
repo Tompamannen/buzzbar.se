@@ -1,1 +1,421 @@
 Old version css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buzzbar – Natural Energy</title>
+  <link rel="stylesheet" href="style.css?v=4" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo">
+          <h1>Buzzbar</h1>
+          <div class="tagline">Clean energy, smarter nutrition</div>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#science">Science</a></li>
+        <li><a href="#nutrition">Nutrition</a></li>
+        <li><a href="#story">Our Story</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="nav-button">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-background"></div>
+    <div class="hero-video-overlay"></div>
+
+    <div class="hero-container container">
+      <div class="hero-content">
+        <span class="hero-badge">New</span>
+        <h1 class="hero-title">
+          <span class="title-line">Clean, steady energy</span>
+          <span class="title-line highlight">without the crash</span>
+        </h1>
+        <p class="hero-subtitle">
+          Functional bars with green tea caffeine, L-theanine, electrolytes and adaptogens.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#products" class="cta-primary">See Products</a>
+          <a href="#science" class="cta-secondary">How it works</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">0g</span>
+            <span class="stat-label">Added Sugar</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10g</span>
+            <span class="stat-label">Protein</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Vegan</span>
+            <span class="stat-label">Friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="product-showcase">
+          <div class="product-bars">
+            <div class="protein-bar bar-energy"></div>
+            <div class="protein-bar bar-focus"></div>
+            <div class="protein-bar bar-recovery"></div>
+          </div>
+
+          <div class="floating-elements">
+            <div class="element element-1">⚡</div>
+            <div class="element element-2">✨</div>
+            <div class="element element-3">⚡</div>
+            <div class="element-4">✴︎</div>
+            <div class="element-5">◎</div>
+            <div class="element-6">✦</div>
+          </div>
+
+          <div class="gym-background">
+            <div class="barbell-icon"></div>
+            <div class="dumbbell-icon"></div>
+            <div class="kettlebell-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nice inline CTA to show .cta-primary styles outside hero -->
+  <section class="container" style="padding:40px 0;text-align:center;">
+    <button class="cta-primary" style="border:none;">Join the launch list</button>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Products</span>
+        <h2>Pick your boost</h2>
+        <p class="section-subtitle">Energy, Focus and Recovery blends.</p>
+      </div>
+
+      <div class="products-carousel">
+        <!-- Energy -->
+        <article class="product-card active">
+          <div class="product-visual">
+            <span class="product-badge">Popular</span>
+            <div class="bar-3d bar-energy-3d"></div>
+          </div>
+          <div class="product-info">
+            <h3>Energy</h3>
+            <p class="product-tagline">Bright, uplifting, sustained.</p>
+            <p class="product-description">Green tea caffeine + B-vitamins.</p>
+            <div class="product-specs">
+              <span class="spec">Electrolytes</span>
+              <span class="spec">No Crash</span>
+              <span class="spec">Gluten-free</span>
+            </div>
+            <div class="flavors">
+              <span class="flavor-dot lemon" title="Lemon"></span>
+              <span class="flavor-dot espresso" title="Espresso"></span>
+              <span class="flavor-dot citrus" title="Citrus"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Focus -->
+        <article class="product-card">
+          <div class="product-visual">
+            <div class="bar-3d bar-focus-3d"></div>
+          </div>
+          <div class="product-info">
+            <h3>Focus</h3>
+            <p class="product-tagline">Calm, clear concentration.</p>
+            <p class="product-description">L-theanine + lion’s mane + magnesium.</p>
+            <div class="product-specs">
+              <span class="spec">No Jitters</span>
+              <span class="spec">Smooth</span>
+              <span class="spec">Vegan</span>
+            </div>
+            <div class="flavors">
+              <span class="flavor-dot matcha" title="Matcha"></span>
+              <span class="flavor-dot blueberry" title="Blueberry"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recovery -->
+        <article class="product-card">
+          <div class="product-visual">
+            <div class="bar-3d bar-recovery-3d"></div>
+          </div>
+          <div class="product-info">
+            <h3>Recovery</h3>
+            <p class="product-tagline">Rebuild and recharge.</p>
+            <p class="product-description">10g plant protein + antioxidants.</p>
+            <div class="product-specs">
+              <span class="spec">Vitamin C&E</span>
+              <span class="spec">Electrolytes</span>
+              <span class="spec">Non-GMO</span>
+            </div>
+            <div class="flavors">
+              <span class="flavor-dot peanut" title="Peanut"></span>
+              <span class="flavor-dot chocolate" title="Chocolate"></span>
+              <span class="flavor-dot cinnamon" title="Cinnamon"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" aria-label="Prev">‹</button>
+        <button class="carousel-btn" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCIENCE ===== -->
+  <section id="science" class="science-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Science</span>
+        <h2>Backed by ingredients that work</h2>
+        <p class="section-subtitle">Designed for steady energy and smooth focus.</p>
+      </div>
+
+      <div class="science-grid">
+        <article class="science-card featured">
+          <span class="card-icon">🧠</span>
+          <h3>Green Tea + L-theanine</h3>
+          <p>Balanced stimulation without jitters.</p>
+          <div class="card-metric">
+            <span class="metric-value">200mg</span>
+            <span class="metric-label">Theanine</span>
+          </div>
+        </article>
+
+        <article class="science-card">
+          <span class="card-icon">💧</span>
+          <h3>Electrolytes</h3>
+          <p>Hydration keeps you going longer.</p>
+          <div class="card-metric">
+            <span class="metric-value">3</span>
+            <span class="metric-label">Key Minerals</span>
+          </div>
+        </article>
+
+        <article class="science-card">
+          <span class="card-icon">🌿</span>
+          <h3>Adaptogens</h3>
+          <p>Support resilience to stress.</p>
+          <div class="card-metric">
+            <span class="metric-value">2</span>
+            <span class="metric-label">Adaptogens</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS & COMPANY STATS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="testimonials-grid">
+        <div class="testimonial-card featured">
+          <div class="testimonial-rating"><span class="stars">★★★★★</span></div>
+          <blockquote>Best pre-meeting snack. No jitters, no crash.</blockquote>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Alex P.</strong>
+              <span>Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating"><span class="stars">★★★★★</span></div>
+          <blockquote>The Focus bar actually helps me study.</blockquote>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Sara L.</strong>
+              <span>Student</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-stats">
+        <div class="stat-item">
+          <span class="stat-number">10k+</span>
+          <span class="stat-label">Bars Tested</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Would Recommend</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Artificial Sweeteners</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Plant-based</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUTRITION ===== -->
+  <section id="nutrition" class="container" style="padding:120px 0;">
+    <div class="section-header">
+      <span class="section-badge">Nutrition</span>
+      <h2>What’s inside</h2>
+      <p class="section-subtitle">Transparent facts for every bar.</p>
+    </div>
+
+    <button class="nutrition-toggle">
+      Energy Bar – Nutrition Facts
+      <span class="toggle-icon">▾</span>
+    </button>
+
+    <div class="nutrition-facts">
+      <h4>Nutrition Facts</h4>
+      <table>
+        <tr><td>Calories</td><td>190</td></tr>
+        <tr><td>Protein</td><td>10g</td></tr>
+        <tr><td>Carbohydrates</td><td>21g</td></tr>
+        <tr><td>Fat</td><td>7g</td></tr>
+      </table>
+      <p><strong>Ingredients:</strong> Oats, pea protein, green tea extract, electrolytes, almond butter.</p>
+      <hr/>
+      <div class="nutrition-grid">
+        <div class="nutrition-card">
+          <h3>Energy</h3>
+          <p>Smooth caffeine + theanine for balanced focus.</p>
+        </div>
+        <div class="nutrition-card">
+          <h3>Electrolytes</h3>
+          <p>Hydration support with sodium, potassium, magnesium.</p>
+        </div>
+      </div>
+
+      <div class="regulatory-info">
+        <h3>Important Info</h3>
+        <div class="warnings">
+          <p class="caffeine-warning"><strong>Contains caffeine.</strong> Not recommended for children or pregnant persons.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming-soon section (uses coming-soon-reviews + launch-stats) -->
+    <div class="coming-soon-reviews">
+      <div class="review-placeholder">
+        <span class="placeholder-icon">⭐</span>
+        <h3>Reviews coming soon</h3>
+        <p>Early testers are loving the flavor and steady energy.</p>
+      </div>
+      <div class="review-placeholder">
+        <span class="placeholder-icon">🛒</span>
+        <h3>Retail partners</h3>
+        <p>We’re in talks with select stores — stay tuned.</p>
+      </div>
+      <div class="review-placeholder">
+        <span class="placeholder-icon">📦</span>
+        <h3>Subscribe & Save</h3>
+        <p>Subscriptions at launch with free shipping.</p>
+      </div>
+    </div>
+
+    <div class="launch-stats">
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Flavors</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Protein options</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Vegan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY / FOUNDERS ===== -->
+  <div class="founders-section" id="founders">
+  <div class="founder-card">
+    <div class="founder-image">
+      <div class="founder-placeholder"><span class="founder-initials">TM</span></div>
+    </div>
+    <div class="founder-info">
+      <h4>Tom</h4>
+      <div class="founder-title">Co-Founder</div>
+      <blockquote>“Build something we want to use daily.”</blockquote>
+    </div>
+  </div>
+
+  <div class="founder-card">
+    <div class="founder-image">
+      <div class="founder-placeholder"><span class="founder-initials">OL</span></div>
+    </div>
+    <div class="founder-info">
+      <h4>Oliver</h4>
+      <div class="founder-title">Co-Founder</div>
+      <blockquote>“Good energy should feel effortless.”</blockquote>
+    </div>
+  </div>
+
+  <div class="founder-card">
+    <div class="founder-image">
+      <div class="founder-placeholder"><span class="founder-initials">CH</span></div>
+    </div>
+    <div class="founder-info">
+      <h4>Charlie</h4>
+      <div class="founder-title">Co-Founder</div>
+      <blockquote>“We’re redefining what healthy energy tastes like.”</blockquote>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Buzzbar</h3>
+        <p>Clean energy, smarter nutrition.</p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p>
+        <p>© 2025 Buzzbar</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Info</h3>
+        <p>Plant-based. No artificial sweeteners.</p>
+        <p>Made with care in the EU.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2025 Buzzbar</div>
+  </footer>
+
+</body>
+</html>
