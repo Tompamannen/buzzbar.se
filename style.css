@@ -2178,3 +2178,14 @@ footer::before {
               linear-gradient(180deg, #2b3038 0%, #3a404b 100%);
   z-index:-1;
 }
+/* ===== PRELAUNCH BANNER ===== */
+.prelaunch-banner {
+  background: linear-gradient(90deg, #ff7b00, #ffaf40);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  padding: 12px 20px;
+  letter-spacing: 0.3px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
