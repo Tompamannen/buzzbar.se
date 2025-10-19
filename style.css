@@ -3195,6 +3195,33 @@ html{ scroll-behavior: smooth; }
   text-decoration:none;
 }
 
+/* remove any default body margin that can cause a white line */
+html, body { margin: 0; }
+
+/* HERO: make it own the image + overlay */
+.hero.hero--photo{
+  position: relative;
+  min-height: min(92vh, 840px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero.hero--photo::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(18,16,39,.78) 0%, rgba(18,16,39,.52) 35%, rgba(18,16,39,0) 70%),
+    url('hero-image.jpg');                 /* your file */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* keep your hero text above the overlay */
+.hero .hero-container,
+.hero .hero-content { position: relative; z-index: 1; }
+
 .brand-line{
   display:inline-flex; gap:2px;
   line-height:1;
