@@ -3404,13 +3404,12 @@ html, body { margin: 0; }
   color: #94a3b8;
 }
 
-/* Footer layout — single source of truth */
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px; /* increased from 1200 */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* lock to 4 columns on desktop */
-  gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px; /* reduced from 60–80px */
   padding: 40px 40px 60px;
   align-items: start;
 }
