@@ -3409,9 +3409,9 @@ html, body { margin: 0; }
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 80px;                  /* clean, even spacing between columns */
-  padding: 40px 40px 60px;    /* consistent side + bottom padding */
+  grid-template-columns: repeat(4, 1fr); /* lock to 4 columns on desktop */
+  gap: 60px;
+  padding: 40px 40px 60px;
   align-items: start;
 }
 
@@ -3486,7 +3486,7 @@ html, body { margin: 0; }
 /* Responsive spacing */
 @media (max-width: 900px){
   .footer-container{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
     gap: 60px 40px;
   }
 }
