@@ -3075,3 +3075,115 @@ section + section::before{
   }
 }
 
+/* ===== Theme tweaks ===== */
+:root{
+  /* nicer purple pair */
+  --nav-purple: #7c5cff;
+  --nav-purple-2: #5b8cfa;
+  /* gold already defined earlier; keep */
+}
+
+/* Brand layout + subline */
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  text-decoration:none;
+}
+.brand-line{ display:flex; gap:2px; align-items:center; }
+.brand-sub{
+  font-size: 12px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  opacity: .92;
+  white-space: nowrap;
+}
+
+/* keep existing brand-word gradient but with updated purple */
+.brand-word{
+  background: linear-gradient(90deg, var(--nav-purple), var(--nav-purple-2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* underline + gold hover already in your CSS; keep as-is */
+
+/* ===== Header autohide on scroll ===== */
+.site-header{ transition: transform .28s ease; }
+.site-header.hide{ transform: translateY(-100%); }
+
+/* ===== Top-of-page purple gradient (behind header/above hero) ===== */
+.page-top-gradient{
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 220px;                 /* adjust to taste */
+  pointer-events: none;
+  z-index: 0;                    /* sits behind sticky header */
+  background:
+    linear-gradient(180deg,
+      #0f1224 0%,
+      #12162a 40%,
+      rgba(18,22,42,0) 100%);
+}
+
+/* If your hero uses an image, add a nicer purple overlay */
+.hero.hero--photo .hero-background{
+  background-image:
+    linear-gradient(180deg, rgba(18,16,39,.78) 0%, rgba(18,16,39,.52) 35%, rgba(18,16,39,0) 70%),
+    url('hero-image.jpg');   /* your existing image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Nicer purple pair for brand/accents */
+:root{
+  --nav-purple: #7c5cff;
+  --nav-purple-2: #5b8cfa;
+}
+
+/* Brand subline under "Buzzbar" */
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  text-decoration:none;
+}
+.brand-line{ display:flex; gap:2px; align-items:center; }
+.brand-sub{
+  font-size: 12px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  opacity: .92;
+  white-space: nowrap;
+}
+
+/* Header autohide */
+.site-header{ transition: transform .28s ease; }
+.site-header.hide{ transform: translateY(-100%); }
+
+/* Top-of-page purple gradient band */
+.page-top-gradient{
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 220px;                /* adjust height to taste */
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(180deg,
+      #0f1224 0%,
+      #12162a 40%,
+      rgba(18,22,42,0) 100%);
+}
+
+/* If your hero uses an image, keep a soft overlay */
+.hero.hero--photo .hero-background{
+  background-image:
+    linear-gradient(180deg, rgba(18,16,39,.78) 0%, rgba(18,16,39,.52) 35%, rgba(18,16,39,0) 70%),
+    url('hero-image.jpg');  /* your current image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional: smooth anchor scrolling */
+html{ scroll-behavior: smooth; }
