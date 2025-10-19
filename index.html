@@ -4,43 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Buzzbar – Natural Energy</title>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
-  ...
-  <!-- Auto-hide header on scroll down, show on scroll up -->
-  <script>
-    (function() {
-      const header = document.querySelector('.site-header');
-      let lastY = window.scrollY;
-
-      window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y > 80 && y > lastY) {
-          header.classList.add('hide');     // scrolling down -> hide
-        } else {
-          header.classList.remove('hide');  // scrolling up -> show
-        }
-        lastY = y;
-      }, { passive: true });
-    })();
-  </script>
 <body>
-  <!-- Purple soft gradient behind the transparent header -->
+
+  <!-- Soft purple band behind transparent header -->
   <div class="page-top-gradient"></div>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="site-header" role="banner">
-    ...
-  </header>
-  ...
-</body>
-
-
-  
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVBAR (only once) ===== -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <!-- Brand (clickable to #home) -->
+      <!-- Brand (clicks to top) -->
       <a href="#home" class="brand" aria-label="Buzzbar — Home">
         <span class="brand-line">
           <span class="brand-word buzz">Buzz</span>
@@ -48,19 +22,30 @@
         </span>
         <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
       </a>
-  
-      <!-- Main navigation -->
+
+      <!-- Main nav -->
       <nav class="main-nav" role="navigation" aria-label="Primary navigation">
         <a href="#products" class="nav-link">Products</a>
         <a href="#science" class="nav-link">Science</a>
         <a href="#nutrition" class="nav-link">Nutrition</a>
         <a href="#our-story" class="nav-link">Our Story</a>
       </nav>
-  
+
       <!-- CTA -->
       <a href="#contact" class="cta-contact">Contact</a>
     </div>
   </header>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <!-- Make sure these targets exist -->
+  <section id="home" class="hero hero--photo">...</section>
+  <section id="products">...</section>
+  <section id="science">...</section>
+  <section id="nutrition">...</section>
+  <section id="our-story" class="our-story">...</section>
+  <footer id="contact">...</footer>
+
+
 
 
   <!-- ===== HERO ===== -->
@@ -687,7 +672,23 @@
 
     <div class="footer-bottom">© 2025 Buzzbar</div>
   </footer>
-
+  <!-- Auto-hide header on scroll down, show on scroll up -->
+  <script>
+    (function() {
+      const header = document.querySelector('.site-header');
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > 80 && y > lastY) {
+          header.classList.add('hide');     // scrolling down -> hide
+        } else {
+          header.classList.remove('hide');  // scrolling up -> show
+        }
+        lastY = y;
+      }, { passive: true });
+    })();
+  </script>
+  
 </body>
 </html>
 
