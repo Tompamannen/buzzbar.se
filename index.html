@@ -632,35 +632,50 @@
 
 
   <!-- ===== FOOTER ===== -->
-  <footer id="contact">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h3>Buzzbar</h3>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">Buzzbar</h3>
         <p>Clean energy, smarter nutrition.</p>
-        <div class="social-links">
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">LinkedIn</a>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+          <a href="#" class="social-btn">LinkedIn</a>
         </div>
       </div>
 
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p>
-        <p><a href="mailto:tomwiseman@buzzbar.se">oliverwiseman@buzzbar.se</a></p>
-        <p><a href="mailto:tomwiseman@buzzbar.se">charliewiseman@buzzbar.se</a></p>
-        <p>© 2025 Buzzbar</p>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:oliverwiseman@buzzbar.se">oliverwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:charliewiseman@buzzbar.se">charliewiseman@buzzbar.se</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Info</h4>
+        <ul>
+          <li>Plant-based. No artificial sweeteners.</li>
+          <li>Made with care in the EU.</li>
+        </ul>
       </div>
 
-      <div class="footer-section">
-        <h3>Info</h3>
-        <p>Plant-based. No artificial sweeteners.</p>
-        <p>Made with care in the EU.</p>
+      <div class="footer-column">
+        <h4>Join our newsletter</h4>
+        <p>No spam, just smarter energy.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="your@email.com" />
+          <button type="submit">→</button>
+        </form>
       </div>
     </div>
-
-    <div class="footer-bottom">© 2025 Buzzbar</div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 Buzzbar. All rights reserved.</p>
+    </div>
   </footer>
+
   <!-- Auto-hide header on scroll down, show on scroll up -->
   <script>
     (function() {
