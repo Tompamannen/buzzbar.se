@@ -3187,3 +3187,46 @@ section + section::before{
 
 /* Optional: smooth anchor scrolling */
 html{ scroll-behavior: smooth; }
+
+
+/* --- Brand block: match screenshot style --- */
+.brand{
+  display:flex; flex-direction:column; gap:6px;
+  text-decoration:none;
+}
+
+.brand-line{
+  display:inline-flex; gap:2px;
+  line-height:1;
+}
+
+.brand-word{
+  font-weight: 900;
+  font-size: clamp(28px, 3.2vw, 44px);   /* big on desktop, smaller on mobile */
+  letter-spacing: .2px;
+  background: linear-gradient(90deg,#7c5cff,#9a84ff); /* richer purple */
+  -webkit-background-clip:text; background-clip:text; color: transparent;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);  /* subtle depth */
+}
+
+/* optional: slightly different tone on “bar” */
+.brand-word.bar{
+  background: linear-gradient(90deg,#8b5cf6,#a78bfa);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* tagline under the logo */
+.brand-sub{
+  font-size: clamp(10px, 1.2vw, 14px);
+  letter-spacing: .28em;               /* wide tracking */
+  text-transform: uppercase;
+  color: rgba(229,231,235,.78);        /* soft grey */
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* hover: shift logo to gold gradient, keep subtitle steady */
+.brand:hover .brand-word{
+  background: linear-gradient(90deg,#f59e0b,#fbbf24);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
