@@ -155,47 +155,104 @@
   </section>
 
   <!-- ===== SCIENCE ===== -->
-  <section id="science" class="science-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Science</span>
-        <h2>Backed by ingredients that work</h2>
-        <p class="section-subtitle">Designed for steady energy and smooth focus.</p>
+  <!-- ===== SCIENCE ===== -->
+<section id="science" class="science-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Science</span>
+      <h2>Backed by ingredients that work</h2>
+      <p class="section-subtitle">Clean stimulation, steady focus, no crash. Here’s how we built it.</p>
+    </div>
+
+    <!-- Ingredient cards (simple, not AI-y) -->
+    <div class="ingredients-grid">
+      <article class="ingredient-card">
+        <div class="icon">
+          <!-- tiny inline SVG, no external assets -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="url(#g1)"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs></svg>
+        </div>
+        <h3>Green Tea + L-theanine</h3>
+        <p>Balanced stimulation without jitters. Theanine smooths the lift from natural caffeine.</p>
+        <ul class="facts">
+          <li><strong>Caffeine:</strong> ~80&nbsp;mg from green tea</li>
+          <li><strong>L-theanine:</strong> ~200&nbsp;mg</li>
+        </ul>
+        <small class="note">*Amounts shown are targets during pre-release and may change.</small>
+      </article>
+
+      <article class="ingredient-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3 5-3 7 0 13 3-6-3-8 0-13z" fill="url(#g2)"/><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+        </div>
+        <h3>Electrolytes</h3>
+        <p>Hydration keeps you steady for longer work sessions.</p>
+        <ul class="facts">
+          <li>Sodium, Potassium, Magnesium</li>
+        </ul>
+      </article>
+
+      <article class="ingredient-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12c3-6 11-6 14 0-3 6-11 6-14 0z" fill="url(#g3)"/><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs></svg>
+        </div>
+        <h3>Adaptogens</h3>
+        <p>Support resilience to stress so focus actually sticks.</p>
+        <ul class="facts">
+          <li>Adaptogen blend (e.g., rhodiola/ashwagandha)</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- How it works -->
+    <div class="how-it-works">
+      <h3>How it works (the quick version)</h3>
+      <ol class="steps">
+        <li><span>1</span><strong>Lift:</strong> Natural caffeine wakes up adenosine-fog without the spike.</li>
+        <li><span>2</span><strong>Smooth:</strong> L-theanine modulates the lift → calm focus, not buzz.</li>
+        <li><span>3</span><strong>Hydrate:</strong> Electrolytes keep the system balanced while you think.</li>
+        <li><span>4</span><strong>Resilience:</strong> Adaptogens help your brain stay in “get stuff done” mode.</li>
+      </ol>
+    </div>
+
+    <!-- Swap-this-for-that (fun, specific) -->
+    <div class="swap-grid">
+      <div class="swap-card">
+        <h4>Swap coffee ✖️</h4>
+        <ul>
+          <li>Fast peak → fast dip</li>
+          <li>Acidity + jitters</li>
+          <li>Needs brewing time</li>
+        </ul>
       </div>
-
-      <div class="science-grid">
-        <article class="science-card featured">
-          <span class="card-icon">🧠</span>
-          <h3>Green Tea + L-theanine</h3>
-          <p>Balanced stimulation without jitters.</p>
-          <div class="card-metric">
-            <span class="metric-value">200mg</span>
-            <span class="metric-label">Theanine</span>
-          </div>
-        </article>
-
-        <article class="science-card">
-          <span class="card-icon">💧</span>
-          <h3>Electrolytes</h3>
-          <p>Hydration keeps you going longer.</p>
-          <div class="card-metric">
-            <span class="metric-value">3</span>
-            <span class="metric-label">Key Minerals</span>
-          </div>
-        </article>
-
-        <article class="science-card">
-          <span class="card-icon">🌿</span>
-          <h3>Adaptogens</h3>
-          <p>Support resilience to stress.</p>
-          <div class="card-metric">
-            <span class="metric-value">2</span>
-            <span class="metric-label">Adaptogens</span>
-          </div>
-        </article>
+      <div class="swap-card">
+        <h4>Swap bananas ✖️</h4>
+        <ul>
+          <li>Great carbs, zero focus</li>
+          <li>Sticky backpack energy 😂</li>
+          <li>Not an actual snack plan</li>
+        </ul>
+      </div>
+      <div class="swap-card good">
+        <h4>Choose Buzzbar ✅</h4>
+        <ul>
+          <li>~80 mg caffeine + theanine</li>
+          <li>Hydration + adaptogens</li>
+          <li>Grab-and-go — no crash</li>
+        </ul>
       </div>
     </div>
-  </section>
+
+    <!-- Tiny FAQ (optional, feels human) -->
+    <details class="micro-faq">
+      <summary>Why green tea caffeine instead of coffee?</summary>
+      <p>Green tea brings a gentler curve, and pairing with theanine reduces the edge most people feel from coffee.</p>
+    </details>
+    <details class="micro-faq">
+      <summary>Can I still drink coffee?</summary>
+      <p>Totally. Buzzbar is for the days you want clean focus without brewing or buzzing.</p>
+    </details>
+  </div>
+</section>
 
   <!-- ===== TESTIMONIALS & COMPANY STATS ===== -->
   <section class="testimonials-section">
