@@ -3474,3 +3474,36 @@ html, body { margin: 0; }
 .newsletter-form button:hover {
   background: #9b7bff;
 }
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.nutrition-card {
+  background: #0b1020;
+  color: #e5e7eb;
+  padding: 20px 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nutrition-card h3 {
+  color: #fbbf24; /* same accent gold */
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.nutrition-card p {
+  color: #d1d5db;
+  line-height: 1.5;
+  font-size: 0.94rem;
+}
+
+.nutrition-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(99,102,241,0.25);
+}
