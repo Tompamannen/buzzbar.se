@@ -2809,4 +2809,92 @@ section + section::before{
 .nt-faq summary{ cursor:pointer; font-weight:700; }
 .nt-faq details[open]{ box-shadow:var(--nt-shadow-sm); }
 
+/* ===== NUTRITION: Quick Compare ===== */
+.nt-compare{
+  margin-top: 24px;
+  background: #fff;
+  border: 1px solid var(--nt-border);
+  border-radius: 18px;
+  box-shadow: var(--nt-shadow-sm);
+  padding: 18px;
+}
+
+.nt-compare-title{
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  background: linear-gradient(90deg, var(--nt-gold), var(--nt-gold-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+.nt-compare-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px,1fr));
+  gap: 14px;
+}
+@media (max-width: 900px){ .nt-compare-grid{ grid-template-columns: 1fr; } }
+
+.nt-compare-card{
+  background: #fff;
+  border: 1px solid var(--nt-border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 10px 22px rgba(2,6,23,.05);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.nt-compare-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(2,6,23,.08);
+}
+
+.nt-compare-card.good{
+  border-color: rgba(245,158,11,.35);
+  box-shadow: 0 14px 28px rgba(245,158,11,.12);
+}
+
+.nt-co-eyebrow{
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--nt-purple), #6366f1);
+  margin-bottom: 8px;
+}
+.nt-compare-card.good .nt-co-eyebrow{
+  background: linear-gradient(135deg, var(--nt-gold), var(--nt-gold-2));
+  color: #231f15;
+}
+
+.nt-list{
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: #334155;
+}
+.nt-list li{ display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+
+.nt-list .good{
+  color: #16a34a;                   /* green check */
+  font-weight: 900;
+}
+.nt-list .bad{
+  color: #ef4444;                   /* red cross */
+  font-weight: 900;
+}
+.nt-list .neutral{
+  color: #94a3b8;                   /* muted dash */
+  font-weight: 900;
+}
+
+.nt-compare-note{
+  text-align: center;
+  color: #94a3b8;
+  font-size: .9rem;
+  margin-top: 10px;
+}
 
