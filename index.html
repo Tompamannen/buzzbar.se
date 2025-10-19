@@ -9,25 +9,23 @@
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <div class="logo">
-          <h1>Buzzbar</h1>
-          <div class="tagline">Clean energy, smarter nutrition</div>
-        </div>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="#products">Products</a></li>
-        <li><a href="#science">Science</a></li>
-        <li><a href="#nutrition">Nutrition</a></li>
-        <li><a href="#story">Our Story</a></li>
-      </ul>
-      <div class="nav-cta">
-        <button class="nav-button">Contact</button>
-      </div>
-    </nav>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#science" class="nav-link">Science</a>
+        <a href="#nutrition" class="nav-link">Nutrition</a>
+        <a href="#story" class="nav-link">Our Story</a>
+      </nav>
+
+      <a href="#contact" class="cta-contact">Contact</a>
+    </div>
   </header>
+
 
   <!-- ===== HERO ===== -->
   <section class="hero hero--photo" id="home">
