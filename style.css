@@ -2423,3 +2423,73 @@ section + section::before{
   content:""; position: absolute; top:-1px; left:0; right:0; height:1px;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
 }
+
+/* ===== Full-bleed photo hero with movement ===== */
+.hero.hero--photo {
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+
+  /* Background image and gradient overlay */
+  background-image:
+    linear-gradient(180deg, rgba(20,16,40,.60) 0%, rgba(20,16,40,.78) 55%, rgba(20,16,40,.92) 100%),
+    url("hero-image.jpg");
+  background-size: cover;
+  background-position: 55% 45%;
+  background-repeat: no-repeat;
+
+  /* Smooth parallax effect */
+  background-attachment: fixed;
+  animation: heroPan 22s ease-in-out infinite alternate;
+}
+
+/* Gentle background movement */
+@keyframes heroPan {
+  0%   { background-position: 52% 40%; }
+  100% { background-position: 58% 50%; }
+}
+
+/* Subtle moving light overlay */
+.hero.hero--photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 50% at 70% 30%, rgba(139,92,246,.18), transparent 60%),
+    radial-gradient(40% 35% at 20% 70%, rgba(245,158,11,.10), transparent 60%);
+  mix-blend-mode: screen;
+  animation: sheenDrift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes sheenDrift {
+  from { transform: translate3d(-2%, 1%, 0); }
+  to   { transform: translate3d(2%, -1%, 0); }
+}
+
+/* Make text readable over photo */
+.hero.hero--photo .hero-content {
+  max-width: 720px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,0));
+  border-radius: 18px;
+}
+
+/* Buttons pop nicely */
+.hero.hero--photo .cta-primary {
+  box-shadow: 0 18px 36px rgba(0,0,0,.35);
+}
+
+/* Mobile and reduced motion */
+@media (max-width: 980px) {
+  .hero.hero--photo { background-attachment: scroll; }
+  .hero.hero--photo .hero-content {
+    background: linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,0));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero.hero--photo { animation: none; }
+  .hero.hero--photo::after { animation: none; }
+}
