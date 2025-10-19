@@ -2906,14 +2906,13 @@ section + section::before{
   color: transparent;
 }
 
-/* Right column notes grid */
+/* Right column notes grid — stacked */
 .nt-notes{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr; /* one per row */
   gap: 14px;
 }
-@media (max-width: 1200px){ .nt-notes{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 760px){ .nt-notes{ grid-template-columns: 1fr; } }
+
 
 .nt-note{
   background: linear-gradient(180deg,#0f172a,#111827);
