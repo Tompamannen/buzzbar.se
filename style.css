@@ -1923,12 +1923,19 @@ footer::before {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .founder-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
 }
+
+.founder-card:focus {
+    outline: 3px solid rgba(99, 102, 241, 0.6);
+    outline-offset: 3px;
+}
+
 
 .founder-card::before {
     content: '';
@@ -2370,6 +2377,7 @@ section:before{
   text-align:center;
   box-shadow: 0 10px 24px rgba(0,0,0,.25);
   height:100%;
+  cursor: pointer;
 }
 .founder-avatar{
   width:84px; height:84px; border-radius:50%;
@@ -2383,6 +2391,98 @@ section:before{
 .founder-card h3{ margin:6px 0 4px; }
 .founder-card .role{ margin:0 0 8px; color:#a7b0bf; font-size:.9rem; }
 .founder-card blockquote{ color:#d5dae4; font-style:italic; margin:0; }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.founder-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.founder-modal.is-visible {
+  display: flex;
+}
+
+.founder-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.founder-modal__dialog {
+  position: relative;
+  background: #0b1220;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 460px;
+  width: calc(100% - 32px);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+  color: #e2e8f0;
+}
+
+.founder-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(148, 163, 184, 0.12);
+  color: #e2e8f0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.founder-modal__close:hover,
+.founder-modal__close:focus {
+  background: rgba(148, 163, 184, 0.25);
+  transform: scale(1.05);
+}
+
+.founder-modal__content {
+  display: grid;
+  gap: 12px;
+}
+
+.founder-modal__name {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.founder-modal__role {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5f5;
+}
+
+.founder-modal__story {
+  margin: 0;
+  line-height: 1.6;
+  color: #cdd5e7;
+}
+
+@media (max-width: 640px) {
+  .founder-modal__dialog {
+    padding: 28px 24px 32px;
+  }
+
+  .founder-modal__name {
+    font-size: 1.4rem;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 1024px){
