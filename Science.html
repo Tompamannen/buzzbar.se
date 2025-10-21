@@ -1,1 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Science — Buzzbar</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body data-page="science">
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-line"><span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span></span>
+        <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a href="products.html"  class="nav-link">Products</a>
+        <a href="science.html"   class="nav-link">Science</a>
+        <a href="nutrition.html" class="nav-link">Nutrition</a>
+        <a href="story.html"     class="nav-link">Our Story</a>
+        <a href="#footer"        class="nav-link">Contact</a>
+      </nav>
+      <a href="products.html" class="cta-contact">Buy Now</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section-header container" style="padding-top:40px">
+      <span class="section-badge">Science</span>
+      <h1>Backed by ingredients that <span class="gold">work</span></h1>
+      <p class="section-subtitle">Clean stimulation, steady focus, fewer jitters.</p>
+    </section>
+
+    <!-- Paste your entire “SCIENCE” section here (curve SVG + ingredient cards + FAQ) -->
+    <section id="science" class="science-section">
+      <div class="container">
+        <!-- your caffeine curve figure + the adjusted paths -->
+        <!-- your ing-grid (Green-tea Caffeine, L-theanine, Electrolytes, Adaptogens) -->
+        <!-- your “How it works” steps + FAQ -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <!-- paste your existing footer markup here -->
+  </footer>
+
+  <script>
+    (function(){
+      const header=document.querySelector('.site-header'); let lastY=window.scrollY;
+      window.addEventListener('scroll',()=>{const y=window.scrollY;
+        if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
+        lastY=y;},{passive:true});
+      const page=document.body.dataset.page;
+      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+      });
+    })();
+  </script>
+</body>
+</html>
 
