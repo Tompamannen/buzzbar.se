@@ -4,17 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Products — Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body data-page="products">
-  <!-- ===== HEADER (same on every page) ===== -->
+  <div class="page-top-gradient"></div>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Buzzbar — Home">
-        <span class="brand-line">
-          <span class="brand-word buzz">Buzz</span>
-          <span class="brand-word bar">bar</span>
-        </span>
+        <span class="brand-line"><span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span></span>
         <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
       </a>
       <nav class="main-nav" role="navigation" aria-label="Primary navigation">
@@ -22,13 +19,12 @@
         <a href="science.html"   class="nav-link">Science</a>
         <a href="nutrition.html" class="nav-link">Nutrition</a>
         <a href="story.html"     class="nav-link">Our Story</a>
-        <a href="#footer"        class="nav-link">Contact</a>
+        <a href="contact.html"   class="nav-link">Contact</a>
       </nav>
       <a href="products.html" class="cta-contact">Buy Now</a>
     </div>
   </header>
 
-  <!-- ===== PAGE CONTENT ===== -->
   <main class="page">
     <section class="section-header container" style="padding-top:40px">
       <span class="section-badge">Products</span>
@@ -36,35 +32,31 @@
       <p class="section-subtitle">Full lineup, specs, ingredients & FAQs.</p>
     </section>
 
-    <!-- Bring over your existing products carousel + cards -->
-    <section id="products" class="products-section">
-      <div class="container">
-        <!-- paste your current .products-carousel + product-card markup here -->
-        <!-- (From index.html — Energy / Focus / Recovery cards) -->
-      </div>
+    <!-- Paste your existing full products markup here (cards/carousel/specs) -->
+    <section class="container">
+      <p>Paste your Energy / Focus / Recovery product cards here from your index.</p>
     </section>
-
-    <!-- Optionally: detailed sections per product -->
-    <!-- <section class="container"> … ingredients, macros, FAQs per product … </section> -->
   </main>
 
-  <!-- ===== FOOTER (reuse your existing footer HTML here) ===== -->
-  <footer id="footer">
-    <!-- paste your existing footer markup here -->
+  <footer id="footer" class="footer">
+    <!-- same footer markup as index.html -->
+    <div class="footer-container">
+      <div class="footer-column"><h3>Buzzbar</h3><p>Clean energy, smarter nutrition.</p></div>
+      <div class="footer-column"><h4>Contact</h4><p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p></div>
+      <div class="footer-column"><h4>Info</h4><p>Plant-based. No artificial sweeteners.</p></div>
+      <div class="footer-column"><h4>Newsletter</h4><form class="newsletter-form"><input placeholder="Email" /><button>→</button></form></div>
+    </div>
+    <div class="footer-bottom">© 2025 Buzzbar</div>
   </footer>
 
-  <!-- Active tab + autohide header -->
   <script>
     (function(){
-      // autohide header (same as your index)
       const header=document.querySelector('.site-header'); let lastY=window.scrollY;
       window.addEventListener('scroll',()=>{const y=window.scrollY;
         if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
         lastY=y;},{passive:true});
-      // underline active tab
-      const page=document.body.dataset.page;
       document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+        const href=a.getAttribute('href')||''; if(href.startsWith('products')) a.classList.add('is-active');
       });
     })();
   </script>
