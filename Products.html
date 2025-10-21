@@ -1,5 +1,3 @@
-products.html
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +7,27 @@ products.html
   <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body data-page="products">
-  <!-- include the SAME header block shown above -->
+  <!-- ===== HEADER (same on every page) ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-line">
+          <span class="brand-word buzz">Buzz</span>
+          <span class="brand-word bar">bar</span>
+        </span>
+        <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a href="products.html"  class="nav-link">Products</a>
+        <a href="science.html"   class="nav-link">Science</a>
+        <a href="nutrition.html" class="nav-link">Nutrition</a>
+        <a href="story.html"     class="nav-link">Our Story</a>
+        <a href="#footer"        class="nav-link">Contact</a>
+      </nav>
+      <a href="products.html" class="cta-contact">Buy Now</a>
+    </div>
+  </header>
+
   <!-- ===== PAGE CONTENT ===== -->
   <main class="page">
     <section class="section-header container" style="padding-top:40px">
@@ -18,11 +36,37 @@ products.html
       <p class="section-subtitle">Full lineup, specs, ingredients & FAQs.</p>
     </section>
 
-    <!-- Bring over your full products carousel + long-form product details here -->
-    <!-- ... -->
+    <!-- Bring over your existing products carousel + cards -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <!-- paste your current .products-carousel + product-card markup here -->
+        <!-- (From index.html — Energy / Focus / Recovery cards) -->
+      </div>
+    </section>
+
+    <!-- Optionally: detailed sections per product -->
+    <!-- <section class="container"> … ingredients, macros, FAQs per product … </section> -->
   </main>
 
-  <!-- Reuse your existing footer -->
-  <footer id="footer"> ... </footer>
+  <!-- ===== FOOTER (reuse your existing footer HTML here) ===== -->
+  <footer id="footer">
+    <!-- paste your existing footer markup here -->
+  </footer>
+
+  <!-- Active tab + autohide header -->
+  <script>
+    (function(){
+      // autohide header (same as your index)
+      const header=document.querySelector('.site-header'); let lastY=window.scrollY;
+      window.addEventListener('scroll',()=>{const y=window.scrollY;
+        if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
+        lastY=y;},{passive:true});
+      // underline active tab
+      const page=document.body.dataset.page;
+      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+      });
+    })();
+  </script>
 </body>
 </html>
