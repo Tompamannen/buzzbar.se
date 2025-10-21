@@ -1,0 +1,20 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/favicon.svg b/favicon.svg
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa87000c7825aca2c092dd573b8b910a4577056b
+--- /dev/null
++++ b/favicon.svg
+@@ -0,0 +1,10 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
++  <defs>
++    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
++      <stop offset="0%" stop-color="#6b3df4" />
++      <stop offset="100%" stop-color="#ff6fb5" />
++    </linearGradient>
++  </defs>
++  <rect width="64" height="64" rx="12" fill="url(#bg)" />
++  <path d="M18 44h8c6.6 0 12-5.4 12-12S32.6 20 26 20h-8v24zm8-18c3.3 0 6 2.7 6 6s-2.7 6-6 6h-2V26h2zm22 18c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8z" fill="#fff" />
++</svg>
+ 
+EOF
+)
