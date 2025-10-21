@@ -1,1 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Story — Buzzbar</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body data-page="story">
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-line"><span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span></span>
+        <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a href="products.html"  class="nav-link">Products</a>
+        <a href="science.html"   class="nav-link">Science</a>
+        <a href="nutrition.html" class="nav-link">Nutrition</a>
+        <a href="story.html"     class="nav-link">Our Story</a>
+        <a href="#footer"        class="nav-link">Contact</a>
+      </nav>
+      <a href="products.html" class="cta-contact">Buy Now</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section-header container" style="padding-top:40px">
+      <span class="section-badge">Mission & Story</span>
+      <h1>Built for busy days. Designed for clean, steady energy.</h1>
+      <p class="section-subtitle">Why we started, who we are, and where we’re going.</p>
+    </section>
+
+    <!-- Paste your OUR STORY layout here (copy from index, including the image you added) -->
+    <section id="our-story" class="our-story">
+      <div class="container story-grid">
+        <!-- your story copy column -->
+        <!-- your <aside class="story-visual"><img src="IMG_8401.JPG" class="story-image" /></aside> -->
+      </div>
+
+      <!-- founders row cards -->
+      <div class="container founders-row">
+        <!-- your three founder-card blocks -->
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <!-- paste your existing footer markup here -->
+  </footer>
+
+  <script>
+    (function(){
+      const header=document.querySelector('.site-header'); let lastY=window.scrollY;
+      window.addEventListener('scroll',()=>{const y=window.scrollY;
+        if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
+        lastY=y;},{passive:true});
+      const page=document.body.dataset.page;
+      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
+        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+      });
+    })();
+  </script>
+</body>
+</html>
 
