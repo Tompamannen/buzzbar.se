@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nutrition — Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body data-page="nutrition">
+  <div class="page-top-gradient"></div>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Buzzbar — Home">
@@ -18,7 +19,7 @@
         <a href="science.html"   class="nav-link">Science</a>
         <a href="nutrition.html" class="nav-link">Nutrition</a>
         <a href="story.html"     class="nav-link">Our Story</a>
-        <a href="#footer"        class="nav-link">Contact</a>
+        <a href="contact.html"   class="nav-link">Contact</a>
       </nav>
       <a href="products.html" class="cta-contact">Buy Now</a>
     </div>
@@ -31,16 +32,21 @@
       <p class="section-subtitle">Balanced macros • No added sugar • Plant-based</p>
     </section>
 
-    <!-- Paste your entire NUTRITION section here -->
-    <section id="nutrition" class="nt-section">
-      <div class="container">
-        <!-- your nt-macros, nt-grid benefits, nt-highlights, nt-facts-wrap, nt-compare, nt-faq -->
-      </div>
+    <!-- Paste your full nutrition page content here -->
+    <section class="container">
+      <p>Paste your macros grid, benefits cards, highlights, nutrition facts, compare & FAQ here…</p>
     </section>
   </main>
 
-  <footer id="footer">
-    <!-- paste your existing footer markup here -->
+  <footer id="footer" class="footer">
+    <!-- same footer markup as index.html -->
+    <div class="footer-container">
+      <div class="footer-column"><h3>Buzzbar</h3><p>Clean energy, smarter nutrition.</p></div>
+      <div class="footer-column"><h4>Contact</h4><p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p></div>
+      <div class="footer-column"><h4>Info</h4><p>Plant-based. No artificial sweeteners.</p></div>
+      <div class="footer-column"><h4>Newsletter</h4><form class="newsletter-form"><input placeholder="Email" /><button>→</button></form></div>
+    </div>
+    <div class="footer-bottom">© 2025 Buzzbar</div>
   </footer>
 
   <script>
@@ -49,9 +55,8 @@
       window.addEventListener('scroll',()=>{const y=window.scrollY;
         if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
         lastY=y;},{passive:true});
-      const page=document.body.dataset.page;
       document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+        const href=a.getAttribute('href')||''; if(href.startsWith('nutrition')) a.classList.add('is-active');
       });
     })();
   </script>
