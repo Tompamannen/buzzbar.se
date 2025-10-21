@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Science — Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body data-page="science">
+  <div class="page-top-gradient"></div>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Buzzbar — Home">
@@ -18,7 +19,7 @@
         <a href="science.html"   class="nav-link">Science</a>
         <a href="nutrition.html" class="nav-link">Nutrition</a>
         <a href="story.html"     class="nav-link">Our Story</a>
-        <a href="#footer"        class="nav-link">Contact</a>
+        <a href="contact.html"   class="nav-link">Contact</a>
       </nav>
       <a href="products.html" class="cta-contact">Buy Now</a>
     </div>
@@ -31,18 +32,40 @@
       <p class="section-subtitle">Clean stimulation, steady focus, fewer jitters.</p>
     </section>
 
-    <!-- Paste your entire “SCIENCE” section here (curve SVG + ingredient cards + FAQ) -->
-    <section id="science" class="science-section">
-      <div class="container">
-        <!-- your caffeine curve figure + the adjusted paths -->
-        <!-- your ing-grid (Green-tea Caffeine, L-theanine, Electrolytes, Adaptogens) -->
-        <!-- your “How it works” steps + FAQ -->
-      </div>
+    <!-- Paste your full Science section here (including the adjusted SVG) -->
+    <section class="container">
+      <figure class="curve">
+        <svg viewBox="0 0 640 200" role="img" aria-label="Caffeine curves: coffee spike vs Buzzbar smooth" width="100%">
+          <path d="M48 20 V180 M48 180 H610" stroke="rgba(2,6,23,.12)" stroke-width="1"/>
+          <text x="8" y="26" fill="#64748b" font-size="12">Energy</text>
+          <text x="560" y="196" fill="#64748b" font-size="12">Time →</text>
+          <path d="M48 175 C 140 60, 220 20, 300 70 S 420 170, 610 175" fill="none" stroke="#ef4444" stroke-width="3" opacity=".9"/>
+          <circle cx="300" cy="70" r="3.5" fill="#ef4444"/>
+          <text x="308" y="68" fill="#ef4444" font-size="11">coffee spike</text>
+          <defs>
+            <linearGradient id="buzzgrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22c55e"/>
+            </linearGradient>
+          </defs>
+          <path d="M48 175 C 120 150, 220 110, 320 95 S 520 125, 610 145" fill="none" stroke="url(#buzzgrad)" stroke-width="4"/>
+          <text x="505" y="140" fill="#6d28d9" font-size="11">Buzzbar target curve</text>
+        </svg>
+        <figcaption>Illustrative curves: coffee can peak fast, then dip; Buzzbar aims for a steadier lift.</figcaption>
+      </figure>
+
+      <p>Paste your ingredient cards & FAQs here…</p>
     </section>
   </main>
 
-  <footer id="footer">
-    <!-- paste your existing footer markup here -->
+  <footer id="footer" class="footer">
+    <!-- same footer markup as index.html -->
+    <div class="footer-container">
+      <div class="footer-column"><h3>Buzzbar</h3><p>Clean energy, smarter nutrition.</p></div>
+      <div class="footer-column"><h4>Contact</h4><p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p></div>
+      <div class="footer-column"><h4>Info</h4><p>Plant-based. No artificial sweeteners.</p></div>
+      <div class="footer-column"><h4>Newsletter</h4><form class="newsletter-form"><input placeholder="Email" /><button>→</button></form></div>
+    </div>
+    <div class="footer-bottom">© 2025 Buzzbar</div>
   </footer>
 
   <script>
@@ -51,9 +74,8 @@
       window.addEventListener('scroll',()=>{const y=window.scrollY;
         if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
         lastY=y;},{passive:true});
-      const page=document.body.dataset.page;
       document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        const href=a.getAttribute('href')||''; if(href.startsWith(page)) a.classList.add('is-active');
+        const href=a.getAttribute('href')||''; if(href.startsWith('science')) a.classList.add('is-active');
       });
     })();
   </script>
