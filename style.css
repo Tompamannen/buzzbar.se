@@ -2118,16 +2118,45 @@ footer::before {
 
 /* Hero product card styling */
 .hero-product-card {
-  max-width: 420px;
+  max-width: 380px;
   justify-self: center;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  transform: scale(0.95);
 }
 
 .hero-product-card .product-visual {
-  background: linear-gradient(135deg, rgba(139,92,246,.1), rgba(34,197,94,.08));
+  background: linear-gradient(135deg, rgba(139,92,246,.15), rgba(34,197,94,.12));
+  backdrop-filter: blur(5px);
+}
+
+.hero-product-card .product-info {
+  color: rgba(255,255,255,0.95);
+}
+
+.hero-product-card .product-info h3 {
+  color: #fff;
+}
+
+.hero-product-card .product-tagline {
+  color: #fbbf24;
+}
+
+.hero-product-card .product-description {
+  color: rgba(255,255,255,0.8);
+}
+
+.hero-product-card .spec {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .hero-product-card:hover {
-  transform: translateY(-8px);
+  transform: scale(0.98) translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.4);
 }
 
 @media (max-width: 980px){
