@@ -1,88 +1,260 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Story — Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <title>Buzzbar – Our Story</title>
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
-<body data-page="story">
+<body>
+
   <div class="page-top-gradient"></div>
+
+  <!-- NAVBAR -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Buzzbar — Home">
-        <span class="brand-line"><span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span></span>
+      <a href="index.html#home" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-line">
+          <span class="brand-word buzz">Buzz</span>
+          <span class="brand-word bar">Bar</span>
+        </span>
         <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
       </a>
+
       <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-        <a href="Products.html"  class="nav-link">Products</a>
-        <a href="Science.html"   class="nav-link">Science</a>
-        <a href="nutrition.html" class="nav-link">Nutrition</a>
-        <a href="Our-Story.html"     class="nav-link">Our Story</a>
-        <a href="Contact.html"   class="nav-link">Contact</a>
+        <a href="index.html#products" class="nav-link">Products</a>
+        <a href="science-nutrition.html#science" class="nav-link">Science</a>
+        <a href="science-nutrition.html#nutrition" class="nav-link">Nutrition</a>
+        <a href="#our-story" class="nav-link is-active">Our Story</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
-      <a href="Products.html" class="cta-contact">Buy Now</a>
+
+      <a href="index.html#products" class="cta-contact">Buy Now</a>
     </div>
   </header>
 
-  <main class="page">
-    <section class="section-header container" style="padding-top:40px">
-      <span class="section-badge">Mission & Story</span>
-      <h1>Built for busy days. Designed for clean, steady energy.</h1>
-      <p class="section-subtitle">Why we started, who we are, and where we’re going.</p>
-    </section>
-
-    <section id="our-story" class="our-story">
-      <div class="container story-grid">
-        <div class="story-text">
-          <div class="story-intro">
-            <h3>Why Buzzbar?</h3>
-            <p>We wanted a clean, nutritious energy source without brewing, chugging, or cooking. Something we could grab on the run.</p>
-          </div>
-          <div class="story-journey">
-            <h3>What we’re building</h3>
-            <p>Natural caffeine from green tea, L-theanine for calm focus, electrolytes for hydration, and a label you can read.</p>
-          </div>
-          <div class="story-values">
-            <div class="value-item"><div class="value-icon">⚡</div><div><h4>No crash</h4><p>Steady energy for classes, deep work, workouts.</p></div></div>
-            <div class="value-item"><div class="value-icon">🌿</div><div><h4>Plant-based</h4><p>No artificial sweeteners; simple ingredients.</p></div></div>
-          </div>
-        </div>
-        <aside class="story-visual">
-          <img src="IMG_8401.JPG" alt="Buzzbar founders" class="story-image" />
-        </aside>
+  <!-- SUB-HERO: STORY -->
+  <section class="sub-hero sub-hero--story">
+    <div class="container sub-hero-inner">
+      <div class="sub-hero-copy">
+        <span class="sub-hero-eyebrow">Built for the driven</span>
+        <h1>BeyondBar – a snack for thought</h1>
+        <p>
+          We built Buzzbar for people who go all in — late nights, training blocks,
+          exams, side projects. Instead of quick fixes and crashes, we wanted
+          clean, convenient energy that helps you stay locked in on what matters.
+        </p>
       </div>
-
-      <div class="container founders-row" style="margin-top:32px">
-        <article class="founder-card"><div class="founder-avatar">TW</div><h3>Tom Wiseman</h3><p class="role">Co-Founder</p></article>
-        <article class="founder-card"><div class="founder-avatar">CW</div><h3>Charlie Wiseman</h3><p class="role">Co-Founder</p></article>
-        <article class="founder-card"><div class="founder-avatar">OW</div><h3>Oliver Wiseman</h3><p class="role">Co-Founder</p></article>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <!-- same footer markup as index.html -->
-    <div class="footer-container">
-      <div class="footer-column"><h3>Buzzbar</h3><p>Clean energy, smarter nutrition.</p></div>
-      <div class="footer-column"><h4>Contact</h4><p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p></div>
-      <div class="footer-column"><h4>Info</h4><p>Plant-based. No artificial sweeteners.</p></div>
-      <div class="footer-column"><h4>Newsletter</h4><form class="newsletter-form"><input placeholder="Email" /><button>→</button></form></div>
     </div>
-    <div class="footer-bottom">© 2025 Buzzbar</div>
+  </section>
+
+  <!-- OUR STORY SECTION (your existing section) -->
+  <section id="our-story" class="our-story">
+    <div class="container story-grid">
+
+      <!-- LEFT: copy -->
+      <div class="story-copy">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="story-title">
+          Built for busy days.<br>
+          Designed for clean, steady energy.
+        </h2>
+
+        <div class="story-lede">
+          We are three brothers who wanted a clean, nutritious energy source
+          that fits into our fast-paced lives—without brewing coffee, chugging energy drinks, or cooking a full meal.
+        </div>
+
+        <div class="story-columns">
+          <p><strong>The problem:</strong> we needed focus that lasts, not jitters or a crash. Most options were either sugary,
+            inconvenient, or just didn’t feel good.</p>
+          <p><strong>Our answer:</strong> Buzzbar—real ingredients, natural caffeine, L-theanine, and electrolytes.
+            A bar you can grab on the run that delivers smooth focus and steady energy.</p>
+        </div>
+
+        <ul class="story-highlights">
+          <li><span>⚡</span> No brewing. No crash. No nonsense.</li>
+          <li><span>🌿</span> Plant-based, thoughtful ingredients.</li>
+          <li><span>🎓</span> Built for study sessions, meetings, and late-night ideas.</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: image placeholder -->
+      <aside class="story-visual">
+        <img src="IMG_8401.JPG" alt="Buzzbar founders" class="story-image" />
+        <p class="img-caption">Three ambitious brothers, building better energy habits.</p>
+      </aside>
+    </div>
+
+    <!-- Founders row (3 cards) -->
+    <div class="container founders-row">
+      <article class="founder-card" data-founder-name="Tom Wiseman" data-founder-role="Co-Founder" data-founder-story="Tom is the product tinkerer, constantly iterating on taste and nutrition profiles. From testing early batches in the family kitchen to partnering with European co-packers, he focuses on building bars that feel as good as they taste.">
+        <div class="founder-avatar"><span>TW</span></div>
+        <h3>Tom Wiseman</h3>
+        <p class="role">Co-Founder</p>
+        <blockquote>“Build something we want to use daily.”</blockquote>
+      </article>
+
+      <article class="founder-card" data-founder-name="Charlie Wiseman" data-founder-role="Co-Founder" data-founder-story="Charlie spent a decade leading high-intensity teams before co-founding Buzzbar. He obsesses over workflow-friendly nutrition and turned his commute cravings into the blueprint for our Focus blend.">
+        <div class="founder-avatar"><span>CW</span></div>
+        <h3>Charlie Wiseman</h3>
+        <p class="role">Co-Founder</p>
+        <blockquote>“No jitters. No crash. Great taste.”</blockquote>
+      </article>
+
+      <article class="founder-card" data-founder-name="Oliver Wiseman" data-founder-role="Co-Founder" data-founder-story="Oliver is the storyteller and community builder. He guides the Buzzbar brand, connecting with early adopters, nutritionists, and sleep scientists to make sure every bar feels like a smarter choice.">
+        <div class="founder-avatar"><span>OW</span></div>
+        <h3>Oliver Wiseman</h3>
+        <p class="role">Co-Founder</p>
+        <blockquote>“Good energy should feel effortless.”</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- Founder detail modal -->
+  <div class="founder-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="founder-modal__overlay" data-founder-close></div>
+    <div class="founder-modal__dialog" role="document">
+      <button class="founder-modal__close" type="button" aria-label="Close founder story" data-founder-close>×</button>
+      <div class="founder-modal__content">
+        <h3 class="founder-modal__name"></h3>
+        <p class="founder-modal__role"></p>
+        <p class="founder-modal__story"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES / AMBITION STRIP (pulling from deck language) -->
+  <section class="container" style="padding:60px 0 40px;">
+    <div class="story-columns">
+      <div>
+        <h3 style="margin-bottom:8px;">Fueling ambition beyond limits</h3>
+        <p>
+          From campus to career, we want Buzzbar to be the go-to energy choice for people
+          chasing growth — studying late, training harder, or building big ideas.
+        </p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:8px;">Helping people stay dialed in</h3>
+        <p>
+          Our mission is to replace quick fixes with balanced, lasting energy that supports focus,
+          better habits, and feeling good in the long run.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">Buzzbar</h3>
+        <p>Clean energy, smarter nutrition.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:oliverwiseman@buzzbar.se">oliverwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:charliewiseman@buzzbar.se">charliewiseman@buzzbar.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Info</h4>
+        <ul>
+          <li>Plant-based. No artificial sweeteners.</li>
+          <li>Made with care in the EU.</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Join our newsletter</h4>
+        <p>No spam, just smarter energy.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="your@email.com" />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Buzzbar. All rights reserved.</p>
+    </div>
   </footer>
 
+  <!-- JS: header hide + founder modal -->
   <script>
-    (function(){
-      const header=document.querySelector('.site-header'); let lastY=window.scrollY;
-      window.addEventListener('scroll',()=>{const y=window.scrollY;
-        if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
-        lastY=y;},{passive:true});
-      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        const href=a.getAttribute('href')||''; if(href.startsWith('story')) a.classList.add('is-active');
+    (function() {
+      const header = document.querySelector('.site-header');
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > 80 && y > lastY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+        lastY = y;
+      }, { passive: true });
+    })();
+
+    (function() {
+      const modal = document.querySelector('.founder-modal');
+      const nameEl = modal.querySelector('.founder-modal__name');
+      const roleEl = modal.querySelector('.founder-modal__role');
+      const storyEl = modal.querySelector('.founder-modal__story');
+      const founders = document.querySelectorAll('.founder-card');
+
+      const openModal = (card) => {
+        nameEl.textContent = card.dataset.founderName;
+        roleEl.textContent = card.dataset.founderRole;
+        storyEl.textContent = card.dataset.founderStory;
+        modal.setAttribute('aria-hidden', 'false');
+        modal.classList.add('is-visible');
+        document.body.classList.add('no-scroll');
+      };
+
+      const closeModal = () => {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.classList.remove('is-visible');
+        document.body.classList.remove('no-scroll');
+      };
+
+      founders.forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openModal(card);
+          }
+        });
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-haspopup', 'dialog');
+        card.setAttribute('aria-label', `${card.dataset.founderName} story`);
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target.matches('[data-founder-close]')) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+          closeModal();
+        }
       });
     })();
   </script>
+
 </body>
 </html>
 
