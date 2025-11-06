@@ -2420,7 +2420,7 @@ section:before{
 
 /* Founders row */
 .founders-row{
-  margin-top:42px;
+  margin-top:24px;
   display:grid; grid-template-columns: repeat(3, minmax(220px,1fr));
   gap:22px;
 }
