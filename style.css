@@ -3969,3 +3969,302 @@ html, body { margin: 0; }
 .nav-link.is-active {
   color: var(--primary-gold);
 }
+/* =========================================
+   SUB-PAGE HEROES (Products / Nutrition / Story)
+   ========================================= */
+
+.sub-hero {
+  position: relative;
+  padding: 140px 0 70px;
+  background:
+    radial-gradient(900px 420px at 0% 0%, rgba(99,102,241,0.18), transparent 60%),
+    radial-gradient(900px 380px at 100% 0%, rgba(245,158,11,0.16), transparent 60%),
+    #020617;
+  color: #e5e7eb;
+}
+
+.sub-hero--products {
+  background:
+    radial-gradient(900px 420px at 0% 0%, rgba(245,158,11,0.22), transparent 60%),
+    radial-gradient(900px 380px at 100% 0%, rgba(239,68,68,0.16), transparent 60%),
+    #020617;
+}
+
+.sub-hero--nutrition {
+  background:
+    radial-gradient(900px 420px at 0% 0%, rgba(56,189,248,0.22), transparent 60%),
+    radial-gradient(900px 380px at 100% 0%, rgba(16,185,129,0.18), transparent 60%),
+    #020617;
+}
+
+.sub-hero--story {
+  background:
+    radial-gradient(900px 420px at 0% 0%, rgba(139,92,246,0.25), transparent 60%),
+    radial-gradient(900px 380px at 100% 0%, rgba(245,158,11,0.18), transparent 60%),
+    #020617;
+}
+
+.sub-hero-inner {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.sub-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.sub-hero-eyebrow {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.5);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c7d2fe;
+  margin-bottom: 10px;
+}
+
+.sub-hero h1 {
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.sub-hero p {
+  color: #cbd5f5;
+  max-width: 60ch;
+}
+
+.sub-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.sub-hero-tag {
+  font-size: 0.78rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.85);
+  border: 1px solid rgba(148,163,184,0.55);
+  color: #e5e7eb;
+}
+
+.sub-hero-footnote {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+/* Highlight active nav on sub-pages */
+.main-nav .nav-link.is-active {
+  color: var(--primary-accent);
+}
+
+.main-nav .nav-link.is-active::after {
+  width: 100%;
+  opacity: 1;
+  background: var(--primary-accent);
+}
+
+/* =========================================
+   PRODUCTS PAGE LAYOUT & INTERACTION
+   ========================================= */
+
+.products-page {
+  padding: 80px 0 110px;
+  background: var(--off-white);
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tabs above the cards */
+.product-tabs {
+  display: inline-flex;
+  padding: 4px;
+  background: rgba(15,23,42,0.04);
+  border-radius: 999px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(148,163,184,0.4);
+  gap: 4px;
+}
+
+.product-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.product-tab.is-active {
+  background: #0b1020;
+  color: #fbbf24;
+  transform: translateY(-1px);
+}
+
+.product-tab:focus-visible {
+  outline: 2px solid rgba(99,102,241,0.6);
+  outline-offset: 2px;
+}
+
+/* Stack the hero cards with playful hover */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.products-grid .product-card {
+  cursor: pointer;
+}
+
+.products-grid .product-card.hero-product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.products-grid .product-card.hero-product-card.active {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15,23,42,0.18);
+  border-color: rgba(99,102,241,0.6);
+}
+
+.products-grid .product-card.hero-product-card.active .bar-3d {
+  transform: translateY(-8px) rotateY(-12deg) rotateX(12deg);
+}
+
+/* Right-hand panel */
+.products-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-experience {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 22px 22px 18px;
+  border: 1px solid rgba(148,163,184,0.4);
+  box-shadow: 0 12px 30px rgba(15,23,42,0.12);
+}
+
+.product-exp-title {
+  font-size: 1.3rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 2px;
+}
+
+.product-exp-tagline {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  margin-bottom: 10px;
+}
+
+.product-exp-copy {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+}
+
+.product-exp-list {
+  margin: 0 0 10px;
+  padding-left: 1.1rem;
+  font-size: 0.86rem;
+  color: var(--medium-gray);
+}
+
+.product-exp-list li + li {
+  margin-top: 4px;
+}
+
+/* Mood chips */
+.product-moods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.product-mood {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  background: rgba(15,23,42,0.04);
+  color: var(--dark-gray);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.product-mood.is-active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #f9fafb;
+  transform: translateY(-1px);
+}
+
+.product-exp-note {
+  font-size: 0.74rem;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* Side info card */
+.product-side-card {
+  background: #0b1020;
+  color: #e5e7eb;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.7);
+}
+
+.product-side-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.product-side-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.84rem;
+}
+
+.product-side-card li + li {
+  margin-top: 4px;
+}
+
+/* Smaller screens tweaks */
+@media (max-width: 600px) {
+  .sub-hero {
+    padding: 120px 0 50px;
+  }
+
+  .product-tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .product-experience {
+    padding: 18px 16px;
+  }
+}
