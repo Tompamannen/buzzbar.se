@@ -3244,8 +3244,8 @@ section + section::before{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
-  gap: 24px;
+  padding: 10px 0;
+  gap: 20px;
 }
 
 /* Remove blue link styling */
@@ -3265,7 +3265,7 @@ section + section::before{
   font-weight: 900;
   letter-spacing: 0.2px;
   line-height: 1;
-  font-size: clamp(22px, 2.4vw, 28px);
+  font-size: clamp(18px, 2vw, 22px);
   background: linear-gradient(90deg, #f59e0b, #fbbf24);
   -webkit-background-clip: text;
   background-clip: text;
@@ -3282,13 +3282,14 @@ section + section::before{
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 
 .nav-link {
   position: relative;
   color: var(--nav-muted);
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.9rem;
   letter-spacing: 0.02em;
   transition: color 0.2s ease;
 }
@@ -3319,14 +3320,15 @@ section + section::before{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  padding: 0 18px;
+  height: 36px;
+  padding: 0 16px;
+  font-size: 0.9rem;
   border-radius: 999px;
   color: #0b1020;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.02em;
   background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  box-shadow: 0 8px 24px rgba(245,158,11,.35);
+  box-shadow: 0 6px 18px rgba(245,158,11,.3);
   transition: transform .15s ease, box-shadow .2s ease, background .25s ease;
 }
 
@@ -3369,11 +3371,11 @@ section + section::before{
 }
 .brand-line{ display:flex; gap:2px; align-items:center; }
 .brand-sub{
-  font-size: 12px;
-  letter-spacing: .28em;
+  font-size: 9px;
+  letter-spacing: .3em;
   text-transform: uppercase;
   color: #cbd5e1;
-  opacity: .92;
+  opacity: .85;
   white-space: nowrap;
 }
 
