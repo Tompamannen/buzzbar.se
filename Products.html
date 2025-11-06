@@ -1,64 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products — Buzzbar</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <title>BuzzBar – Products</title>
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
-<body data-page="products">
+<body>
+
   <div class="page-top-gradient"></div>
+
+  <!-- ===== NAVBAR ===== -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Buzzbar — Home">
-        <span class="brand-line"><span class="brand-word buzz">Buzz</span><span class="brand-word bar">bar</span></span>
+      <a href="index.html#home" class="brand" aria-label="Buzzbar — Home">
+        <span class="brand-line">
+          <span class="brand-word buzz">Buzz</span>
+          <span class="brand-word bar">Bar</span>
+        </span>
         <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
       </a>
+
       <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-        <a href="Products.html"  class="nav-link">Products</a>
-        <a href="Science.html"   class="nav-link">Science</a>
+        <a href="products.html" class="nav-link is-active">Products</a>
+        <a href="index.html#science" class="nav-link">Science</a>
         <a href="nutrition.html" class="nav-link">Nutrition</a>
-        <a href="Our-Story.html"     class="nav-link">Our Story</a>
-        <a href="Contact.html"   class="nav-link">Contact</a>
+        <a href="our-story.html" class="nav-link">Our Story</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
-      <a href="Products.html" class="cta-contact">Buy Now</a>
+
+      <a href="#products" class="cta-contact">Buy Now</a>
     </div>
   </header>
 
-  <main class="page">
-    <section class="section-header container" style="padding-top:40px">
-      <span class="section-badge">Products</span>
-      <h1>Pick your boost</h1>
-      <p class="section-subtitle">Full lineup, specs, ingredients & FAQs.</p>
-    </section>
+  <!-- ===== SUB-HERO (Products) ===== -->
+  <section class="sub-hero sub-hero--products">
+    <div class="container sub-hero-inner">
+      <div class="sub-hero-copy">
+        <span class="sub-hero-eyebrow">Products</span>
+        <h1>Bars built for focus, not just calories</h1>
+        <p>
+          Each BuzzBar bar combines green tea caffeine, L-theanine, electrolytes and balanced macros
+          so you get smooth, steady energy you can actually study, train and work on.
+        </p>
 
-    <!-- Paste your existing full products markup here (cards/carousel/specs) -->
-    <section class="container">
-      <p>Paste your Energy / Focus / Recovery product cards here from your index.</p>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <!-- same footer markup as index.html -->
-    <div class="footer-container">
-      <div class="footer-column"><h3>Buzzbar</h3><p>Clean energy, smarter nutrition.</p></div>
-      <div class="footer-column"><h4>Contact</h4><p><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></p></div>
-      <div class="footer-column"><h4>Info</h4><p>Plant-based. No artificial sweeteners.</p></div>
-      <div class="footer-column"><h4>Newsletter</h4><form class="newsletter-form"><input placeholder="Email" /><button>→</button></form></div>
+        <div class="sub-hero-tags">
+          <span class="sub-hero-tag">Clean caffeine</span>
+          <span class="sub-hero-tag">L-theanine</span>
+          <span class="sub-hero-tag">Electrolytes</span>
+          <span class="sub-hero-tag">Plant-based</span>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom">© 2025 Buzzbar</div>
+  </section>
+
+  <!-- ===== PRODUCTS PAGE ===== -->
+  <section id="products" class="products-page">
+    <div class="container products-layout">
+
+      <!-- LEFT: Product picker -->
+      <section class="products-main" aria-label="BuzzBar products">
+
+        <div class="product-tabs" role="tablist">
+          <button class="product-tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-product-id="energy">
+            Energy
+          </button>
+          <button class="product-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-product-id="focus">
+            Focus
+          </button>
+          <button class="product-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-product-id="recovery">
+            Recovery
+          </button>
+        </div>
+
+        <div class="products-grid" aria-live="polite">
+
+          <!-- Energy -->
+          <article class="product-card hero-product-card active"
+                   tabindex="0"
+                   data-product-id="energy"
+                   data-product-name="Energy"
+                   data-product-tagline="Bright, uplifting, sustained."
+                   data-product-long="Energy is your on-the-go swap for coffee and energy drinks — green tea caffeine, B-vitamins and electrolytes for a clean lift without the chaos."
+                   data-product-bullets="≈80 mg natural caffeine from green tea|L-theanine for smooth, calm focus|B-vitamins to support energy metabolism|Electrolytes so hydration keeps up|No energy-drink aftertaste">
+            <div class="product-visual">
+              <span class="product-badge">Popular</span>
+              <div class="bar-3d bar-energy-3d"></div>
+            </div>
+            <div class="product-info">
+              <h3>Energy</h3>
+              <p class="product-tagline">Bright, uplifting, sustained.</p>
+              <p class="product-description">
+                Green tea caffeine + B-vitamins for smooth, no-crash energy during long days.
+              </p>
+              <div class="product-specs">
+                <span class="spec">≈80mg caffeine</span>
+                <span class="spec">Electrolytes</span>
+                <span class="spec">No crash</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Focus -->
+          <article class="product-card hero-product-card"
+                   tabindex="0"
+                   data-product-id="focus"
+                   data-product-name="Focus"
+                   data-product-tagline="Dialed-in concentration."
+                   data-product-long="Focus is built for deep work, exams and long strategy sessions — clean caffeine, L-theanine and adaptogens to keep your brain in flow mode."
+                   data-product-bullets="Caffeine + L-theanine focus stack|Adaptogens to support stress balance|Macros tuned for steady release|Perfect for deep work blocks|Pairs well with your usual coffee">
+            <div class="product-visual">
+              <span class="product-badge">Study Sessions</span>
+              <div class="bar-3d bar-focus-3d"></div>
+            </div>
+            <div class="product-info">
+              <h3>Focus</h3>
+              <p class="product-tagline">Dialed-in concentration.</p>
+              <p class="product-description">
+                A calmer, more controlled lift for when you need to lock in on hard things for hours.
+              </p>
+              <div class="product-specs">
+                <span class="spec">Caffeine + theanine</span>
+                <span class="spec">Adaptogens</span>
+                <span class="spec">No jitters</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Recovery -->
+          <article class="product-card hero-product-card"
+                   tabindex="0"
+                   data-product-id="recovery"
+                   data-product-name="Recovery"
+                   data-product-tagline="Recharge, don’t crash."
+                   data-product-long="Recovery is for post-training, late-evening work and busy travel days — a softer lift with more emphasis on protein, electrolytes and feeling good later."
+                   data-product-bullets="Higher protein for rebuild|Electrolytes and minerals|Gentler caffeine curve|Great for after training|Supports sustainable routines">
+            <div class="product-visual">
+              <span class="product-badge">Post-Session</span>
+              <div class="bar-3d bar-recovery-3d"></div>
+            </div>
+            <div class="product-info">
+              <h3>Recovery</h3>
+              <p class="product-tagline">Recharge, don’t crash.</p>
+              <p class="product-description">
+                Protein-forward, electrolyte-rich and designed to keep your mood steady after hard sessions.
+              </p>
+              <div class="product-specs">
+                <span class="spec">Protein heavy</span>
+                <span class="spec">Electrolytes</span>
+                <span class="spec">Gentle caffeine</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- RIGHT: Dynamic details panel -->
+      <aside class="products-side" aria-label="Product details">
+        <div class="product-experience">
+          <h2 class="product-exp-title">Energy</h2>
+          <p class="product-exp-tagline">Bright, uplifting, sustained.</p>
+          <p class="product-exp-copy">
+            Energy is your on-the-go swap for coffee and energy drinks — green tea caffeine,
+            B-vitamins and electrolytes for a clean lift without the chaos.
+          </p>
+
+          <ul class="product-exp-list">
+            <li>≈80 mg natural caffeine from green tea</li>
+            <li>L-theanine for smooth, calm focus</li>
+            <li>B-vitamins to support energy metabolism</li>
+            <li>Electrolytes so hydration keeps up</li>
+            <li>No energy-drink aftertaste</li>
+          </ul>
+
+          <div class="product-moods">
+            <button type="button" class="product-mood is-active">Morning classes</button>
+            <button type="button" class="product-mood">Long workdays</button>
+            <button type="button" class="product-mood">Before training</button>
+            <button type="button" class="product-mood">Travel days</button>
+          </div>
+
+          <p class="product-exp-note">
+            *All values and names are pre-launch and may change as we refine the recipe.
+          </p>
+        </div>
+
+        <div class="product-side-card">
+          <h3>Which bar is for you?</h3>
+          <ul>
+            <li><strong>Energy</strong> – when you’d normally grab coffee or an energy drink.</li>
+            <li><strong>Focus</strong> – deep work, exams, late-night study blocks.</li>
+            <li><strong>Recovery</strong> – after training or when you want a softer lift.</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (same as index) ===== -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">Buzzbar</h3>
+        <p>Clean energy, smarter nutrition.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:oliverwiseman@buzzbar.se">oliverwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:charliewiseman@buzzbar.se">charliewiseman@buzzbar.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Info</h4>
+        <ul>
+          <li>Plant-based. No artificial sweeteners.</li>
+          <li>Made with care in the EU.</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Join our newsletter</h4>
+        <p>No spam, just smarter energy.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="your@email.com" />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Buzzbar. All rights reserved.</p>
+    </div>
   </footer>
 
+  <!-- ===== JS: sticky header + product interactions ===== -->
   <script>
-    (function(){
-      const header=document.querySelector('.site-header'); let lastY=window.scrollY;
-      window.addEventListener('scroll',()=>{const y=window.scrollY;
-        if(y>80 && y>lastY){header.classList.add('hide')} else{header.classList.remove('hide')}
-        lastY=y;},{passive:true});
-      document.querySelectorAll('.main-nav .nav-link').forEach(a=>{
-        const href=a.getAttribute('href')||''; if(href.startsWith('products')) a.classList.add('is-active');
+    // Hide/show header on scroll
+    (function () {
+      const header = document.querySelector('.site-header');
+      let lastY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y > 80 && y > lastY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+        lastY = y;
+      }, { passive: true });
+    })();
+
+    // Product cards + tabs -> dynamic details on the right
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.product-card[data-product-id]'));
+      const tabs = Array.from(document.querySelectorAll('.product-tab[data-product-id]'));
+
+      if (!cards.length) return;
+
+      const titleEl = document.querySelector('.product-exp-title');
+      const taglineEl = document.querySelector('.product-exp-tagline');
+      const copyEl = document.querySelector('.product-exp-copy');
+      const listEl = document.querySelector('.product-exp-list');
+
+      const setActive = (productId) => {
+        cards.forEach(card => {
+          const isActive = card.dataset.productId === productId;
+          card.classList.toggle('active', isActive);
+          card.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+        tabs.forEach(tab => {
+          const isActive = tab.dataset.productId === productId;
+          tab.classList.toggle('is-active', isActive);
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        const activeCard = cards.find(card => card.dataset.productId === productId);
+        if (!activeCard) return;
+
+        const name = activeCard.dataset.productName || activeCard.querySelector('h3')?.textContent || '';
+        const tagline = activeCard.dataset.productTagline || activeCard.querySelector('.product-tagline')?.textContent || '';
+        const long = activeCard.dataset.productLong || '';
+        const bullets = (activeCard.dataset.productBullets || '')
+          .split('|')
+          .map(x => x.trim())
+          .filter(Boolean);
+
+        if (titleEl) titleEl.textContent = name;
+        if (taglineEl) taglineEl.textContent = tagline;
+        if (copyEl) copyEl.textContent = long;
+
+        if (listEl) {
+          listEl.innerHTML = '';
+          bullets.forEach(text => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            listEl.appendChild(li);
+          });
+        }
+      };
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          setActive(tab.dataset.productId);
+        });
       });
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          setActive(card.dataset.productId);
+        });
+
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setActive(card.dataset.productId);
+          }
+        });
+      });
+
+      // Playful moods: just toggle the visual state
+      const moods = document.querySelectorAll('.product-mood');
+      moods.forEach(btn => {
+        btn.addEventListener('click', () => {
+          moods.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+        });
+      });
+
+      // Default state
+      setActive('energy');
     })();
   </script>
+
 </body>
 </html>
