@@ -2120,43 +2120,50 @@ footer::before {
 .hero-product-card {
   max-width: 380px;
   justify-self: center;
-  background: rgba(255,255,255,0.06);
+  background: rgba(15,22,37,0.7) !important;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  border: 1px solid rgba(139,92,246,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
   transform: scale(0.95);
 }
 
 .hero-product-card .product-visual {
-  background: linear-gradient(135deg, rgba(139,92,246,.15), rgba(34,197,94,.12));
+  background: linear-gradient(135deg, rgba(139,92,246,.2), rgba(34,197,94,.15)) !important;
   backdrop-filter: blur(5px);
 }
 
 .hero-product-card .product-info {
   color: rgba(255,255,255,0.95);
+  background: transparent;
 }
 
 .hero-product-card .product-info h3 {
-  color: #fff;
+  color: #fff !important;
 }
 
 .hero-product-card .product-tagline {
-  color: #fbbf24;
+  color: #fbbf24 !important;
 }
 
 .hero-product-card .product-description {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.8) !important;
 }
 
 .hero-product-card .spec {
-  background: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.9);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(139,92,246,0.15) !important;
+  color: rgba(255,255,255,0.9) !important;
+  border: 1px solid rgba(139,92,246,0.3);
+}
+
+.hero-product-card .product-badge {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24) !important;
+  color: #fff;
 }
 
 .hero-product-card:hover {
   transform: scale(0.98) translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  box-shadow: 0 12px 40px rgba(139,92,246,.4);
+  border-color: rgba(139,92,246,0.5);
 }
 
 @media (max-width: 980px){
