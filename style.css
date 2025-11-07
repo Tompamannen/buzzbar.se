@@ -5127,3 +5127,290 @@ body.subpage {
     margin-right: auto;
   }
 }
+
+/* =========================================================
+   OVERRIDE: HEADER / NAV (same on all pages)
+   ========================================================= */
+
+header.site-header {
+  background: var(--milk-white);
+  color: var(--espresso);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(62, 39, 35, 0.06);
+  box-shadow: 0 6px 24px rgba(62, 39, 35, 0.06);
+  transform: translateY(0);          /* visible by default */
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 0.3s var(--curve-smooth), opacity 0.3s ease;
+}
+
+/* JS on each page only toggles .hide */
+header.site-header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Make sure nav colors work on light header */
+.site-header .nav-link {
+  color: var(--nav-muted, var(--espresso));
+}
+
+.site-header .nav-link:hover {
+  color: var(--nav-text, var(--espresso));
+}
+
+.site-header .brand-sub {
+  color: rgba(107, 84, 69, 0.72);
+}
+
+.site-header .cta-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #0b1020;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, .35);
+  transition: transform .15s ease, box-shadow .2s ease, background .25s ease;
+}
+
+.site-header .cta-contact:hover {
+  background: linear-gradient(135deg, #fbbf24, #fde68a);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, .28);
+}
+
+/* Small tweak so the header content keeps its layout */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* =========================================================
+   SCIENCE PAGE – HERO + PHOTO GRID
+   ========================================================= */
+
+/* Light coffee hero, like homepage */
+.science-hero {
+  padding-top: 140px; /* room for fixed header */
+  padding-bottom: 80px;
+  background:
+    radial-gradient(850px 280px at 0% 0%, rgba(230, 118, 53, 0.16), transparent 60%),
+    radial-gradient(850px 280px at 100% 0%, rgba(232, 221, 208, 0.7), transparent 70%),
+    var(--milk-white);
+  color: var(--espresso);
+}
+
+/* Layout: text + product card */
+.science-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.95fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.science-hero-copy {
+  max-width: 640px;
+}
+
+.science-hero-product {
+  justify-self: flex-end;
+}
+
+.science-hero-card {
+  max-width: 380px;
+  margin-top: 10px;
+}
+
+.science-hero-caption {
+  font-size: 0.75rem;
+  color: rgba(107, 114, 128, 0.85);
+  max-width: 320px;
+  margin-top: 8px;
+}
+
+/* Hero eyebrow + pills (uses classes from Science.html) */
+.page-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(62, 39, 35, 0.08);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.page-hero-eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--coffee-orange);
+}
+
+.page-hero-title {
+  font-size: clamp(2.4rem, 3.4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+
+.page-hero-title .highlight {
+  color: var(--coffee-orange);
+}
+
+.page-hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 36rem;
+  margin-bottom: 20px;
+}
+
+.page-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(62, 39, 35, 0.08);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tag-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--coffee-orange);
+}
+
+/* Mini section nav pills under hero */
+.pill-nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(248, 244, 240, 0.9);
+}
+
+.pill-nav a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.pill-nav a:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--espresso);
+  transform: translateY(-1px);
+}
+
+.pill-nav a.is-active {
+  background: #111827;
+  color: #fefce8;
+}
+
+/* =========================================================
+   SCIENCE PAGE – PHOTO STRIP LOWER ON PAGE
+   ========================================================= */
+
+.science-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.science-photo-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+}
+
+.science-photo-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.science-photo-card figcaption {
+  padding: 14px 16px 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   SCIENCE PAGE – RESPONSIVE TWEAKS
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .science-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .science-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .science-hero-product {
+    justify-self: stretch;
+  }
+
+  .science-hero-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero-title {
+    font-size: 2rem;
+  }
+
+  .page-hero-meta {
+    gap: 8px;
+  }
+
+  .pill-nav {
+    width: 100%;
+  }
+
+  .pill-nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
