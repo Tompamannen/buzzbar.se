@@ -4564,3 +4564,386 @@ html, body { margin: 0; }
     right: 16px;
   }
 }
+
+/* =========================================
+   SUBPAGES: SHARED LAYOUT (Science / Nutrition / Products / Story)
+   ========================================= */
+
+body.subpage {
+  background: var(--milk-white);
+  color: var(--text-dark);
+}
+
+/* Generic page hero */
+
+.page-hero {
+  position: relative;
+  padding: 140px 0 80px;
+  background:
+    radial-gradient(900px 360px at 0% 0%, rgba(230,118,53,0.20), transparent 65%),
+    radial-gradient(900px 360px at 100% 0%, rgba(62,39,35,0.65), #111827);
+  color: #f9fafb;
+  overflow: hidden;
+}
+
+.page-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.page-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(248,250,252,0.24);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e5e7eb;
+  background: rgba(15,23,42,0.5);
+  backdrop-filter: blur(12px);
+}
+
+.page-hero-eyebrow span.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--coffee-orange);
+}
+
+.page-hero-title {
+  margin-top: 20px;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 900;
+}
+
+.page-hero-title .highlight {
+  color: var(--coffee-orange);
+}
+
+.page-hero-sub {
+  margin-top: 16px;
+  max-width: 56ch;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(249,250,251,0.9);
+}
+
+.page-hero-meta {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.7);
+  border: 1px solid rgba(148,163,184,0.55);
+  font-size: 0.78rem;
+  color: #e5e7eb;
+}
+
+.tag-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--coffee-orange);
+}
+
+/* Hero mini navigation (no more ugly blue links) */
+
+.pill-nav {
+  margin-top: 30px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.7);
+  border: 1px solid rgba(148,163,184,0.55);
+}
+
+.pill-nav a {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(226,232,240,0.9);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.pill-nav a:hover {
+  background: rgba(248,250,252,0.12);
+  transform: translateY(-1px);
+}
+
+.pill-nav a.is-active {
+  background: #f59e0b;
+  color: #111827;
+}
+
+/* Hero specific variations */
+
+.science-hero {
+  background:
+    radial-gradient(900px 360px at 0% 0%, rgba(56,189,248,0.16), transparent 65%),
+    radial-gradient(900px 360px at 100% 0%, rgba(248,250,252,0.05), #020617);
+}
+
+.nutrition-hero {
+  background:
+    radial-gradient(900px 360px at 0% 0%, rgba(16,185,129,0.22), transparent 65%),
+    radial-gradient(900px 360px at 100% 0%, rgba(250,204,21,0.2), #020617);
+}
+
+.products-hero {
+  background:
+    radial-gradient(900px 360px at 0% 0%, rgba(230,118,53,0.28), transparent 65%),
+    radial-gradient(900px 360px at 100% 0%, rgba(15,23,42,0.9), #020617);
+}
+
+.story-hero {
+  background:
+    radial-gradient(900px 360px at 0% 0%, rgba(217,121,23,0.26), transparent 65%),
+    radial-gradient(900px 360px at 100% 0%, rgba(148,163,184,0.22), #020617);
+}
+
+/* Shared content sections */
+
+.page-section {
+  padding: 80px 0;
+}
+
+.page-section--soft {
+  background: var(--cream);
+}
+
+.page-section--on-white {
+  background: var(--milk-white);
+}
+
+.section-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section-intro {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.section-intro h2 {
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--espresso);
+}
+
+.section-intro p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Simple two-column layout */
+
+.split-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.1fr) minmax(0,1.1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .page-hero {
+    padding: 120px 0 60px;
+  }
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card grid */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15,23,42,0.13);
+  border-color: rgba(230,118,53,0.35);
+}
+
+.info-eyebrow {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: rgba(248,250,252,0.8);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.info-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--espresso);
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.info-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.info-list li + li {
+  margin-top: 4px;
+}
+
+/* Subtle scroll-reveal */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Science-specific tweaks */
+
+.science-curve-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 24px 20px;
+  border: 1px solid rgba(148,163,184,0.35);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.12);
+}
+
+.science-curve-card figure {
+  margin-top: 18px;
+}
+
+.science-curve-card svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Nutrition-specific */
+
+.nutrition-macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.macro-pill {
+  min-width: 120px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(148,163,184,0.35);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.05);
+}
+
+.macro-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.macro-value {
+  margin-top: 4px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--espresso);
+}
+
+/* Products use-case chips */
+
+.usecase-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.usecase-chip {
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  background: rgba(15,23,42,0.03);
+  border: 1px solid rgba(148,163,184,0.5);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+
+.usecase-chip.is-active {
+  background: var(--coffee-orange);
+  border-color: var(--coffee-orange);
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+/* Story page small tweaks */
+
+.story-page-lede {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 58ch;
+}
+
+/* Make header links show active page (optional but nice) */
+
+.main-nav .nav-link.is-active {
+  color: var(--coffee-orange);
+}
+
+.main-nav .nav-link.is-active::after {
+  width: 100%;
+  background: var(--coffee-orange);
+}
