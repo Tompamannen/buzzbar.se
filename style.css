@@ -2337,7 +2337,7 @@ footer::after {
         font-size: var(--font-size-sm);
     }
 }
-/* ===== Hero polish (Buzzbar) ===== */
+/* ===== Hero polish (Ampra) ===== */
 :root{
   --buzz-orange:#f59e0b; /* highlight */
   --ink-900:#0f172a;
@@ -2477,7 +2477,7 @@ footer::after {
               linear-gradient(180deg, #2b3038 0%, #3a404b 100%);
   z-index:-1;
 }
-/* === Buzzbar palette & tokens === */
+/* === Ampra palette & tokens === */
 :root{
   --ink-900:#0f1625;        /* deep navy */
   --ink-800:#141b2e;
@@ -3656,7 +3656,7 @@ section + section::before{
   --nav-purple-2: #5b8cfa;
 }
 
-/* Brand subline under "Buzzbar" */
+/* Brand subline under "Ampra" */
 .brand{
   display:flex;
   flex-direction:column;
