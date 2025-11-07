@@ -5414,3 +5414,17 @@ header.site-header.hide {
     text-align: center;
   }
 }
+
+/* === NAV / HEADER FIX – MAKE IT ALWAYS VISIBLE === */
+header.site-header,
+.site-header {
+  /* force the header to be visible on all pages */
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* optional: if the header ever jumps, make sure it sits on top nicely */
+.site-header {
+  z-index: 1000;
+}
