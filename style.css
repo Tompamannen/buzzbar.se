@@ -4947,3 +4947,108 @@ body.subpage {
   width: 100%;
   background: var(--coffee-orange);
 }
+
+/* =========================================
+   PRODUCTS PAGE EXTRA
+   ========================================= */
+
+.product-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.product-hero-copy {
+  max-width: 560px;
+}
+
+.product-hero-card {
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.product-footnote {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Usecase panel */
+.usecase-panel {
+  margin-top: 12px;
+}
+
+/* Comparison grid */
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.comparison-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(148,163,184,0.4);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.04);
+}
+
+.comparison-card--highlight {
+  border-color: var(--coffee-orange);
+  box-shadow: 0 12px 28px rgba(230,118,53,0.25);
+}
+
+.comparison-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   STORY PAGE EXTRA
+   ========================================= */
+
+.story-hero-side {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.story-hero-side .info-list {
+  margin-top: 12px;
+}
+
+.founder-detail-card {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 12px 32px rgba(15,23,42,0.14);
+  border: 1px solid rgba(148,163,184,0.45);
+}
+
+.founder-detail-card .role {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.founder-snippet {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+/* Highlight active founder */
+.founder-card.active {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--coffee-orange);
+}
+
+@media (max-width: 960px) {
+  .product-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-hero-card {
+    margin: 24px auto 0;
+  }
+}
