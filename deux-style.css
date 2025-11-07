@@ -1,0 +1,547 @@
+/* ========================================
+   BUZZBAR × DEUX INSPIRED DESIGN
+   Minimal, clean, product-focused
+   ======================================== */
+
+/* Core Brand Colors */
+:root {
+    --cream: #F5F1E8;
+    --dark-cream: #E8E3D8;
+    --espresso: #2C1810;
+    --caramel: #B8794F;
+    --white: #FDFCFA;
+    --text: #3E3530;
+    --text-light: #6B635A;
+}
+
+/* Reset aggressive defaults */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body - Cream background like DEUX */
+body {
+    background: var(--cream) !important;
+    color: var(--text) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    overflow-x: hidden;
+}
+
+/* Hero - Minimal, product-focused */
+.hero,
+.hero--colorblock {
+    background: var(--white) !important;
+    min-height: 90vh !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    /* Allow drips to hang outside the section like slime */
+    overflow: visible !important;
+    z-index: 1 !important;
+}
+
+/* Gooey background effect - MORE VISIBLE */
+.hero::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 10% !important;
+    right: 15% !important;
+    width: 800px !important;
+    height: 800px !important;
+    background: radial-gradient(circle, rgba(184, 121, 79, 0.25), transparent 65%) !important;
+    border-radius: 48% 52% 58% 42% / 45% 48% 52% 55% !important;
+    filter: blur(60px) !important;
+    animation: gooey-morph 20s ease-in-out infinite !important;
+    z-index: 0 !important;
+}
+
+.hero::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 10% !important;
+    left: 10% !important;
+    width: 600px !important;
+    height: 600px !important;
+    background: radial-gradient(circle, rgba(232, 227, 216, 0.6), transparent 65%) !important;
+    border-radius: 42% 58% 45% 55% / 48% 52% 48% 52% !important;
+    filter: blur(50px) !important;
+    animation: gooey-morph 15s ease-in-out infinite reverse !important;
+    z-index: 0 !important;
+}
+
+@keyframes gooey-morph {
+    0%, 100% { 
+        border-radius: 48% 52% 58% 42% / 45% 48% 52% 55% !important;
+        transform: rotate(0deg) scale(1) !important;
+    }
+    25% { 
+        border-radius: 58% 42% 48% 52% / 52% 45% 55% 48% !important;
+        transform: rotate(5deg) scale(1.05) !important;
+    }
+    50% { 
+        border-radius: 42% 58% 52% 48% / 48% 52% 48% 52% !important;
+        transform: rotate(-3deg) scale(0.98) !important;
+    }
+    75% { 
+        border-radius: 52% 48% 42% 58% / 55% 48% 52% 45% !important;
+        transform: rotate(3deg) scale(1.02) !important;
+    }
+}
+
+.hero-colorblock-wrapper {
+    display: none !important;
+}
+
+.hero-details {
+    padding: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-details .container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 100px !important;
+    align-items: center !important;
+    justify-items: center !important;
+    min-height: 90vh !important;
+    max-width: 100% !important;
+    padding: 0 80px !important;
+}
+
+/* Hero Text Side */
+.hero-text-side {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.hero-headline {
+    font-size: 6rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: var(--espresso) !important;
+    letter-spacing: -0.03em !important;
+    margin: 0 0 30px 0 !important;
+}
+
+.hero-subtext {
+    font-size: 1.5rem !important;
+    color: var(--text-light) !important;
+    line-height: 1.5 !important;
+    margin: 0 0 40px 0 !important;
+    max-width: 400px !important;
+}
+
+.hero-text-side .cta-primary {
+    display: inline-block !important;
+    text-decoration: none !important;
+}
+
+/* Hide the ::before content */
+.hero-details::before {
+    display: none !important;
+}
+
+/* Product Showcase */
+.hero-details .hero-product-showcase {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.hero .bar-3d {
+    width: 150px !important;
+    height: 300px !important;
+    transform: scale(1.5) !important;
+}
+
+/* Hide product info text */
+.hero .product-info {
+    display: none !important;
+}
+
+/* Just show the product visual */
+.hero .product-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+}
+
+.hero .product-visual {
+    background: transparent !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Introducing Banner - Subtle */
+.introducing-banner {
+    background: var(--espresso) !important;
+    height: 50px !important;
+}
+
+.introducing-word {
+    color: var(--cream) !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+}
+
+/* Header - Minimal */
+.site-header {
+    background: rgba(253, 252, 250, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(62, 53, 48, 0.08) !important;
+}
+
+.brand-word {
+    background: var(--espresso) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: 1.5rem !important;
+}
+
+.brand-sub {
+    color: var(--text-light) !important;
+    font-size: 9px !important;
+    letter-spacing: 0.15em !important;
+}
+
+.nav-link {
+    color: var(--text) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.nav-link:hover {
+    color: var(--espresso) !important;
+}
+
+/* CTA Button - Minimal, pill-shaped */
+.cta-contact,
+.cta-primary {
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    padding: 12px 32px !important;
+    border-radius: 50px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.cta-contact:hover,
+.cta-primary:hover {
+    background: var(--text) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Product Cards - DEUX style */
+.product-card {
+    background: var(--white) !important;
+    border: 1px solid rgba(62, 53, 48, 0.06) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 12px rgba(44, 24, 16, 0.04) !important;
+    transition: all 0.4s ease !important;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08) !important;
+    transform: translateY(-4px) !important;
+}
+
+.product-visual {
+    background: var(--dark-cream) !important;
+    border-bottom: none !important;
+    padding: 40px !important;
+}
+
+.product-badge {
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    font-size: 10px !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 600 !important;
+}
+
+.product-info {
+    padding: 32px !important;
+    text-align: left !important;
+}
+
+.product-info h3 {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: var(--espresso) !important;
+    margin-bottom: 8px !important;
+}
+
+.product-tagline {
+    color: var(--caramel) !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 500 !important;
+}
+
+.product-description {
+    color: var(--text-light) !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
+
+.spec {
+    background: var(--dark-cream) !important;
+    color: var(--text) !important;
+    border: none !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    border-radius: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Sections - Alternating cream/white */
+.science-section,
+.nt-section {
+    background: var(--white) !important;
+    padding: 100px 0 !important;
+    position: relative !important;
+    /* Allow decorative drips to extend into next section */
+    overflow: visible !important;
+    z-index: 1 !important;
+}
+
+.our-story,
+.sp-section {
+    background: var(--cream) !important;
+    padding: 100px 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+}
+
+/* Bubble transition separators (white → coffee) */
+.hero::after,
+.science-section::after,
+.nt-section::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: var(--bubble-height, 140px) !important;
+    background-color: var(--espresso) !important;
+    /* Draw white bubbles intruding into the coffee band */
+    background-image:
+      radial-gradient(closest-side at 6% 60%, var(--white) 0 34px, transparent 35px),
+      radial-gradient(closest-side at 18% 40%, var(--white) 0 28px, transparent 29px),
+      radial-gradient(closest-side at 32% 70%, var(--white) 0 40px, transparent 41px),
+      radial-gradient(closest-side at 48% 42%, var(--white) 0 30px, transparent 31px),
+      radial-gradient(closest-side at 62% 68%, var(--white) 0 36px, transparent 37px),
+      radial-gradient(closest-side at 78% 46%, var(--white) 0 26px, transparent 27px),
+      radial-gradient(closest-side at 92% 66%, var(--white) 0 42px, transparent 43px),
+      linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(0,0,0,0) 40%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10 !important;
+    pointer-events: none !important;
+}
+
+/* Bubble transition separators for cream sections (cream → coffee) */
+.our-story::after,
+.sp-section::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: var(--bubble-height, 140px) !important;
+    background-color: var(--espresso) !important;
+    background-image:
+      radial-gradient(closest-side at 10% 60%, var(--cream) 0 34px, transparent 35px),
+      radial-gradient(closest-side at 24% 40%, var(--cream) 0 28px, transparent 29px),
+      radial-gradient(closest-side at 38% 70%, var(--cream) 0 40px, transparent 41px),
+      radial-gradient(closest-side at 52% 42%, var(--cream) 0 30px, transparent 31px),
+      radial-gradient(closest-side at 66% 68%, var(--cream) 0 36px, transparent 37px),
+      radial-gradient(closest-side at 80% 46%, var(--cream) 0 26px, transparent 27px),
+      radial-gradient(closest-side at 94% 66%, var(--cream) 0 42px, transparent 43px),
+      linear-gradient(to bottom, rgba(255,255,255,0.12), rgba(0,0,0,0) 40%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10 !important;
+    pointer-events: none !important;
+}
+
+/* Section badges - Minimal */
+.section-eyebrow,
+.sc-badge,
+.nt-badge,
+.sp-badge {
+    background: transparent !important;
+    color: var(--caramel) !important;
+    border: 1px solid var(--caramel) !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+}
+
+/* Headings - Clean typography */
+h1, h2, .story-title, .sc-title, .nt-title {
+    color: var(--espresso) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.2 !important;
+}
+
+h2, .story-title, .sc-title, .nt-title {
+    font-size: 2.5rem !important;
+}
+
+/* Text - Warm gray */
+p, .story-lede, .sc-sub, .nt-sub {
+    color: var(--text-light) !important;
+    line-height: 1.7 !important;
+}
+
+/* Cards - Minimal shadows */
+.science-card,
+.ing-card,
+.nt-card,
+.founder-card,
+.sp-card {
+    background: var(--white) !important;
+    border: 1px solid rgba(62, 53, 48, 0.06) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 2px 12px rgba(44, 24, 16, 0.04) !important;
+    padding: 32px !important;
+}
+
+.science-card:hover,
+.ing-card:hover,
+.nt-card:hover,
+.founder-card:hover,
+.sp-card:hover {
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Founder avatars */
+.founder-avatar {
+    background: var(--espresso) !important;
+    border: 2px solid var(--cream) !important;
+}
+
+/* Footer - Dark espresso */
+footer {
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    padding: 80px 0 40px !important;
+}
+
+.footer-section h3 {
+    color: var(--caramel) !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Remove color blocks from hero */
+.block-tagline,
+.block-accent {
+    display: none !important;
+}
+
+/* Image styling - DEUX style */
+.story-image {
+    border-radius: 16px !important;
+    box-shadow: 0 4px 24px rgba(44, 24, 16, 0.08) !important;
+}
+
+/* Page gradient - remove */
+.page-top-gradient {
+    display: none !important;
+}
+
+/* Clean spacing */
+.container {
+    max-width: 1280px !important;
+    padding: 0 40px !important;
+}
+
+/* Buttons in nutrition/science sections */
+.nt-more-btn {
+    background: transparent !important;
+    border: 1px solid var(--text-light) !important;
+    color: var(--text) !important;
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+}
+
+.nt-more-btn:hover {
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    border-color: var(--espresso) !important;
+}
+
+/* Testimonials */
+.sp-card blockquote {
+    color: var(--text) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+
+.sp-stars {
+    color: var(--caramel) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0 60px !important;
+    }
+    
+    h2, .story-title, .sc-title, .nt-title {
+        font-size: 2rem !important;
+    }
+    
+    .container {
+        padding: 0 24px !important;
+    }
+}
+
+/* Disable section separators entirely */
+.hero::after,
+.science-section::after,
+.nt-section::after,
+.our-story::after,
+.sp-section::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  height: 0 !important;
+}
