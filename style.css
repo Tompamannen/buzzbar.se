@@ -5428,3 +5428,21 @@ header.site-header,
 .site-header {
   z-index: 1000;
 }
+
+/* =========================================
+   PRODUCTS HERO – light coffee background
+   ========================================= */
+
+.products-hero {
+  /* room for the sticky header */
+  padding-top: 140px;
+  padding-bottom: 80px;
+
+  /* same kind of coffee gradient as Science */
+  background:
+    radial-gradient(850px 280px at 0% 0%, rgba(230, 118, 53, 0.16), transparent 60%),
+    radial-gradient(850px 280px at 100% 0%, rgba(232, 221, 208, 0.7), transparent 70%),
+    var(--milk-white);
+
+  color: var(--espresso);
+}
