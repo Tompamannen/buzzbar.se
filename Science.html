@@ -8,11 +8,13 @@
 </head>
 <body class="subpage subpage-science">
 
+  <!-- Soft band behind header -->
   <div class="page-top-gradient"></div>
 
-  <!-- NAVBAR (same structure everywhere) -->
+  <!-- ===== NAVBAR (same style as main page) ===== -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
+      <!-- Brand (clicks back to main hero) -->
       <a href="index.html#home" class="brand" aria-label="Buzzbar — Home">
         <span class="brand-line">
           <span class="brand-word buzz">Buzz</span>
@@ -21,6 +23,7 @@
         <span class="brand-sub">CLEAN ENERGY, SMARTER NUTRITION</span>
       </a>
 
+      <!-- Main nav -->
       <nav class="main-nav" role="navigation" aria-label="Primary navigation">
         <a href="Products.html" class="nav-link">Products</a>
         <a href="Science.html" class="nav-link is-active">Science</a>
@@ -29,50 +32,91 @@
         <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
 
-      <a href="Products.html" class="cta-contact">Buy Now</a>
+      <!-- CTA -->
+      <a href="Products.html#buy" class="cta-contact">Buy Now</a>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- ===== HERO: TEXT + PRODUCT CARD ===== -->
     <section class="page-hero science-hero" id="top">
-      <div class="page-hero-inner" data-reveal>
-        <div class="page-hero-eyebrow">
-          <span class="dot"></span>
-          <span>Science</span>
-          <span>Backed, not buzzworded</span>
-        </div>
-        <h1 class="page-hero-title">
-          How Buzzbar fuels <span class="highlight">steady focus</span>
-        </h1>
-        <p class="page-hero-sub">
-          Buzzbar is built around a simple idea: keep the **good** parts of caffeine
-          (alertness, motivation) and smooth out the spike, jitters and crash.
-        </p>
+      <div class="page-hero-inner science-hero-grid" data-reveal>
 
-        <div class="page-hero-meta">
-          <span class="tag-pill">
-            <span class="tag-pill-dot"></span> Green-tea caffeine + L-theanine
-          </span>
-          <span class="tag-pill">
-            <span class="tag-pill-dot"></span> Gradual curve, fewer jitters
-          </span>
-          <span class="tag-pill">
-            <span class="tag-pill-dot"></span> Electrolytes & adaptogens
-          </span>
+        <!-- Left: science copy -->
+        <div class="science-hero-copy">
+          <div class="page-hero-eyebrow">
+            <span class="dot"></span>
+            <span>Science backed</span>
+            <span>not buzzworded</span>
+          </div>
+
+          <h1 class="page-hero-title">
+            How Buzzbar fuels <span class="highlight">steady focus</span>
+          </h1>
+
+          <p class="page-hero-sub">
+            Buzzbar is built around a simple idea: keep the <strong>good</strong> parts of caffeine
+            (alertness, motivation) and smooth out the spike, jitters and crash – using
+            green-tea caffeine, L-theanine, electrolytes and adaptogens.
+          </p>
+
+          <div class="page-hero-meta">
+            <span class="tag-pill">
+              <span class="tag-pill-dot"></span> Green-tea caffeine + L-theanine
+            </span>
+            <span class="tag-pill">
+              <span class="tag-pill-dot"></span> Gradual curve, fewer jitters
+            </span>
+            <span class="tag-pill">
+              <span class="tag-pill-dot"></span> Electrolytes &amp; adaptogens
+            </span>
+          </div>
+
+          <!-- Hero mini-nav -->
+          <nav class="pill-nav" aria-label="Science page sections">
+            <a href="#curve" class="is-active">Curve</a>
+            <a href="#ingredients">Ingredients</a>
+            <a href="#feels">How it feels</a>
+            <a href="#real-life">In real life</a>
+            <a href="#faq">FAQ</a>
+          </nav>
         </div>
 
-        <nav class="pill-nav" aria-label="Science page sections">
-          <a href="#curve" class="is-active">Curve</a>
-          <a href="#ingredients">Ingredients</a>
-          <a href="#feels">How it feels</a>
-          <a href="#faq">FAQ</a>
-        </nav>
+        <!-- Right: product hero card (same vibe as homepage) -->
+        <aside class="science-hero-product">
+          <article class="product-card hero-product-card science-hero-card active">
+            <div class="product-visual">
+              <span class="product-badge">Prototype</span>
+              <!-- same “bar” look as your main hero -->
+              <div class="bar-3d bar-energy-3d"></div>
+            </div>
+            <div class="product-info">
+              <h3>Buzzbar</h3>
+              <p class="product-tagline">Energy that feels good.</p>
+              <p class="product-description">
+                A caffeinated energy bar that combines green-tea caffeine, L-theanine,
+                electrolytes and real nutrition for a smoother focus window.
+              </p>
+              <div class="product-specs">
+                <span class="spec">≈ 80 mg caffeine*</span>
+                <span class="spec">Protein &amp; fiber</span>
+                <span class="spec">0 g added sugar*</span>
+              </div>
+              <p class="product-footnote">
+                *Targets during development. Final values may shift as we finish R&amp;D.
+              </p>
+            </div>
+          </article>
+          <p class="science-hero-caption">
+            Visual prototype of Buzzbar – artwork only. Exact packaging and macros will be finalised before launch.
+          </p>
+        </aside>
+
       </div>
     </section>
 
-    <!-- CURVE SECTION -->
+    <!-- ===== CURVE ===== -->
     <section id="curve" class="page-section page-section--on-white">
       <div class="section-inner split-layout">
         <div class="section-intro" data-reveal>
@@ -91,7 +135,7 @@
 
         <div class="science-curve-card" data-reveal>
           <p style="font-size:0.85rem;color:#64748b;">
-            Illustrative only – curves show the *idea*, not lab data.
+            Illustrative only – curves show the <em>idea</em>, not lab data.
           </p>
           <figure>
             <svg viewBox="0 0 640 220" role="img"
@@ -112,7 +156,7 @@
               <path d="M48 185 C 130 110, 220 70, 310 60
                        S 470 80, 610 185"
                     fill="none" stroke="#22c55e" stroke-width="3" />
-              <text x="345" y="80" fill="#22c55e" font-size="12">
+              <text x="340" y="80" fill="#22c55e" font-size="12">
                 Buzzbar target curve
               </text>
             </svg>
@@ -121,7 +165,7 @@
       </div>
     </section>
 
-    <!-- INGREDIENTS SECTION -->
+    <!-- ===== INGREDIENTS ===== -->
     <section id="ingredients" class="page-section page-section--soft">
       <div class="section-inner">
         <div class="section-intro" data-reveal>
@@ -134,17 +178,13 @@
         </div>
 
         <div class="card-grid">
-
           <article class="info-card" data-reveal>
             <span class="info-eyebrow">Lift</span>
             <h3>Green-tea caffeine</h3>
-            <p>
-              Natural caffeine from green tea for a cleaner, less edgy lift than
-              high-dose coffee or shots.
-            </p>
+            <p>Natural caffeine from green tea for a cleaner, less edgy lift.</p>
             <ul class="info-list">
-              <li>Moderate dose aimed around ~80&nbsp;mg per bar.*</li>
-              <li>Works in tandem with L-theanine for calmer alertness.</li>
+              <li>Moderate dose around ~80&nbsp;mg per bar.*</li>
+              <li>Pairs with L-theanine for calmer alertness.</li>
             </ul>
           </article>
 
@@ -152,12 +192,12 @@
             <span class="info-eyebrow">Smooth</span>
             <h3>L-theanine</h3>
             <p>
-              An amino acid found in tea that helps take the “sharp” off caffeine
-              and supports focus without feeling wired.
+              Tea-derived amino acid that helps blunt jitters and supports
+              clear, steady focus.
             </p>
             <ul class="info-list">
-              <li>Helps reduce perceived jitters from caffeine.</li>
-              <li>Supports calm, sustained attention.</li>
+              <li>Helps reduce the “wired but tired” feeling.</li>
+              <li>Works best alongside a sensible caffeine dose.</li>
             </ul>
           </article>
 
@@ -165,12 +205,12 @@
             <span class="info-eyebrow">Hydrate</span>
             <h3>Electrolytes</h3>
             <p>
-              Mild dehydration tanks focus. A small electrolyte blend helps your
-              brain keep up with long days.
+              Mild dehydration wrecks concentration. A small electrolyte blend
+              helps you keep up.
             </p>
             <ul class="info-list">
-              <li>Sodium, potassium and magnesium in sensible amounts.</li>
-              <li>Designed for everyday use, not extreme sports drinks.</li>
+              <li>Sodium, potassium and magnesium.</li>
+              <li>Everyday levels – not a salty sports drink.</li>
             </ul>
           </article>
 
@@ -178,33 +218,30 @@
             <span class="info-eyebrow">Resilience</span>
             <h3>Adaptogen support</h3>
             <p>
-              Carefully selected adaptogens (like rhodiola / ashwagandha, final
-              recipe dependent on testing) to help you handle stressy days.
+              Carefully selected adaptogens (e.g. rhodiola / ashwagandha –
+              exact stack depends on testing) to help you handle stressy days.
             </p>
             <ul class="info-list">
               <li>Targets perceived fatigue more than “hype”.</li>
-              <li>Supports balance on top of caffeine, not instead of it.</li>
+              <li>Supports balance, not stimulation.</li>
             </ul>
           </article>
-
         </div>
 
         <p style="font-size:0.78rem;color:#6b7280;margin-top:18px;">
-          *All values are pre-launch targets and may change as we finalize the recipe.
+          *All values are pre-launch targets and may change as we finalise the recipe.
         </p>
       </div>
     </section>
 
-    <!-- HOW IT FEELS -->
+    <!-- ===== HOW IT FEELS ===== -->
     <section id="feels" class="page-section page-section--on-white">
       <div class="section-inner split-layout">
-
         <div class="section-intro" data-reveal>
           <h2>How it should feel in real life</h2>
           <p>
-            Science is cool, but in the end Buzzbar has to do one thing:
-            help you stay dialed in on the stuff that matters, without feeling
-            cracked out or destroyed afterwards.
+            Science is cool, but Buzzbar has one job: help you stay dialled in on the
+            stuff that matters, without feeling cracked out or destroyed afterwards.
           </p>
         </div>
 
@@ -214,16 +251,16 @@
             <h3>Wake up without whiplash</h3>
             <p>Smooth lift; you notice you’re more “on”, not suddenly buzzing.</p>
             <ul class="info-list">
-              <li>Good for morning classes or a pre-work boost.</li>
-              <li>No shaking hands while you type.</li>
+              <li>Good for morning classes or pre-work boost.</li>
+              <li>No shaky hands while you type.</li>
             </ul>
           </article>
 
           <article class="info-card">
             <span class="info-eyebrow">30–120 min</span>
-            <h3>Deep work window</h3>
+            <h3>Deep-work window</h3>
             <p>
-              Energy stays steady; pairing caffeine with actual nutrition means your
+              Energy stays steady; pairing caffeine with real nutrition means your
               brain has something to run on.
             </p>
             <ul class="info-list">
@@ -234,23 +271,57 @@
 
           <article class="info-card">
             <span class="info-eyebrow">Afterwards</span>
-            <h3>Less “post-caffeine regret”</h3>
+            <h3>Less post-caffeine regret</h3>
             <p>
               The goal is to close your laptop and still feel like a human, not a
               zombie with a sugar crash.
             </p>
             <ul class="info-list">
-              <li>Milder comedown vs. large coffees or energy drinks.</li>
-              <li>Protein & fiber help fill the gap between meals.</li>
+              <li>Milder comedown vs heavy coffees or energy drinks.</li>
+              <li>Protein &amp; fiber help bridge the gap between meals.</li>
             </ul>
           </article>
         </div>
-
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="page-section page-section--soft">
+    <!-- ===== REAL-LIFE PHOTO STRIP ===== -->
+    <section id="real-life" class="page-section page-section--soft">
+      <div class="section-inner">
+        <div class="section-intro" data-reveal>
+          <h2>Science in real life</h2>
+          <p>
+            Buzzbar isn’t a lab experiment. It’s meant for actual messy days – libraries,
+            gyms, late trains and group projects that go on way too long.
+          </p>
+        </div>
+
+        <div class="science-photo-grid">
+          <figure class="science-photo-card" data-reveal>
+            <img src="science-study.jpg" alt="Student studying with Buzzbar and laptop on the desk" />
+            <figcaption>Library focus blocks without a triple-shot latte crash.</figcaption>
+          </figure>
+
+          <figure class="science-photo-card" data-reveal>
+            <img src="science-training.jpg" alt="Buzzbar next to training shoes and a water bottle" />
+            <figcaption>Pre- or post-training when you still have things to do afterwards.</figcaption>
+          </figure>
+
+          <figure class="science-photo-card" data-reveal>
+            <img src="science-desk.jpg" alt="Buzzbar on a cluttered work desk" />
+            <figcaption>A small upgrade from random snacks between meetings.</figcaption>
+          </figure>
+        </div>
+
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:14px;">
+          Upload your own images to replace these placeholders – see the filenames in the code:
+          <code>science-study.jpg</code>, <code>science-training.jpg</code>, <code>science-desk.jpg</code>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="page-section page-section--on-white">
       <div class="section-inner">
         <div class="section-intro" data-reveal>
           <h2>Quick questions</h2>
@@ -261,24 +332,24 @@
           <article class="info-card" data-reveal>
             <h3>Is this meant to replace coffee?</h3>
             <p>
-              Not necessarily. For some people Buzzbar is the main caffeine source;
-              others use it to avoid a third or fourth coffee.
+              Not necessarily. For some people Buzzbar is the main caffeine source; others
+              use it to avoid an extra coffee or a sugary drink.
             </p>
           </article>
 
           <article class="info-card" data-reveal>
-            <h3>Will you publish more data?</h3>
+            <h3>Will you share more data?</h3>
             <p>
-              As we finalize the recipe, we plan to share more about exact doses
-              and internal testing so you can see how we made those decisions.
+              As we finalise the recipe, we’ll share more about exact doses and internal
+              testing so you can see how we made those decisions.
             </p>
           </article>
 
           <article class="info-card" data-reveal>
             <h3>What about tolerance?</h3>
             <p>
-              If you’re very caffeine-sensitive, we recommend starting with half a bar.
-              If you drink a lot of coffee, you’ll still feel it – but in a calmer way.
+              If you’re very caffeine-sensitive, start with half a bar. If you drink a lot
+              of coffee, you’ll still feel it – but in a calmer way.
             </p>
           </article>
         </div>
@@ -287,26 +358,62 @@
 
   </main>
 
-  <!-- FOOTER (same as index) -->
-  <!-- You can copy-paste your existing footer here; keeping as-is -->
-  <!-- BEGIN FOOTER -->
-  <?php /* or just paste the footer HTML from index.html here */ ?>
-  <!-- END FOOTER -->
+  <!-- ===== FOOTER (same as homepage) ===== -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 class="footer-title">Buzzbar</h3>
+        <p>Clean energy, smarter nutrition.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">TikTok</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+        </div>
+      </div>
 
-  <!-- JS: header hide/show + scroll reveal -->
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:tomwiseman@buzzbar.se">tomwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:oliverwiseman@buzzbar.se">oliverwiseman@buzzbar.se</a></li>
+          <li><a href="mailto:charliewiseman@buzzbar.se">charliewiseman@buzzbar.se</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Info</h4>
+        <ul>
+          <li>Plant-based. No artificial sweeteners.</li>
+          <li>Made with care in the EU.</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Join our newsletter</h4>
+        <p>No spam, just smarter energy.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="your@email.com" />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Buzzbar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== JS: header hide/show + scroll reveal ===== -->
   <script>
-    // Header hide/show (same as index)
+    // Hide/show header on scroll
     (function () {
       const header = document.querySelector('.site-header');
       if (!header) return;
       let lastY = window.scrollY;
       window.addEventListener('scroll', () => {
         const y = window.scrollY;
-        if (y > 80 && y > lastY) {
-          header.classList.add('hide');
-        } else {
-          header.classList.remove('hide');
-        }
+        if (y > 80 && y > lastY) header.classList.add('hide');
+        else header.classList.remove('hide');
         lastY = y;
       }, { passive: true });
     })();
@@ -326,11 +433,9 @@
           }
         });
       }, { threshold: 0.15 });
-
       els.forEach(el => io.observe(el));
     })();
   </script>
 
 </body>
 </html>
-
