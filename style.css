@@ -5449,3 +5449,95 @@ header.site-header,
   color: var(--espresso);
 }
 
+/* =========================================================
+   GLOBAL TYPOGRAPHY – CLEAN SANS + READABILITY
+   ========================================================= */
+
+/* Make sure everything uses a modern sans-serif */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Hero subtitles & section intros more readable */
+.page-hero-sub,
+.section-intro p,
+.info-card p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+/* Make main headings feel stronger + sans-serif */
+h1, h2, h3,
+.page-hero-title,
+.section-intro h2,
+.story-title {
+  font-family: inherit;
+  letter-spacing: -0.03em;
+}
+
+/* =========================================================
+   POPPING TITLES WITH GOLDEN ENERGY ACCENT
+   ========================================================= */
+
+/* Gold accent under section titles (Science, Nutrition, etc.) */
+.section-intro h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.section-intro h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+}
+
+/* Make hero highlight text really pop */
+.page-hero-title .highlight {
+  color: #fbbf24; /* golden energy */
+}
+
+/* Cards: slightly stronger headings */
+.info-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+/* =========================================================
+   GOLDEN ACCENTS IN NAV + ACTIVE ELEMENTS
+   ========================================================= */
+
+/* Active nav item: use golden energy colour */
+.main-nav .nav-link.is-active {
+  color: #fbbf24;
+}
+
+.main-nav .nav-link.is-active::after {
+  width: 100%;
+  background: #fbbf24;
+}
+
+/* Science/Nutrition mini pill nav: pop the active tab */
+.pill-nav a.is-active {
+  background: #111827;
+  color: #fefce8;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.4);
+}
+
+/* Eyebrow labels (like Lift / Smooth / Hydrate) a bit warmer */
+.info-eyebrow {
+  background: rgba(252, 211, 77, 0.12);
+  color: #92400e;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
