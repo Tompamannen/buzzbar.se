@@ -135,11 +135,13 @@
       </div>
     </div>
 
-    <!-- Quantity Options -->
-    <div class="quantity-options-grid">
+    <!-- Quantity Options Carousel -->
+    <div class="quantity-carousel-wrapper">
+      <button class="carousel-nav carousel-prev" aria-label="Previous option">‹</button>
+      <div class="quantity-carousel">
       
       <!-- 1 Box = 12 Bars -->
-      <article class="quantity-card">
+      <article class="quantity-card" data-index="0">
         <div class="quantity-header">
           <h3>Starter Pack</h3>
           <p class="quantity-subtitle">1 Box</p>
@@ -167,7 +169,7 @@
       </article>
 
       <!-- 2 Boxes = 24 Bars (Most Popular) -->
-      <article class="quantity-card popular">
+      <article class="quantity-card popular active" data-index="1">
         <span class="popular-badge">Most Popular</span>
         <div class="quantity-header">
           <h3>Best Value</h3>
@@ -199,7 +201,7 @@
       </article>
 
       <!-- 3 Boxes = 36 Bars -->
-      <article class="quantity-card">
+      <article class="quantity-card" data-index="2">
         <div class="quantity-header">
           <h3>Stock Up & Save</h3>
           <p class="quantity-subtitle">3 Boxes</p>
@@ -232,6 +234,15 @@
         </div>
       </article>
 
+    </div>
+    <button class="carousel-nav carousel-next" aria-label="Next option">›</button>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button class="indicator" data-slide="0" aria-label="1 Box"></button>
+      <button class="indicator active" data-slide="1" aria-label="2 Boxes"></button>
+      <button class="indicator" data-slide="2" aria-label="3 Boxes"></button>
     </div>
 
     <!-- Additional Info -->
@@ -953,3 +964,82 @@
   
 </body>
 </html>
+
+  <!-- Quantity Carousel Script -->
+  <script>
+    (function() {
+      const cards = document.querySelectorAll('.quantity-card');
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      const indicators = document.querySelectorAll('.indicator');
+      let currentIndex = 1; // Start with middle card (2 boxes)
+
+      if (!cards.length) return;
+
+      function updateCarousel() {
+        cards.forEach((card, index) => {
+          card.classList.remove('active', 'prev', 'next');
+          
+          if (index === currentIndex) {
+            card.classList.add('active');
+          } else if (index === currentIndex - 1) {
+            card.classList.add('prev');
+          } else if (index === currentIndex + 1) {
+            card.classList.add('next');
+          }
+        });
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+        updateCarousel();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+      });
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          goToSlide(index);
+        });
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+        if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+      });
+
+      // Touch swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const carousel = document.querySelector('.quantity-carousel');
+
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        if (touchEndX < touchStartX - 50) goToSlide(currentIndex + 1);
+        if (touchEndX > touchStartX + 50) goToSlide(currentIndex - 1);
+      }
+
+      // Initialize
+      updateCarousel();
+    })();
+  </script>
