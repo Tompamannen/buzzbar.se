@@ -286,13 +286,12 @@ body {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
 }
 
 .brand-sub {
-    color: var(--text-light) !important;
-    font-size: 9px !important;
-    letter-spacing: 0.15em !important;
+    display: none !important;
 }
 
 .nav-link {
