@@ -1,3 +1,17 @@
+.hero-headline em {
+    font-family: inherit !important;
+    font-style: normal !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.015em !important;
+    display: inline-block !important;
+    transform: rotate(-1.5deg) scale(1.05) !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 0.18em !important;
+    text-underline-offset: 0.18em !important;
+    text-decoration-skip-ink: none !important;
+    text-shadow: 0 4px 12px rgba(15,23,42,.18) !important;
+}
+
 /* ========================================
    BUZZBAR × DEUX INSPIRED DESIGN
    Minimal, clean, product-focused
@@ -132,29 +146,6 @@ body {
     margin: 0 0 30px 0 !important;
 }
 
-.hero-headline em {
-    font-family: 'Yellowtail', cursive !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.02em !important;
-    font-size: 1.2em !important;
-    position: relative !important;
-    display: inline-block !important;
-}
-
-.hero-headline em::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: -8px !important;
-    left: -10px !important;
-    right: -10px !important;
-    height: 18px !important;
-    background-image: url('brush-stroke.svg') !important;
-    background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
-    opacity: 0.9 !important;
-}
-
 .hero-subtext {
     font-size: 1.5rem !important;
     color: var(--text-light) !important;
@@ -213,15 +204,24 @@ body {
     z-index: 2 !important;
 }
 
-/* Introducing Banner - brown/espresso style */
+/* Introducing Banner - brown/espresso style at bottom */
 .introducing-banner {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    position: relative !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     z-index: 1001 !important;
     background: var(--espresso) !important;
     height: 50px !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.introducing-banner.hidden {
+    transform: translateY(100%) !important;
+    opacity: 0 !important;
 }
 
 .introducing-word {
@@ -230,6 +230,18 @@ body {
     font-weight: 600 !important;
     letter-spacing: 0.2em !important;
     text-transform: uppercase !important;
+}
+
+/* Fade-in on scroll animation */
+[data-fade-in] {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+}
+
+[data-fade-in].is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Header - Minimal */

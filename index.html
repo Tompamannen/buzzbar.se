@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=16" />
-  <link rel="stylesheet" href="deux-style.css" />
+  <link rel="stylesheet" href="style.css?v=36" />
+  <link rel="stylesheet" href="deux-style.css?v=20" />
 </head>
 <body>
 
@@ -106,7 +106,7 @@
   </section>
 
 <!-- ===== OUR STORY (polished) ===== -->
-<section id="our-story" class="our-story"> 
+<section id="our-story" class="our-story" data-fade-scope>
   <div class="container story-grid">
 
     <!-- LEFT: copy -->
@@ -144,7 +144,7 @@
   </div>
 
   <!-- Founders row (3 cards) -->
-  <div class="container founders-row">
+  <div class="container founders-row" data-fade-scope>
     <article class="founder-card" data-founder-name="Tom Wiseman" data-founder-role="Co-Founder" data-founder-story="Tom is the product tinkerer, constantly iterating on taste and nutrition profiles. From testing early batches in the family kitchen to partnering with European co-packers, he focuses on building bars that feel as good as they taste.">
       <div class="founder-avatar"><span>TW</span></div>
       <h3>Tom Wiseman</h3>
@@ -186,7 +186,7 @@
   </section>
 
   <!-- ===== SCIENCE ===== -->
-  <section id="science" class="science-section">
+  <section id="science" class="science-section" data-fade-scope>
     <div class="container">
   
       <!-- Header -->
@@ -672,8 +672,45 @@
 
   <!-- Auto-hide header on scroll down, show on scroll up -->
   <script>
-    // Navbar is now position: sticky, so it automatically sticks to top as you scroll
-    // No JavaScript needed for basic scroll behavior
+    // Hide bottom introducing banner when user scrolls
+    (function() {
+      const banner = document.querySelector('.introducing-banner');
+      let lastY = window.scrollY;
+      
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        
+        // Hide banner when scrolling down, show when at top
+        if (y > 50 && y > lastY) {
+          banner.classList.add('hidden');
+        } else if (y < 10) {
+          banner.classList.remove('hidden');
+        }
+        
+        lastY = y;
+      }, { passive: true });
+    })();
+
+    // Fade in elements on scroll
+    (function() {
+      const fadeElements = document.querySelectorAll('[data-fade-in]');
+      
+      if (!fadeElements.length) return;
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      fadeElements.forEach(el => observer.observe(el));
+    })();
 
        (function() {
       const modal = document.querySelector('.nt-modal');
