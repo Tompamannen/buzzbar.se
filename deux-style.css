@@ -1757,35 +1757,22 @@ footer {
 
 .sp-who {
     display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
 }
 
-.sp-avatar {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9) !important;
-    color: white !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-weight: 700 !important;
-    font-size: 0.9rem !important;
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
-}
-
-.sp-who strong {
-    display: block !important;
+.sp-name {
+    font-weight: 600 !important;
     color: var(--espresso) !important;
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
 }
 
-.sp-who small {
-    display: block !important;
+.sp-initials {
+    font-size: 0.8rem !important;
     color: #999 !important;
-    font-size: 0.85rem !important;
-    margin-top: 2px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.1em !important;
 }
 
 .sp-band {
