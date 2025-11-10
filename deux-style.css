@@ -1557,10 +1557,7 @@ footer {
 }
 
 .story-3d-box:hover {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-3px);
-    box-shadow: 
-        0 12px 32px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    /* No hover effect */
 }
 
 /* Adjust spacing inside the 3D box */
@@ -1679,7 +1676,7 @@ footer {
     }
     
     .story-3d-box:hover {
-        transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-3px);
+        /* No hover effect on mobile */
     }
 }
 
