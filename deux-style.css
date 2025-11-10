@@ -154,17 +154,18 @@ body {
     max-width: 400px !important;
 }
 
-.hero-text-side .cta-primary {
-    display: inline-block !important;
-    text-decoration: none !important;
-}
-
 /* Hero CTA Button Group */
 .hero-cta-group {
     display: flex !important;
     gap: 12px !important;
     align-items: center !important;
     margin-top: 0 !important;
+}
+
+.hero-cta-group .cta-primary,
+.hero-cta-group .cta-secondary {
+    text-decoration: none !important;
+    white-space: nowrap !important;
 }
 
 /* Secondary CTA Button */
