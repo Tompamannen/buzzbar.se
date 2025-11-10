@@ -551,10 +551,45 @@ footer {
     display: none !important;
 }
 
-/* Image styling - DEUX style */
+/* Image styling - DEUX style with 3D effect */
+.story-visual {
+    position: relative !important;
+}
+
 .story-image {
-    border-radius: 16px !important;
-    box-shadow: 0 4px 24px rgba(44, 24, 16, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 
+        0 20px 60px rgba(139, 92, 246, 0.3),
+        0 0 0 1px rgba(139, 92, 246, 0.1) !important;
+    transform: perspective(1200px) rotateY(2deg) rotateX(-2deg) !important;
+    transition: all 0.4s ease !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.story-visual::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 20px !important;
+    left: -20px !important;
+    right: 20px !important;
+    bottom: -20px !important;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(34, 197, 94, 0.2)) !important;
+    border-radius: 20px !important;
+    z-index: 1 !important;
+    filter: blur(30px) !important;
+    animation: float-shadow 4s ease-in-out infinite !important;
+}
+
+@keyframes float-shadow {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.05);
+        opacity: 0.8;
+    }
 }
 
 /* Page gradient - remove */
