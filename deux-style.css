@@ -1329,43 +1329,43 @@ footer {
 .box-stack {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
     align-items: center;
 }
 
 .box-stack.bulk {
-    gap: 10px;
+    gap: 6px;
 }
 
 .product-box {
-    width: 120px;
-    height: 80px;
+    width: 80px;
+    height: 50px;
     background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: box-float 3s ease-in-out infinite;
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .product-box::before {
     content: '';
     position: absolute;
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    height: 3px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 2px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
 }
 
 .box-label {
     color: white;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
