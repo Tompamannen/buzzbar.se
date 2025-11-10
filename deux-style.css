@@ -1634,18 +1634,11 @@ footer {
     opacity: 1;
 }
 
-.story-box-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-    text-align: center;
-}
-
 .story-box h3 {
     font-size: 1.3rem;
     color: var(--espresso);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-weight: 700;
-    text-align: center;
 }
 
 .story-box p {
