@@ -950,13 +950,13 @@ footer {
 }
 
 .comparison-card {
-    background: #f5f5f5;
+    background: #f8f8f8;
     padding: 32px;
     border-radius: 16px;
-    border: 2px dashed rgba(44, 24, 16, 0.15);
+    border: 2px dashed rgba(44, 24, 16, 0.2);
     transition: all 0.3s ease;
-    opacity: 0.75;
-    filter: grayscale(0.3);
+    opacity: 0.85;
+    filter: grayscale(0.2);
     position: relative;
 }
 
@@ -966,26 +966,28 @@ footer {
     top: 12px;
     right: 12px;
     font-size: 18px;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .comparison-card:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .comparison-card h3 {
     font-size: 1.4rem;
-    color: #666;
+    color: #333;
     margin-bottom: 20px;
     font-weight: 600;
 }
 
 .comparison-card .info-eyebrow {
-    color: #999;
+    color: #666;
+    font-weight: 600;
 }
 
 .comparison-card .info-list li {
-    color: #777;
+    color: #444;
+    font-weight: 500;
 }
 
 .comparison-card .info-list li::before {
