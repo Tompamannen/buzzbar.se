@@ -152,6 +152,8 @@ body {
     line-height: 1.5 !important;
     margin: 0 0 40px 0 !important;
     max-width: 400px !important;
+    vertical-align: baseline !important;
+    display: block !important;
 }
 
 /* Hero CTA Button Group */
