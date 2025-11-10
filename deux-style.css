@@ -159,6 +159,33 @@ body {
     text-decoration: none !important;
 }
 
+/* Hero CTA Button Group */
+.hero-cta-group {
+    display: flex !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+}
+
+/* Secondary CTA Button */
+.cta-secondary {
+    display: inline-block !important;
+    padding: 16px 32px !important;
+    border-radius: 999px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid var(--espresso) !important;
+    background: transparent !important;
+    color: var(--espresso) !important;
+}
+
+.cta-secondary:hover {
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    transform: translateY(-1px) !important;
+}
+
 /* Hide the ::before content */
 .hero-details::before {
     display: none !important;
