@@ -296,8 +296,8 @@ body {
 
 .nav-link {
     color: var(--text) !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
 }
 
 .nav-link:hover {
