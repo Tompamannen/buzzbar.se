@@ -950,66 +950,106 @@ footer {
 }
 
 .comparison-card {
-    background: white;
+    background: #f5f5f5;
     padding: 32px;
     border-radius: 16px;
-    border: 2px solid rgba(44, 24, 16, 0.08);
+    border: 2px dashed rgba(44, 24, 16, 0.15);
     transition: all 0.3s ease;
+    opacity: 0.75;
+    filter: grayscale(0.3);
+    position: relative;
+}
+
+.comparison-card::after {
+    content: '❌';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    opacity: 0.4;
 }
 
 .comparison-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--caramel);
+    opacity: 0.85;
 }
 
+.comparison-card h3 {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.comparison-card .info-eyebrow {
+    color: #999;
+}
+
+.comparison-card .info-list li {
+    color: #777;
+}
+
+.comparison-card .info-list li::before {
+    content: '✗';
+    color: #d97917;
+}
+
+/* Ampra Card - The Winner! */
 .comparison-card--highlight {
-    background: linear-gradient(135deg, var(--espresso) 0%, #3E2723 100%);
-    border-color: var(--espresso);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    border: 3px solid #8b5cf6;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(184, 121, 79, 0.3);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
+    opacity: 1;
+    filter: none;
+    transform: scale(1.05);
+}
+
+.comparison-card--highlight::after {
+    content: '';
+    display: none;
 }
 
 .comparison-card--highlight::before {
-    content: '✨';
+    content: '⭐';
     position: absolute;
     top: 16px;
     right: 16px;
-    font-size: 24px;
+    font-size: 28px;
     animation: sparkle 2s ease-in-out infinite;
 }
 
 @keyframes sparkle {
     0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-    50% { opacity: 0.7; transform: scale(1.1) rotate(10deg); }
+    50% { opacity: 0.8; transform: scale(1.15) rotate(15deg); }
 }
 
 .comparison-card--highlight:hover {
-    box-shadow: 0 15px 50px rgba(184, 121, 79, 0.4);
-    transform: translateY(-8px);
+    box-shadow: 0 25px 70px rgba(139, 92, 246, 0.5);
+    transform: scale(1.08) translateY(-5px);
 }
 
 .comparison-card--highlight .info-eyebrow {
-    color: var(--caramel);
+    color: #fbbf24;
+    font-weight: 700;
 }
 
 .comparison-card--highlight h3 {
-    color: var(--cream);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .comparison-card--highlight .info-list li {
-    color: rgba(245, 241, 232, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
 }
 
 .comparison-card--highlight .info-list li::before {
-    color: var(--caramel);
-}
-
-.comparison-card h3 {
-    font-size: 1.4rem;
-    color: var(--espresso);
-    margin-bottom: 20px;
+    content: '✓';
+    color: #22c55e;
     font-weight: 700;
+    font-size: 18px;
 }
 
 /* Scroll Reveal Animation */
