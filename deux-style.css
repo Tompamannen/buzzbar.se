@@ -1164,47 +1164,49 @@ footer {
 /* Quantity Carousel Wrapper */
 .quantity-carousel-wrapper {
     position: relative;
-    max-width: 500px;
+    max-width: 1200px;
     margin: 0 auto 40px;
-    padding: 0 60px;
+    padding: 0 80px;
 }
 
 .quantity-carousel {
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     position: relative;
-    border-radius: 24px;
 }
 
 .quantity-card {
     background: white;
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 30px 24px;
     border: 2px solid rgba(44, 24, 16, 0.1);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    opacity: 0;
-    transform: translateX(100%) scale(0.8);
-    pointer-events: none;
+    flex: 0 0 300px;
+    opacity: 0.6;
+    transform: scale(0.85);
+    cursor: pointer;
+}
+
+.quantity-card:hover {
+    opacity: 0.8;
+    transform: scale(0.88);
 }
 
 .quantity-card.active {
-    position: relative;
     opacity: 1;
-    transform: translateX(0) scale(1);
-    pointer-events: all;
+    transform: scale(1);
+    flex: 0 0 380px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    cursor: default;
 }
 
-.quantity-card.prev {
-    opacity: 0.3;
-    transform: translateX(-100%) scale(0.8);
-}
-
+.quantity-card.prev,
 .quantity-card.next {
-    opacity: 0.3;
-    transform: translateX(100%) scale(0.8);
+    opacity: 0.6;
 }
 
 /* Popular Card */
@@ -1457,14 +1459,29 @@ footer {
 /* Responsive */
 @media (max-width: 968px) {
     .quantity-carousel-wrapper {
-        padding: 0 50px;
+        padding: 0 20px;
+    }
+    
+    .quantity-carousel {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .quantity-card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .quantity-card.active {
+        flex: 0 0 auto;
+        width: 100%;
     }
     
     .carousel-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
+        display: none;
     }
+}
     
     .products-title {
         font-size: 2.2rem;
