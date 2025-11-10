@@ -132,6 +132,29 @@ body {
     margin: 0 0 30px 0 !important;
 }
 
+.hero-headline em {
+    font-family: 'Yellowtail', cursive !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+    font-size: 1.2em !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.hero-headline em::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -8px !important;
+    left: -10px !important;
+    right: -10px !important;
+    height: 18px !important;
+    background-image: url('brush-stroke.svg') !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    opacity: 0.9 !important;
+}
+
 .hero-subtext {
     font-size: 1.5rem !important;
     color: var(--text-light) !important;
@@ -190,8 +213,13 @@ body {
     z-index: 2 !important;
 }
 
-/* Introducing Banner - Subtle */
+/* Introducing Banner - brown/espresso style */
 .introducing-banner {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1001 !important;
     background: var(--espresso) !important;
     height: 50px !important;
 }
@@ -335,7 +363,7 @@ body {
 
 .our-story,
 .sp-section {
-    background: var(--cream) !important;
+    background: var(--white) !important;
     padding: 100px 0 !important;
     position: relative !important;
     overflow: visible !important;
