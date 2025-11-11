@@ -106,7 +106,9 @@ body {
 }
 
 .hero-colorblock-wrapper {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 60px !important;
 }
 
 .hero-details {
