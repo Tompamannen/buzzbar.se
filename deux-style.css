@@ -120,8 +120,8 @@ body {
 
 .hero-details .container {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 100px !important;
+    grid-template-columns: 1.3fr 1fr !important;
+    gap: 80px !important;
     align-items: center !important;
     justify-items: center !important;
     min-height: 90vh !important;
@@ -140,29 +140,36 @@ body {
 }
 
 .hero-headline {
-    font-size: 6rem !important;
+    font-size: 7.5rem !important;
     font-weight: 700 !important;
-    line-height: 1 !important;
+    line-height: 0.95 !important;
     color: var(--espresso) !important;
     letter-spacing: -0.03em !important;
-    margin: 0 0 30px 0 !important;
+    margin: 0 0 40px 0 !important;
 }
 
 .hero-subtext {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
     color: var(--text-light) !important;
-    line-height: 1.5 !important;
-    margin: 0 0 40px 0 !important;
-    max-width: 400px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 50px 0 !important;
+    max-width: 550px !important;
     vertical-align: baseline !important;
     display: block !important;
+    font-weight: 400 !important;
 }
 
 /* Hero CTA Button Group */
 .hero-cta-group {
     display: flex !important;
-    gap: 12px !important;
+    gap: 20px !important;
     align-items: center !important;
+}
+
+.hero-cta-group .cta-primary,
+.hero-cta-group .cta-secondary {
+    font-size: 1.125rem !important;
+    padding: 18px 40px !important;
     margin-top: 0 !important;
 }
 
