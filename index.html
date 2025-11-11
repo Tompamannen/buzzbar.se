@@ -319,11 +319,11 @@
       <!-- Side-by-side: Text + Graph -->
       <div class="science-split">
         
-        <!-- LEFT: Condensed Text -->
+        <!-- LEFT: Text -->
         <div class="science-text">
-          <h3>Why Ampra Works</h3>
+          <h3>The difference</h3>
           <p class="science-intro">
-            Clean energy without the crash. Here's how our ingredients work together.
+            Most energy products spike you up then drop you hard. We built Ampra to work differently.
           </p>
 
           <div class="science-points">
@@ -331,7 +331,7 @@
               <div class="point-icon">🍃</div>
               <div class="point-content">
                 <h4>Green Tea Caffeine</h4>
-                <p>~80mg of natural caffeine for steady alertness without jitters.</p>
+                <p>~80mg per bar. Enough to feel it, not so much you're bouncing off walls.</p>
               </div>
             </div>
 
@@ -339,7 +339,7 @@
               <div class="point-icon">🧘</div>
               <div class="point-content">
                 <h4>L-theanine</h4>
-                <p>Promotes calm focus and smooths out caffeine's edge.</p>
+                <p>Takes the edge off caffeine. You get focus without the jitters.</p>
               </div>
             </div>
 
@@ -347,7 +347,7 @@
               <div class="point-icon">💧</div>
               <div class="point-content">
                 <h4>Electrolytes</h4>
-                <p>Keeps you hydrated for sustained mental performance.</p>
+                <p>Because even mild dehydration kills your focus.</p>
               </div>
             </div>
 
@@ -355,64 +355,40 @@
               <div class="point-icon">🌿</div>
               <div class="point-content">
                 <h4>Adaptogens</h4>
-                <p>Helps your body handle stress and maintain focus.</p>
+                <p>Helps you stay calm when things get hectic.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT: Enhanced Graph -->
+        <!-- RIGHT: Graph -->
         <div class="science-graph">
-          <figure class="curve-enhanced">
-            <svg viewBox="0 0 500 300" role="img" aria-label="Energy levels: Coffee vs Ampra">
+          <figure class="curve">
+            <svg viewBox="0 0 640 200" role="img" aria-label="Caffeine curves: coffee spike vs Ampra smooth"></svg>
+              <defs>rid -->
+              <path d="M48 20 V180 M48 180 H610" stroke="rgba(2,6,23,.12)" stroke-width="1"/>
+              <!-- labels -->
+              <text x="8" y="26" fill="#64748b" font-size="12">Energy</text>
+              <text x="560" y="196" fill="#64748b" font-size="12">Time →</text>
+      
+              <!-- Coffee spike -->
+              <path d="M48 175 C 140 70, 210 45, 270 40 S 380 120, 610 175"
+                    fill="none" stroke="#ef4444" stroke-width="3" opacity=".9"/>
+              <circle cx="270" cy="40" r="3.5" fill="#ef4444"/>
+              <text x="278" y="38" fill="#ef4444" font-size="11">coffee spike</text>
+      
+              <!-- Ampra smooth -->
               <defs>
-                <linearGradient id="ampraGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#8b5cf6"/>
-                  <stop offset="100%" stop-color="#22c55e"/>
+                <linearGradient id="buzzgrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8b5cf6"/>
+                  <stop offset="1" stop-color="#22c55e"/>
                 </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                  <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
               </defs>
-
-              <!-- Grid lines -->
-              <line x1="60" y1="40" x2="60" y2="240" stroke="#e2e8f0" stroke-width="2"/>
-              <line x1="60" y1="240" x2="460" y2="240" stroke="#e2e8f0" stroke-width="2"/>
-              <line x1="60" y1="140" x2="460" y2="140" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
-
-              <!-- Axis labels -->
-              <text x="20" y="45" fill="#64748b" font-size="14" font-weight="600">High</text>
-              <text x="15" y="145" fill="#64748b" font-size="14" font-weight="600">Medium</text>
-              <text x="25" y="245" fill="#64748b" font-size="14" font-weight="600">Low</text>
-              <text x="420" y="265" fill="#64748b" font-size="14" font-weight="600">Time →</text>
-
-              <!-- Coffee spike (red) -->
-              <path d="M60 240 Q 120 80, 180 60 T 300 180 Q 380 220, 460 235"
-                    fill="none" stroke="#ef4444" stroke-width="4" opacity="0.85"/>
-              <circle cx="180" cy="60" r="5" fill="#ef4444"/>
-              
-              <!-- Coffee label -->
-              <rect x="185" y="45" width="95" height="24" fill="white" opacity="0.9" rx="4"/>
-              <text x="190" y="62" fill="#ef4444" font-size="13" font-weight="600">☕ Coffee</text>
-
-              <!-- Ampra smooth curve -->
-              <path d="M60 240 Q 140 160, 220 100 T 380 120 Q 420 130, 460 140"
-                    fill="none" stroke="url(#ampraGrad)" stroke-width="5" filter="url(#glow)"/>
-              
-              <!-- Ampra label -->
-              <rect x="340" y="95" width="100" height="24" fill="white" opacity="0.9" rx="4"/>
-              <text x="345" y="112" fill="#8b5cf6" font-size="13" font-weight="600">⚡ Ampra</text>
-
-              <!-- Annotations -->
-              <text x="180" y="90" fill="#94a3b8" font-size="11" text-anchor="middle">Quick spike</text>
-              <text x="300" y="210" fill="#94a3b8" font-size="11" text-anchor="middle">Crash</text>
-              <text x="380" y="155" fill="#94a3b8" font-size="11" text-anchor="middle">Sustained</text>
+              <path d="M48 175 C 150 150, 260 90, 320 40 S 500 40, 610 150"
+                    fill="none" stroke="url(#buzzgrad)" stroke-width="4"/>
+              <text x="505" y="130" fill="#6d28d9" font-size="11">Ampra target curve</text>
             </svg>
-            <figcaption>Coffee spikes fast then crashes. Ampra delivers steady, sustained energy.</figcaption>
+            <figcaption>Illustrative curves: coffee can peak fast, then dip; Ampra aims for a steadier lift.</figcaption>
           </figure>
         </div>
 
