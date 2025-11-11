@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=36" />
-  <link rel="stylesheet" href="deux-style.css?v=26" />
+  <link rel="stylesheet" href="deux-style.css?v=27" />
 </head>
 <body>
 
@@ -56,56 +56,38 @@
 
 
  <!-- ===== HERO ===== -->
-  <section class="hero hero--colorblock" id="home">
-    <!-- Content first -->
-    <div class="hero-details">
-      <div class="container">
-        <!-- LEFT: Catchy Text -->
-        <div class="hero-text-side">
-          <h1 class="hero-headline">Energy that feels <em>Good.</em></h1>
-          <p class="hero-subtext">Clean caffeine. No crash. Smooth focus.</p>
-          <div class="hero-cta-group">
-            <a href="#products" class="cta-primary">Get Ampra</a>
-            <a href="Products.html" class="cta-secondary">Learn More</a>
-          </div>
+  <section class="hero hero--vercel" id="home">
+    <div class="container">
+      
+      <!-- Hero Text -->
+      <div class="hero-text-center">
+        <h1 class="hero-headline">Energy that feels <em>Good.</em></h1>
+        <p class="hero-subtext">Clean caffeine. No crash. Smooth focus.</p>
+        <div class="hero-cta-group">
+          <a href="#products" class="cta-primary">Get Ampra</a>
+          <a href="Products.html" class="cta-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- 3D Box with Product -->
+      <div class="hero-3d-box">
+        <!-- Background image will go here when you add it -->
+        <div class="box-background">
+          <!-- Placeholder gradient for now, replace with background-image -->
         </div>
         
-        <!-- RIGHT: Product Visual Only -->
-        <div class="hero-product-showcase">
-          <article class="product-card hero-product-card-large">
-            <div class="product-visual">
-              <span class="product-badge">New Release</span>
-              <div class="bar-3d bar-energy-3d"></div>
-            </div>
-            <div class="product-info">
-              <h3>Energy</h3>
-              <p class="product-tagline">Bright, uplifting, sustained.</p>
-              <p class="product-description">Green tea caffeine + B-vitamins.</p>
-              <div class="product-specs">
-                <span class="spec">Electrolytes</span>
-                <span class="spec">No Crash</span>
-                <span class="spec">Gluten-free</span>
-              </div>
-            </div>
-          </article>
+        <!-- Product floating on top -->
+        <div class="hero-product-float">
+          <div class="bar-3d bar-energy-3d"></div>
         </div>
+        
+        <!-- Box edges for 3D effect -->
+        <div class="box-edge box-edge-top"></div>
+        <div class="box-edge box-edge-right"></div>
+        <div class="box-edge box-edge-bottom"></div>
+        <div class="box-edge box-edge-left"></div>
       </div>
-    </div>
 
-    <!-- Color blocks below -->
-    <div class="hero-colorblock-wrapper">
-      <!-- Bold color blocks -->
-      <div class="color-block block-tagline">
-        <div class="container">
-          <h2 class="block-text">the bar that gives you clean energy</h2>
-        </div>
-      </div>
-      
-      <div class="color-block block-accent">
-        <div class="container">
-          <h2 class="block-text">without the crash</h2>
-        </div>
-      </div>
     </div>
   </section>
 
