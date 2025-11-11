@@ -1593,20 +1593,23 @@ footer {
 
 /* Story Boxes Grid */
 .story-boxes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 40px;
 }
 
 .story-box {
     background: white;
-    padding: 32px;
-    border-radius: 16px;
+    padding: 24px 32px;
+    border-radius: 12px;
     border: 2px solid rgba(62, 53, 48, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 .story-box::before {
@@ -1622,8 +1625,8 @@ footer {
 }
 
 .story-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(44, 24, 16, 0.12);
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.12);
     border-color: var(--caramel);
 }
 
@@ -1631,19 +1634,23 @@ footer {
     opacity: 1;
 }
 
+.story-box-content {
+    flex: 1;
+}
+
 .story-box h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--espresso);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-weight: 700;
     position: relative;
-    padding-bottom: 12px;
+    display: inline-block;
 }
 
 .story-box h3::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 40px;
     height: 3px;
@@ -1652,42 +1659,51 @@ footer {
 }
 
 .story-box p {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text);
-    margin: 0;
+    margin: 12px 0 0 0;
     font-weight: 400;
 }
 
 /* Add icons/numbers to boxes */
 .story-box-problem h3::before {
     content: '01';
-    display: block;
+    display: inline-block;
     font-size: 0.75rem;
     color: var(--caramel);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-right: 12px;
+    padding: 4px 10px;
+    background: rgba(184, 121, 79, 0.1);
+    border-radius: 4px;
 }
 
 .story-box-realization h3::before {
     content: '02';
-    display: block;
+    display: inline-block;
     font-size: 0.75rem;
     color: var(--caramel);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-right: 12px;
+    padding: 4px 10px;
+    background: rgba(184, 121, 79, 0.1);
+    border-radius: 4px;
 }
 
 .story-box-solution h3::before {
     content: '03';
-    display: block;
+    display: inline-block;
     font-size: 0.75rem;
     color: var(--caramel);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-right: 12px;
+    padding: 4px 10px;
+    background: rgba(184, 121, 79, 0.1);
+    border-radius: 4px;
 }
 
 /* Responsive */
