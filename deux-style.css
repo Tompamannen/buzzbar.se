@@ -34,7 +34,11 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body - Unified gradient background */
+/* Body - Full page gradient background */
+html {
+    height: 100%;
+}
+
 body {
     background: linear-gradient(to bottom, 
         #ffffff 0%,
@@ -44,9 +48,9 @@ body {
         #ffd9a8 80%,
         #ff9800 100%
     ) !important;
-    background-attachment: fixed !important;
+    background-attachment: scroll !important;
     background-repeat: no-repeat !important;
-    min-height: 100vh !important;
+    min-height: 100% !important;
     color: var(--text) !important;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
     line-height: 1.6 !important;
