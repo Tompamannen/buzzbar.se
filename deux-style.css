@@ -2123,3 +2123,147 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 768px) {
+  /* Simplify or disable heavy animations */
+  .bar-3d,
+  .product-box,
+  .story-3d-box {
+    transform: none !important;
+    transition: transform 0.2s ease !important;
+  }
+  
+  /* Reduce animation complexity */
+  * {
+    animation-duration: 0.3s !important;
+  }
+  
+  /* Optimize transforms for mobile */
+  .quantity-card,
+  .ing-card,
+  .science-point {
+    will-change: auto;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Optimize images */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  /* Reduce carousel complexity on mobile */
+  .quantity-carousel {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Simplify hover effects on mobile (use tap instead) */
+  .quantity-card:hover,
+  .ing-card:hover {
+    transform: none !important;
+  }
+  
+  /* Optimize SVG rendering */
+  svg {
+    shape-rendering: optimizeSpeed;
+  }
+  
+  /* Reduce shadow complexity */
+  .quantity-card,
+  .ing-card,
+  .story-3d-box,
+  .science-graph {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Keep only essential transitions */
+  a, button, .nav-link {
+    transition: opacity 0.2s ease !important;
+  }
+  
+  /* Optimize font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  .nav-link,
+  .carousel-nav,
+  .indicator {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px;
+  }
+  
+  /* Larger touch areas for carousel */
+  .carousel-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Prevent layout shift on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Fixed aspect ratios to prevent reflow */
+  .curve svg,
+  .bar-3d,
+  .product-box {
+    aspect-ratio: auto;
+  }
+  
+  /* Optimize grid layouts */
+  .ing-grid,
+  .science-points,
+  .quantity-carousel {
+    gap: 16px;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
