@@ -2366,3 +2366,67 @@ h1, h2, h3, h4, h5, h6, p {
     box-sizing: border-box;
   }
 }
+
+
+/* ===== HERO MOBILE FIX - STACK VERTICALLY ===== */
+@media (max-width: 768px) {
+  .hero-details .container {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    min-height: auto !important;
+    padding: 40px 20px !important;
+  }
+  
+  .hero-text-side {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-product-showcase {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-colorblock-wrapper {
+    margin-top: 40px !important;
+  }
+  
+  .color-block {
+    padding: 30px 20px !important;
+  }
+  
+  .block-text {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-details .container {
+    padding: 30px 16px !important;
+    gap: 30px !important;
+  }
+  
+  .hero-headline {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem !important;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  
+  .cta-primary,
+  .cta-secondary {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .block-text {
+    font-size: 1.25rem !important;
+  }
+}
