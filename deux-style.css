@@ -3,12 +3,11 @@
     font-style: normal !important;
     font-weight: 900 !important;
     letter-spacing: 0.015em !important;
-    display: inline !important;
+    display: inline-block !important;
     transform: rotate(-1.5deg) scale(1.05) !important;
     text-decoration: underline !important;
     text-decoration-thickness: 0.18em !important;
     text-underline-offset: 0.18em !important;
-    vertical-align: baseline !important;
     text-decoration-skip-ink: none !important;
     text-shadow: 0 4px 12px rgba(15,23,42,.18) !important;
 }
@@ -203,6 +202,7 @@ body {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    margin-top: 60px !important;
 }
 
 .hero .bar-3d {
@@ -1126,7 +1126,7 @@ footer {
 /* ===== HOME PAGE PRODUCTS SECTION ===== */
 
 .products-section {
-    padding: 100px 0;
+    padding: 150px 0 100px 0;
     background: linear-gradient(180deg, #FDFCFA 0%, #F5F1E8 100%);
     position: relative;
     overflow: hidden;
