@@ -2437,3 +2437,52 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 1.25rem !important;
   }
 }
+
+
+/* ===== GRADIENT BACKGROUND - WHITE TO WARM ENERGIZING ORANGE ===== */
+body {
+  background: linear-gradient(to bottom, 
+    #ffffff 0%,
+    #fffcf7 15%,
+    #fff8ed 30%,
+    #fff1db 45%,
+    #ffe4b8 60%,
+    #ffd494 75%,
+    #ffb85e 90%,
+    #ff9933 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Ensure sections have transparent backgrounds to show gradient */
+.hero,
+.products-section,
+.our-story,
+.science-section,
+.sp-section {
+  background: transparent !important;
+}
+
+/* Adjust text colors for better contrast on orange */
+.sp-section,
+footer {
+  color: #1e293b;
+}
+
+.sp-section h2,
+.sp-section h3 {
+  color: #0f172a;
+}
+
+/* Make sure white cards stand out */
+.quantity-card,
+.ing-card,
+.story-3d-box,
+.testimonial-card,
+.sp-card,
+.product-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(255, 153, 51, 0.15) !important;
+}
