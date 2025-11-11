@@ -1864,3 +1864,116 @@ footer {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+
+/* ===== COMPREHENSIVE MOBILE FIXES ===== */
+
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-headline {
+        font-size: 3rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    .hero-subtext {
+        font-size: 1.2rem !important;
+    }
+    
+    .hero-details .hero-product-showcase {
+        margin-top: 60px !important;
+    }
+    
+    .hero-cta-group {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    .hero-cta-group .cta-primary,
+    .hero-cta-group .cta-secondary {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Products Section */
+    .products-section {
+        padding: 80px 0 60px 0 !important;
+    }
+    
+    .products-title {
+        font-size: 2rem !important;
+    }
+    
+    .products-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    /* Story Section */
+    .story-3d-box {
+        padding: 24px !important;
+        transform: none !important;
+    }
+    
+    .story-3d-box .section-eyebrow {
+        font-size: 0.9rem !important;
+        padding: 8px 16px !important;
+    }
+    
+    .story-3d-box .story-title {
+        font-size: 2rem !important;
+    }
+    
+    .story-boxes-grid {
+        gap: 16px !important;
+    }
+    
+    .story-box {
+        padding: 20px !important;
+    }
+    
+    /* Image */
+    .story-image {
+        transform: none !important;
+    }
+    
+    .story-visual::before {
+        display: none !important;
+    }
+    
+    /* Social Proof */
+    .sp-head h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .sp-card {
+        padding: 20px !important;
+    }
+    
+    /* Navigation */
+    .nav-link {
+        font-size: 16px !important;
+    }
+    
+    /* Container padding */
+    .container {
+        padding: 0 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .hero-headline {
+        font-size: 2.5rem !important;
+    }
+    
+    .products-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .story-3d-box .story-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .quantity-card {
+        padding: 24px 20px !important;
+    }
+}
