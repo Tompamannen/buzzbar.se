@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=36" />
-  <link rel="stylesheet" href="deux-style.css?v=20" />
+  <link rel="stylesheet" href="deux-style.css?v=21" />
 </head>
 <body>
 
@@ -312,116 +312,122 @@
       <div class="sc-header">
         <span class="sc-badge">Science</span>
         <h2 class="sc-title">
-          Backed by ingredients that <span class="gold">work</span>
+          The <span class="gold">Science</span> Behind Ampra
         </h2>
-        <p class="sc-sub">
-          Clean stimulation, steady focus, fewer jitters. Here’s the “why” behind Ampra — and how it’s different
-          from quick spikes and sugary fixes.
-        </p>
+      </div>
+
+      <!-- Side-by-side: Text + Graph -->
+      <div class="science-split">
+        
+        <!-- LEFT: Condensed Text -->
+        <div class="science-text">
+          <h3>Why Ampra Works</h3>
+          <p class="science-intro">
+            Clean energy without the crash. Here's how our ingredients work together.
+          </p>
+
+          <div class="science-points">
+            <div class="science-point">
+              <div class="point-icon">🍃</div>
+              <div class="point-content">
+                <h4>Green Tea Caffeine</h4>
+                <p>~80mg of natural caffeine for steady alertness without jitters.</p>
+              </div>
+            </div>
+
+            <div class="science-point">
+              <div class="point-icon">🧘</div>
+              <div class="point-content">
+                <h4>L-theanine</h4>
+                <p>Promotes calm focus and smooths out caffeine's edge.</p>
+              </div>
+            </div>
+
+            <div class="science-point">
+              <div class="point-icon">💧</div>
+              <div class="point-content">
+                <h4>Electrolytes</h4>
+                <p>Keeps you hydrated for sustained mental performance.</p>
+              </div>
+            </div>
+
+            <div class="science-point">
+              <div class="point-icon">🌿</div>
+              <div class="point-content">
+                <h4>Adaptogens</h4>
+                <p>Helps your body handle stress and maintain focus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Enhanced Graph -->
+        <div class="science-graph">
+          <figure class="curve-enhanced">
+            <svg viewBox="0 0 500 300" role="img" aria-label="Energy levels: Coffee vs Ampra">
+              <defs>
+                <linearGradient id="ampraGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#22c55e"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Grid lines -->
+              <line x1="60" y1="40" x2="60" y2="240" stroke="#e2e8f0" stroke-width="2"/>
+              <line x1="60" y1="240" x2="460" y2="240" stroke="#e2e8f0" stroke-width="2"/>
+              <line x1="60" y1="140" x2="460" y2="140" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+
+              <!-- Axis labels -->
+              <text x="20" y="45" fill="#64748b" font-size="14" font-weight="600">High</text>
+              <text x="15" y="145" fill="#64748b" font-size="14" font-weight="600">Medium</text>
+              <text x="25" y="245" fill="#64748b" font-size="14" font-weight="600">Low</text>
+              <text x="420" y="265" fill="#64748b" font-size="14" font-weight="600">Time →</text>
+
+              <!-- Coffee spike (red) -->
+              <path d="M60 240 Q 120 80, 180 60 T 300 180 Q 380 220, 460 235"
+                    fill="none" stroke="#ef4444" stroke-width="4" opacity="0.85"/>
+              <circle cx="180" cy="60" r="5" fill="#ef4444"/>
+              
+              <!-- Coffee label -->
+              <rect x="185" y="45" width="95" height="24" fill="white" opacity="0.9" rx="4"/>
+              <text x="190" y="62" fill="#ef4444" font-size="13" font-weight="600">☕ Coffee</text>
+
+              <!-- Ampra smooth curve -->
+              <path d="M60 240 Q 140 160, 220 100 T 380 120 Q 420 130, 460 140"
+                    fill="none" stroke="url(#ampraGrad)" stroke-width="5" filter="url(#glow)"/>
+              
+              <!-- Ampra label -->
+              <rect x="340" y="95" width="100" height="24" fill="white" opacity="0.9" rx="4"/>
+              <text x="345" y="112" fill="#8b5cf6" font-size="13" font-weight="600">⚡ Ampra</text>
+
+              <!-- Annotations -->
+              <text x="180" y="90" fill="#94a3b8" font-size="11" text-anchor="middle">Quick spike</text>
+              <text x="300" y="210" fill="#94a3b8" font-size="11" text-anchor="middle">Crash</text>
+              <text x="380" y="155" fill="#94a3b8" font-size="11" text-anchor="middle">Sustained</text>
+            </svg>
+            <figcaption>Coffee spikes fast then crashes. Ampra delivers steady, sustained energy.</figcaption>
+          </figure>
+        </div>
+
       </div>
   
-      <!-- Caffeine curve (illustrative) -->
-      <figure class="curve">
-        <svg viewBox="0 0 640 200" role="img" aria-label="Caffeine curves: coffee spike vs Ampra smooth">
-          <!-- grid -->
-          <path d="M48 20 V180 M48 180 H610" stroke="rgba(2,6,23,.12)" stroke-width="1"/>
-          <!-- labels -->
-          <text x="8" y="26" fill="#64748b" font-size="12">Energy</text>
-          <text x="560" y="196" fill="#64748b" font-size="12">Time →</text>
-  
-          <!-- Coffee spike -->
-          <path d="M48 175 C 140 70, 210 45, 270 40 S 380 120, 610 175"
-                fill="none" stroke="#ef4444" stroke-width="3" opacity=".9"/>
-          <circle cx="270" cy="40" r="3.5" fill="#ef4444"/>
-          <text x="278" y="38" fill="#ef4444" font-size="11">coffee spike</text>
-  
-          <!-- Ampra smooth -->
-          <defs>
-            <linearGradient id="buzzgrad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#8b5cf6"/>
-              <stop offset="1" stop-color="#22c55e"/>
-            </linearGradient>
-          </defs>
-          <path d="M48 175 C 150 150, 260 90, 320 40 S 500 40, 610 150"
-                fill="none" stroke="url(#buzzgrad)" stroke-width="4"/>
-          <text x="505" y="130" fill="#6d28d9" font-size="11">Ampra target curve</text>
-        </svg>
-        <figcaption>Illustrative curves: coffee can peak fast, then dip; Ampra aims for a steadier lift.</figcaption>
-      </figure>
-  
-      <!-- Ingredient cards -->
-      <div class="ing-grid">
-  
-        <article class="ing-card ing-lift" tabindex="0">
-          <div class="ing-eyebrow">Lift</div>
-          <h3>Green-tea Caffeine</h3>
-          <p>Steady focus from natural caffeine, without the sharp edge.</p>
-          <ul class="ing-facts">
-            <li><strong>Target per bar:</strong> ~<span class="mono">80 mg</span>*</li>
-            <li><strong>Source:</strong> green tea extract</li>
-            <li><strong>Reason:</strong> pairs well with L-theanine for calmer alertness</li>
-          </ul>
-          <details class="ing-evidence">
-            <summary>Evidence snapshot</summary>
-            <p>Moderate caffeine improves alertness and reaction time; when paired with L-theanine, studies report
-               better task accuracy and fewer jitters (varies by dose and individual).<span class="note">†</span></p>
-          </details>
-        </article>
-  
-        <article class="ing-card ing-smooth" tabindex="0">
-          <div class="ing-eyebrow">Smooth</div>
-          <h3>L-theanine</h3>
-          <p>Promotes calm alertness and smooths caffeine’s lift.</p>
-          <ul class="ing-facts">
-            <li><strong>Typical range:</strong> <span class="mono">100–200 mg</span></li>
-            <li><strong>Effect:</strong> supports attention with relaxed focus</li>
-          </ul>
-          <details class="ing-evidence">
-            <summary>Evidence snapshot</summary>
-            <p>Reviews note L-theanine increases alpha-wave activity (relaxed alertness). Combined with caffeine,
-               it may reduce perceived stress and improve attention switching.</p>
-          </details>
-        </article>
-  
-        <article class="ing-card ing-hydrate" tabindex="0">
-          <div class="ing-eyebrow">Hydrate</div>
-          <h3>Electrolytes</h3>
-          <p>Hydration supports cognition and endurance during long sessions.</p>
-          <ul class="ing-facts">
-            <li>Sodium • Potassium • Magnesium</li>
-            <li>Helps maintain fluid balance for mental stamina</li>
-          </ul>
-          <details class="ing-evidence">
-            <summary>Evidence snapshot</summary>
-            <p>Even mild dehydration can impair mood and focus; electrolyte balance helps prevent those dips.</p>
-          </details>
-        </article>
-  
-        <article class="ing-card ing-adapt" tabindex="0">
-          <div class="ing-eyebrow">Resilience</div>
-          <h3>Adaptogens</h3>
-          <p>Stress-support so focus actually sticks (e.g., rhodiola, ashwagandha).</p>
-          <ul class="ing-facts">
-            <li>Targets perceived fatigue and stress reactivity</li>
-            <li>Complements caffeine’s alertness with composure</li>
-          </ul>
-          <details class="ing-evidence">
-            <summary>Evidence snapshot</summary>
-            <p>Emerging research suggests some adaptogens reduce fatigue and support stress adaptation in healthy
-               adults; effects vary with dose and personal response.</p>
-          </details>
-        </article>
-  
-      </div>
+      <!-- Ingredient cards removed - simplified -->
   
       <!-- How it works -->
       <div class="hiw">
-        <h3 class="hiw-title">How it works — the quick version</h3>
+        <h3 class="hiw-title">How it works</h3>
         <ol class="hiw-steps">
           <li><span>1</span><strong>Lift</strong>: natural caffeine wakes up adenosine-fog — no harsh spike.</li>
           <li><span>2</span><strong>Smooth</strong>: L-theanine modulates the lift → calm focus, fewer jitters.</li>
           <li><span>3</span><strong>Hydrate</strong>: electrolytes keep the system balanced while you think.</li>
-          <li><span>4</span><strong>Resilience</strong>: adaptogens help your brain stay in “get-stuff-done” mode.</li>
+          <li><span>4</span><strong>Resilience</strong>: adaptogens help your brain stay in "get-stuff-done" mode.</li>
         </ol>
       </div>
   
@@ -429,7 +435,7 @@
       <div class="sc-faq">
         <details>
           <summary>Why green tea instead of coffee?</summary>
-          <p>Green tea has a gentler curve and plays nicely with L-theanine. Coffee’s great — we just wanted a
+          <p>Green tea has a gentler curve and plays nicely with L-theanine. Coffee's great — we just wanted a
              carry-anywhere option with fewer spikes and no brewing.</p>
         </details>
         <details>
@@ -450,9 +456,6 @@
   
     </div>
   </section>
-<!-- ===== NUTRITION SECTION REMOVED ===== -->
-<section id="nutrition" class="nt-section" style="display: none;">
-  <div class="container">
 
     <!-- Header -->
     <div class="nt-head">

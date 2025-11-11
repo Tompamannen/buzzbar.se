@@ -1977,3 +1977,149 @@ footer {
         padding: 24px 20px !important;
     }
 }
+
+
+/* ===== SCIENCE SECTION REDESIGN ===== */
+.science-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.science-text h3 {
+  font-size: 2rem;
+  color: var(--deep-plum);
+  margin-bottom: 16px;
+}
+
+.science-intro {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.science-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.science-point {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.point-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f4ff 0%, #fff 100%);
+  border-radius: 12px;
+  border: 2px solid #e9d5ff;
+}
+
+.point-content h4 {
+  font-size: 1.2rem;
+  color: var(--deep-plum);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.point-content p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.science-graph {
+  background: linear-gradient(135deg, #faf8ff 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  border: 2px solid #e9d5ff;
+}
+
+.curve-enhanced {
+  margin: 0;
+}
+
+.curve-enhanced svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curve-enhanced figcaption {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 968px) {
+  .science-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .science-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .science-intro {
+    font-size: 1rem;
+  }
+  
+  .point-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6rem;
+  }
+  
+  .point-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .point-content p {
+    font-size: 0.9rem;
+  }
+  
+  .science-graph {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .science-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .science-points {
+    gap: 20px;
+  }
+  
+  .point-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+  
+  .point-content h4 {
+    font-size: 1rem;
+  }
+  
+  .curve-enhanced figcaption {
+    font-size: 0.85rem;
+  }
+}
