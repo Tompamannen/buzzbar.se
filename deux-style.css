@@ -1556,56 +1556,94 @@ footer {
 }
 
 
-/* ===== SLEEK OUR STORY SECTION ===== */
+/* ===== INNOVATIVE OUR STORY SECTION WITH BACKGROUND IMAGE ===== */
 
-.story-3d-box {
-    background: white;
-    padding: 60px;
-    border-radius: 16px;
+.story-hero-wrapper {
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(62, 53, 48, 0.08);
-    transition: all 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Adjust spacing inside the box */
-.story-3d-box .section-eyebrow {
-    margin-bottom: 20px;
+.story-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.story-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.85) 30%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.85) 70%,
+        rgba(255, 255, 255, 0.95) 100%
+    );
+    z-index: 2;
+}
+
+.story-content-wrapper {
+    position: relative;
+    z-index: 3;
+    padding: 100px 40px;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.story-header .section-eyebrow {
     display: inline-block;
     padding: 8px 20px;
-    background: transparent;
-    border: 1px solid var(--caramel);
+    background: white;
+    border: 2px solid var(--caramel);
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.9rem;
     color: var(--caramel);
     letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.story-3d-box .story-title {
-    margin-bottom: 40px;
-    position: relative;
-    line-height: 1.2;
-    font-size: 2.5rem;
+.story-header .story-title {
+    font-size: 3.5rem;
     color: var(--espresso);
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
 }
 
-/* Story Boxes Grid */
-.story-boxes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 40px;
+/* Positioned Story Boxes */
+.story-boxes-positioned {
+    position: relative;
+    min-height: 600px;
 }
 
 .story-box {
-    background: white;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 20px;
     border: 2px solid rgba(62, 53, 48, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 380px;
     overflow: hidden;
 }
 
@@ -1614,16 +1652,16 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--caramel);
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--caramel), var(--espresso));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .story-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(44, 24, 16, 0.12);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
     border-color: var(--caramel);
 }
 
@@ -1632,7 +1670,7 @@ footer {
 }
 
 .story-box h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--espresso);
     margin-bottom: 16px;
     font-weight: 700;
@@ -1645,7 +1683,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: 50px;
     height: 3px;
     background: var(--caramel);
     border-radius: 2px;
@@ -1659,53 +1697,119 @@ footer {
     font-weight: 400;
 }
 
-/* Add icons/numbers to boxes */
+/* Add numbers to boxes */
 .story-box-problem h3::before {
     content: '01';
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--caramel);
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
     margin-bottom: 8px;
 }
 
 .story-box-realization h3::before {
     content: '02';
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--caramel);
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
     margin-bottom: 8px;
 }
 
 .story-box-solution h3::before {
     content: '03';
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--caramel);
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
     margin-bottom: 8px;
 }
 
-/* Responsive */
-@media (max-width: 968px) {
-    .story-boxes-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+/* Position boxes around the image */
+.story-box-top-left {
+    top: 0;
+    left: 5%;
+    animation: float-box 6s ease-in-out infinite;
+}
+
+.story-box-middle-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float-box 6s ease-in-out infinite 2s;
+}
+
+.story-box-middle-center:hover {
+    transform: translate(-50%, -50%) translateY(-8px) scale(1.02);
+}
+
+.story-box-top-right {
+    top: 0;
+    right: 5%;
+    animation: float-box 6s ease-in-out infinite 4s;
+}
+
+@keyframes float-box {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
 
 /* Responsive */
 @media (max-width: 968px) {
-    .story-3d-box {
-        padding: 30px;
+    .story-content-wrapper {
+        padding: 60px 20px;
     }
     
-    .story-3d-box .story-title {
+    .story-header .story-title {
+        font-size: 2.5rem;
+    }
+    
+    .story-header {
+        margin-bottom: 60px;
+    }
+    
+    .story-boxes-positioned {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        min-height: auto;
+    }
+    
+    .story-box {
+        position: static !important;
+        max-width: 100%;
+        transform: none !important;
+        animation: none !important;
+    }
+    
+    .story-box:hover {
+        transform: translateY(-4px) !important;
+    }
+    
+    .story-box-middle-center:hover {
+        transform: translateY(-4px) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .story-header .story-title {
         font-size: 2rem;
+    }
+    
+    .story-box {
+        padding: 24px;
+    }
+    
+    .story-box h3 {
+        font-size: 1.3rem;
     }
 }
 
