@@ -34,9 +34,19 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body - Cream background like DEUX */
+/* Body - Unified gradient background */
 body {
-    background: var(--cream) !important;
+    background: linear-gradient(to bottom, 
+        #ffffff 0%,
+        #fff9f0 20%,
+        #fff3e0 40%,
+        #ffead0 60%,
+        #ffd9a8 80%,
+        #ff9800 100%
+    ) !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh !important;
     color: var(--text) !important;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
     line-height: 1.6 !important;
@@ -46,7 +56,7 @@ body {
 /* Hero - Minimal, product-focused */
 .hero,
 .hero--colorblock {
-    background: var(--white) !important;
+    background: transparent !important;
     min-height: 90vh !important;
     padding: 0 !important;
     display: flex !important;
@@ -409,10 +419,10 @@ body {
     font-weight: 500 !important;
 }
 
-/* Sections - Alternating cream/white */
+/* Sections - Transparent to show gradient */
 .science-section,
 .nt-section {
-    background: var(--white) !important;
+    background: transparent !important;
     padding: 100px 0 !important;
     position: relative !important;
     /* Allow decorative drips to extend into next section */
@@ -422,7 +432,7 @@ body {
 
 .our-story,
 .sp-section {
-    background: var(--white) !important;
+    background: transparent !important;
     padding: 100px 0 !important;
     position: relative !important;
     overflow: visible !important;
@@ -673,7 +683,7 @@ footer {
 
 /* Products Hero Section */
 .products-hero {
-    background: linear-gradient(135deg, #F5F1E8 0%, #E8E3D8 100%);
+    background: transparent !important;
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
@@ -827,11 +837,11 @@ footer {
 }
 
 .page-section--on-white {
-    background: #FDFCFA;
+    background: transparent !important;
 }
 
 .page-section--soft {
-    background: linear-gradient(180deg, #F5F1E8 0%, #FDFCFA 100%);
+    background: transparent !important;
     position: relative;
 }
 
@@ -1136,7 +1146,7 @@ footer {
 
 .products-section {
     padding: 150px 0 100px 0;
-    background: linear-gradient(180deg, #FDFCFA 0%, #F5F1E8 100%);
+    background: transparent !important;
     position: relative;
     overflow: hidden;
 }
@@ -1750,7 +1760,7 @@ footer {
 /* ===== CLEANER SOCIAL PROOF SECTION ===== */
 
 .sp-section {
-    background: linear-gradient(180deg, #FDFCFA 0%, #F5F1E8 100%) !important;
+    background: transparent !important;
     padding: 80px 0 !important;
 }
 
@@ -2439,50 +2449,54 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-/* ===== GRADIENT BACKGROUND - WHITE TO WARM ENERGIZING ORANGE ===== */
-body {
-  background: linear-gradient(to bottom, 
-    #ffffff 0%,
-    #fffcf7 15%,
-    #fff8ed 30%,
-    #fff1db 45%,
-    #ffe4b8 60%,
-    #ffd494 75%,
-    #ffb85e 90%,
-    #ff9933 100%
-  );
-  background-attachment: fixed;
-  min-height: 100vh;
-}
+/* ===== UNIFIED GRADIENT BACKGROUND - WHITE TO BRIGHT ORANGE ===== */
 
-/* Ensure sections have transparent backgrounds to show gradient */
+/* Ensure all sections are transparent to show the unified gradient */
 .hero,
 .products-section,
 .our-story,
 .science-section,
-.sp-section {
+.sp-section,
+.nt-section,
+.products-hero,
+.page-section,
+.page-section--on-white,
+.page-section--soft {
   background: transparent !important;
 }
 
-/* Adjust text colors for better contrast on orange */
+/* Adjust text colors for better contrast on orange at bottom */
 .sp-section,
 footer {
   color: #1e293b;
 }
 
 .sp-section h2,
-.sp-section h3 {
-  color: #0f172a;
+.sp-section h3,
+footer h2,
+footer h3 {
+  color: #0f172a !important;
 }
 
-/* Make sure white cards stand out */
+/* Make sure white cards stand out against gradient */
 .quantity-card,
 .ing-card,
 .story-3d-box,
 .testimonial-card,
 .sp-card,
-.product-card {
+.product-card,
+.science-card,
+.nt-card,
+.founder-card,
+.info-card,
+.comparison-card {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(255, 153, 51, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(255, 152, 0, 0.15) !important;
+}
+
+/* Ensure product info banner stands out */
+.product-info-banner {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
 }
