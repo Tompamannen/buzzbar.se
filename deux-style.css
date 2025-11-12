@@ -304,12 +304,19 @@ body {
 }
 
 .brand-word {
-    background: var(--espresso) !important;
+    background: linear-gradient(135deg, var(--espresso) 0%, var(--caramel) 100%) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
-    font-size: 2rem !important;
-    font-weight: 700 !important;
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    transition: all 0.3s ease !important;
+}
+
+.brand-word:hover {
+    letter-spacing: 0.1em !important;
+    transform: scale(1.05) !important;
 }
 
 .brand-sub {
