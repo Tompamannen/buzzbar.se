@@ -301,6 +301,11 @@ body {
     background: rgba(253, 252, 250, 0.95) !important;
     backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid rgba(62, 53, 48, 0.08) !important;
+    overflow-x: hidden !important;
+}
+
+.header-inner {
+    overflow-x: hidden !important;
 }
 
 .brand-word {
