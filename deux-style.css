@@ -311,12 +311,11 @@ body {
     font-size: 2.5rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
-    transition: all 0.3s ease !important;
+    transition: transform 0.3s ease !important;
 }
 
 .brand-word:hover {
-    letter-spacing: 0.1em !important;
-    transform: scale(1.05) !important;
+    transform: scale(1.02) !important;
 }
 
 .brand-sub {
