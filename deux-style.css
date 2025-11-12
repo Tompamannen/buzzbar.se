@@ -301,11 +301,15 @@ body {
     background: rgba(253, 252, 250, 0.95) !important;
     backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid rgba(62, 53, 48, 0.08) !important;
-    overflow-x: hidden !important;
+    overflow: visible !important;
 }
 
 .header-inner {
-    overflow-x: hidden !important;
+    overflow: visible !important;
+}
+
+.main-nav {
+    overflow: visible !important;
 }
 
 .brand-word {
