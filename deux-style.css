@@ -2425,9 +2425,7 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center !important;
     max-width: 100% !important;
     padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    order: 1 !important;
+    display: contents !important;
   }
   
   .hero-headline {
@@ -2435,17 +2433,19 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.1 !important;
     margin-bottom: 16px !important;
     order: 1 !important;
+    text-align: center !important;
   }
   
   .hero-subtext {
     font-size: 1rem !important;
     margin: 16px 0 24px !important;
     order: 2 !important;
+    text-align: center !important;
   }
   
   .hero-product-showcase {
     display: flex !important;
-    order: 2 !important;
+    order: 3 !important;
     width: 100% !important;
     max-width: 100% !important;
     justify-content: center !important;
