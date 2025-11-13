@@ -5708,26 +5708,7 @@ h1, h2, h3,
   }
 }
 
-/* =========================================================
-   OVERRIDE OLD REVIEWS / REACTIONS STYLES
-   ========================================================= */
 
-#reactions *,
-.reaction-card,
-.reactions-grid,
-.review-card,
-.review-item,
-.reviews-grid,
-.reactions-section {
-  all: unset !important;
-  display: revert !important;
-}
-
-/* Reset layout containers so they don't inherit old grid/flex */
-#reactions {
-  all: unset !important;
-  display: block !important;
-}
 
 /* =========================================================
    NEW REVIEWS BELT STYLING (FULLY OVERRIDES OLD)
