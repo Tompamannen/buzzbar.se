@@ -5921,17 +5921,30 @@ h1, h2, h3,
 /* Mobile */
 @media (max-width: 640px) {
   .reviews-static-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    max-width: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 100%;
+  }
+  
+  .review-video {
+    aspect-ratio: 9 / 16;
+  }
+  
+  .review-play {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .review-text {
+    padding: 0 4px;
   }
   
   .review-text h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .review-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -6350,44 +6363,46 @@ h1, h2, h3,
   
   .reviews-summary {
     margin: 0 16px 40px;
-    padding: 20px;
-    gap: 20px;
+    padding: 24px 20px;
+    gap: 24px;
+    flex-direction: column;
   }
   
   .average-rating {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+    flex-direction: row;
+    gap: 16px;
+    text-align: left;
+    justify-content: flex-start;
   }
   
   .rating-number {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   
   .rating-details {
-    align-items: center;
+    align-items: flex-start;
   }
   
   .rating-stars-large {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
   }
   
   .rating-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .rating-breakdown {
-    gap: 10px;
+    gap: 8px;
   }
   
   .rating-bar-row {
-    gap: 10px;
+    gap: 8px;
   }
   
   .star-label {
-    min-width: 30px;
-    font-size: 0.85rem;
+    min-width: 28px;
+    font-size: 0.8rem;
   }
   
   .rating-bar-container {
@@ -6395,14 +6410,14 @@ h1, h2, h3,
   }
   
   .rating-count {
-    min-width: 35px;
-    font-size: 0.8rem;
+    min-width: 32px;
+    font-size: 0.75rem;
   }
   
   .recommendation-text {
-    font-size: 0.9rem;
-    padding-top: 12px;
-    margin-top: 4px;
+    font-size: 0.85rem;
+    padding-top: 10px;
+    margin-top: 2px;
   }
   
   .reviews-carousel-wrapper {
@@ -6411,13 +6426,13 @@ h1, h2, h3,
   
   .reviews-carousel {
     padding: 0 16px;
-    gap: 12px;
+    gap: 16px;
   }
   
   .customer-review-card {
-    min-width: 280px;
-    max-width: 280px;
-    padding: 20px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 24px;
     gap: 16px;
     scroll-snap-align: start;
   }
