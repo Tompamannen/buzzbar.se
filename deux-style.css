@@ -2427,7 +2427,7 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    order: 2 !important;
+    order: 1 !important;
   }
   
   .hero-headline {
@@ -2445,11 +2445,11 @@ h1, h2, h3, h4, h5, h6, p {
   
   .hero-product-showcase {
     display: flex !important;
-    order: 1 !important;
+    order: 2 !important;
     width: 100% !important;
     max-width: 100% !important;
     justify-content: center !important;
-    margin-bottom: 20px !important;
+    margin: 20px 0 !important;
   }
   
   .hero-product-card-large {
@@ -2461,7 +2461,7 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column !important;
     gap: 16px !important;
     align-items: center !important;
-    order: 3 !important;
+    order: 4 !important;
   }
   
   .hero-cta-group a {
