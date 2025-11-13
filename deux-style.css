@@ -1899,8 +1899,8 @@ footer {
 @media (max-width: 768px) {
     /* Hero Section */
     .hero-headline {
-        font-size: 3rem !important;
-        line-height: 1.1 !important;
+        font-size: 8rem !important;
+        line-height: 1.05 !important;
     }
     
     .hero-description {
@@ -1994,7 +1994,7 @@ footer {
 @media (max-width: 480px) {
     /* Extra small screens */
     .hero-headline {
-        font-size: 2.5rem !important;
+        font-size: 7rem !important;
     }
     
     .hero-description {
@@ -2494,7 +2494,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
   .hero-headline {
-    font-size: 2rem !important;
+    font-size: 7rem !important;
   }
   
   .hero-subtext {
