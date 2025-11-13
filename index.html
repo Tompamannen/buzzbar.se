@@ -910,7 +910,51 @@
       });
     })();
   </script>
-  
+    <!-- ===== REVIEWS MARQUEE SCRIPT ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const wrapper = document.querySelector('.reviews-rail-wrapper');
+      const rail = document.querySelector('.reviews-rail');
+      if (!wrapper || !rail) return;
+
+      // Duplicate the content for looping
+      rail.innerHTML += rail.innerHTML;
+
+      const halfWidth = () => rail.scrollWidth / 2;
+      const SPEED = 0.6; // tweak speed here
+      let lastUserScroll = Date.now();
+
+      wrapper.addEventListener('scroll', () => {
+        lastUserScroll = Date.now();
+
+        const max = halfWidth();
+        if (wrapper.scrollLeft >= max) {
+          wrapper.scrollLeft -= max;
+        } else if (wrapper.scrollLeft < 0) {
+          wrapper.scrollLeft += max;
+        }
+      });
+
+      function autoScroll() {
+        const now = Date.now();
+        const idle = now - lastUserScroll;
+
+        // Auto-scroll only when user hasn't interacted for ~0.6s
+        if (idle > 600) {
+          wrapper.scrollLeft += SPEED;
+          const max = halfWidth();
+          if (wrapper.scrollLeft >= max) {
+            wrapper.scrollLeft -= max;
+          }
+        }
+
+        requestAnimationFrame(autoScroll);
+      }
+
+      autoScroll();
+    });
+  </script>
+
 </body>
 </html>
 
