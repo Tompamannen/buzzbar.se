@@ -5583,3 +5583,127 @@ h1, h2, h3,
 .review-meta .meta span { color: var(--text-muted); font-size: .9rem; }
 
 .reviews-footnote { text-align:center; color: var(--text-muted); margin-top: 18px; }
+
+
+/* ===== OUR REACTIONS / REVIEWS MARQUEE ===== */
+
+.reviews-marquee {
+  padding: 72px 0 64px;
+  background: var(--milk-white);
+}
+
+.reviews-header {
+  text-align: center;
+}
+
+.reviews-header h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.4rem);
+  color: var(--espresso);
+  margin-bottom: 8px;
+}
+
+.reviews-sub {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* Band that holds the conveyor of cards */
+.reviews-band {
+  margin-top: 32px;
+  overflow: hidden;
+  background: #f6efe5;
+  border-top: 1px solid rgba(62,39,35,0.06);
+  border-bottom: 1px solid rgba(62,39,35,0.06);
+  padding: 18px 0;
+}
+
+/* Track that moves left */
+.reviews-track {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 20px;
+  padding-left: 20px;
+  animation: reviews-scroll 32s linear infinite;
+}
+
+@keyframes reviews-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual cards */
+.review-card {
+  flex: 0 0 320px;
+  max-width: 360px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid rgba(62,39,35,0.06);
+}
+
+.review-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #ffe7c2, #f29b54);
+  color: var(--espresso);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.review-avatar-initial {
+  transform: translateY(1px);
+}
+
+.review-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-stars {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+}
+
+.review-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--espresso);
+}
+
+.review-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Footnote */
+.reviews-footnote {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .review-card {
+    flex: 0 0 260px;
+  }
+}
