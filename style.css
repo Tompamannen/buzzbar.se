@@ -1640,7 +1640,7 @@ footer::after {
         flex-direction: column;
         text-align: center;
         gap: 40px;
-        padding-top: 140px;
+        padding-top: 180px;
     }
     
     .hero-content {
