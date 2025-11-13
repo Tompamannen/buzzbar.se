@@ -2429,12 +2429,12 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
   .hero-headline {
-    font-size: 3.5rem !important;
-    line-height: 1.2 !important;
+    font-size: 4rem !important;
+    line-height: 1.15 !important;
     margin-bottom: 16px !important;
     order: 1 !important;
     text-align: center !important;
-    max-width: 320px !important;
+    max-width: 260px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
