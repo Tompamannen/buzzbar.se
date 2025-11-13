@@ -4554,7 +4554,68 @@ html, body { margin: 0; }
   }
 }
 
+@media (max-width: 768px) {
+  .hero--colorblock {
+    padding: 120px 0 0 0;
+  }
+  
+  .color-block {
+    padding: 40px 0;
+  }
+  
+  .block-intro {
+    padding: 50px 0 40px;
+  }
+  
+  .block-tagline,
+  .block-accent {
+    padding: 50px 0;
+    margin: -10px 0;
+  }
+  
+  .block-text {
+    font-size: clamp(1.8rem, 10vw, 3.5rem);
+    line-height: 1.1;
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 640px) {
+  .hero--colorblock {
+    padding: 100px 0 0 0;
+  }
+  
+  .color-block {
+    padding: 32px 0;
+  }
+  
+  .block-intro {
+    padding: 40px 0 32px;
+  }
+  
+  .block-tagline,
+  .block-accent {
+    padding: 40px 0;
+    margin: -8px 0;
+    transform: perspective(1500px) rotateX(0deg);
+  }
+  
+  .block-tagline:hover,
+  .block-accent:hover {
+    transform: perspective(1500px) rotateX(0deg) scale(1);
+  }
+  
+  .block-text {
+    font-size: clamp(1.5rem, 9vw, 2.5rem);
+    line-height: 1.15;
+    padding: 0 16px;
+    letter-spacing: -0.02em;
+  }
+  
+  .hero-details {
+    padding: 40px 0 60px;
+  }
+  
   .hero-details .product-visual {
     padding: 40px 20px;
     min-height: 320px;
