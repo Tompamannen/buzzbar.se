@@ -5876,3 +5876,26 @@ h1, h2, h3,
     flex: 0 0 220px;
   }
 }
+
+/* --- Reviews belt: use scroll instead of transform animation --- */
+
+/* stop any previous keyframe animation */
+.reviews-rail {
+  animation: none !important;
+}
+
+/* make the wrapper horizontally scrollable */
+.reviews-rail-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide scrollbars (but keep scroll functionality) */
+.reviews-rail-wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+.reviews-rail-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
+}
