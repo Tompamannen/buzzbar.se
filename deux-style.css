@@ -1577,15 +1577,15 @@ footer {
     
     .quantity-card {
         flex: 0 0 auto;
-        width: 85%;
-        max-width: 350px;
+        width: 70%;
+        max-width: 300px;
         scroll-snap-align: center;
     }
     
     .quantity-card.active {
         flex: 0 0 auto;
-        width: 85%;
-        max-width: 350px;
+        width: 70%;
+        max-width: 300px;
     }
     
     .carousel-nav {
