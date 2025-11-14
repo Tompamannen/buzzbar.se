@@ -1557,8 +1557,9 @@ footer {
 /* Responsive */
 @media (max-width: 968px) {
     .quantity-carousel-wrapper {
-        padding: 0 20px;
+        padding: 0;
         overflow: hidden;
+        margin: 0 -20px;
     }
     
     .quantity-carousel {
@@ -1568,7 +1569,7 @@ footer {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none; /* Firefox */
-        padding-bottom: 10px;
+        padding: 0 20px 10px 20px;
     }
     
     .quantity-carousel::-webkit-scrollbar {
