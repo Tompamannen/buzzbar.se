@@ -82,14 +82,15 @@
       <!-- CTA -->
       <a href="#products" class="cta-contact">Buy Now</a>
 
-      <!-- Mobile Cart Button -->
-      <a href="#products" class="mobile-cart-btn" aria-label="Add to cart">
+      <!-- Cart Button (Mobile & Desktop) -->
+      <button class="cart-btn" aria-label="View cart">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="9" cy="21" r="1"></circle>
           <circle cx="20" cy="21" r="1"></circle>
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
         </svg>
-      </a>
+        <span class="cart-count">0</span>
+      </button>
 
       <!-- Hamburger Menu Button (Mobile Only) -->
       <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
@@ -1218,6 +1219,38 @@
 
       // Initialize
       updateCarousel();
+    })();
+  </script>
+
+  <!-- Cart Functionality Script -->
+  <script>
+    (function() {
+      let cartCount = 0;
+      const cartCountElement = document.querySelector('.cart-count');
+      const buyButtons = document.querySelectorAll('.quantity-cta');
+      
+      function updateCartCount() {
+        cartCountElement.textContent = cartCount;
+        if (cartCount > 0) {
+          cartCountElement.classList.add('has-items');
+        } else {
+          cartCountElement.classList.remove('has-items');
+        }
+      }
+      
+      buyButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          cartCount++;
+          updateCartCount();
+          
+          // Add animation feedback
+          button.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            button.style.transform = '';
+          }, 150);
+        });
+      });
     })();
   </script>
 

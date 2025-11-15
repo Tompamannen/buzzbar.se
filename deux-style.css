@@ -3319,40 +3319,65 @@ h1, h2, h3, h4, h5, h6, p {
     
 }
 
-/* Mobile Cart Button */
-.site-header .mobile-cart-btn {
+/* Cart Button */
+.site-header .cart-btn {
     display: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--espresso);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.site-header .cart-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.site-header .cart-btn:hover {
+    color: var(--caramel);
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--espresso);
+    color: var(--cream);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.cart-count.has-items {
+    opacity: 1;
+    transform: scale(1);
 }
 
 @media (max-width: 768px) {
-    .site-header .mobile-cart-btn {
+    .site-header .cart-btn {
         display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 44px !important;
-        height: 44px !important;
-        color: var(--espresso) !important;
-        background: transparent !important;
-        border: none !important;
-        cursor: pointer !important;
-        transition: all 0.3s ease !important;
         margin-right: 8px !important;
-        flex-shrink: 0 !important;
         order: 2 !important;
     }
     
     .site-header .hamburger-menu {
         order: 3 !important;
-    }
-    
-    .site-header .mobile-cart-btn:hover {
-        color: var(--caramel) !important;
-        transform: scale(1.1) !important;
-    }
-    
-    .site-header .mobile-cart-btn svg {
-        width: 24px !important;
-        height: 24px !important;
     }
     
     .site-header .header-inner {
