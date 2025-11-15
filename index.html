@@ -8,7 +8,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=36" />
-  <link rel="stylesheet" href="deux-style.css?v=29" />
+  <link rel="stylesheet" href="deux-style.css?v=31" />
+  <style>
+    @keyframes scroll-reviews {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    #reviews .reviews-carousel-wrapper {
+      overflow: hidden !important;
+      overflow-x: hidden !important;
+      padding: 40px 0 !important;
+      width: 100% !important;
+    }
+    
+    #reviews .reviews-carousel-track {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 24px !important;
+      animation: scroll-reviews 25s linear infinite !important;
+      width: max-content !important;
+      will-change: transform !important;
+    }
+    
+    #reviews .customer-review-card {
+      flex-shrink: 0 !important;
+      min-width: 380px !important;
+      max-width: 380px !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -160,7 +190,7 @@
           </div>
         </div>
         <div class="quantity-details">
-          <button class="quantity-cta cta-secondary">Buy Now - $29</button>
+          <button class="quantity-cta cta-primary">Buy Now - $29</button>
         </div>
       </article>
 
@@ -195,7 +225,7 @@
           </div>
         </div>
         <div class="quantity-details">
-          <button class="quantity-cta cta-secondary">Buy Now - $75</button>
+          <button class="quantity-cta cta-primary">Buy Now - $75</button>
         </div>
       </article>
 
@@ -704,9 +734,82 @@
     </div>
   </div>
 
-  <div class="reviews-carousel-wrapper"></div></span></div>""
-    <div class="reviews-carousel">
+  <div class="reviews-carousel-wrapper">
+    <div class="reviews-carousel-track">
       
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Finally, an energy bar that doesn't make me crash. Perfect for long study sessions."</p>
+        <div class="review-author">
+          <div class="review-avatar">JS</div>
+          <div class="review-info">
+            <p class="review-name">Jessica S.</p>
+            <p class="review-role">Student</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"The taste is incredible and I actually feel the difference. No jitters, just steady focus."</p>
+        <div class="review-author">
+          <div class="review-avatar">MK</div>
+          <div class="review-info">
+            <p class="review-name">Marcus K.</p>
+            <p class="review-role">Software Engineer</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"I keep these in my bag for travel days. Way better than airport coffee."</p>
+        <div class="review-author">
+          <div class="review-avatar">AL</div>
+          <div class="review-info">
+            <p class="review-name">Anna L.</p>
+            <p class="review-role">Consultant</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Clean ingredients, great energy, and it actually tastes good. That's rare."</p>
+        <div class="review-author">
+          <div class="review-avatar">DW</div>
+          <div class="review-info">
+            <p class="review-name">David W.</p>
+            <p class="review-role">Athlete</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"My go-to for afternoon slumps. No sugar crash, just smooth energy."</p>
+        <div class="review-author">
+          <div class="review-avatar">SC</div>
+          <div class="review-info">
+            <p class="review-name">Sarah C.</p>
+            <p class="review-role">Designer</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="customer-review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Best energy bar I've tried. The focus blend really works."</p>
+        <div class="review-author">
+          <div class="review-avatar">TM</div>
+          <div class="review-info">
+            <p class="review-name">Tom M.</p>
+            <p class="review-role">Entrepreneur</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicate for seamless loop -->
       <article class="customer-review-card">
         <div class="review-stars">★★★★★</div>
         <p class="review-quote">"Finally, an energy bar that doesn't make me crash. Perfect for long study sessions."</p>
