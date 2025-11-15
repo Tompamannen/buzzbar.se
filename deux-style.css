@@ -3088,7 +3088,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
     
     .customer-reviews-section .reviews-carousel-track {
-        animation: scroll-reviews 30s linear infinite !important;
+        animation: scroll-reviews 18s linear infinite !important;
     }
 }
 
