@@ -426,39 +426,55 @@ body {
     box-shadow: none !important;
 }
 
-/* CTA Button - Minimal, clean */
+/* CTA Button - Appealing and enticing */
 .cta-contact,
 .cta-primary {
-    background: var(--espresso) !important;
-    color: var(--cream) !important;
-    padding: 14px 32px !important;
-    border-radius: 0 !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
+    background: linear-gradient(135deg, #2C1810 0%, #3E2723 100%) !important;
+    color: #F5F1E8 !important;
+    padding: 16px 40px !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em !important;
     border: none !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     text-transform: uppercase !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1) !important;
     position: relative !important;
     overflow: hidden !important;
+    cursor: pointer !important;
 }
 
 .cta-contact::before,
 .cta-primary::before {
-    display: none !important;
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(184, 121, 79, 0.3) !important;
+    transform: translate(-50%, -50%) !important;
+    transition: width 0.6s ease, height 0.6s ease !important;
 }
 
 .cta-contact:hover,
 .cta-primary:hover {
-    background: #1a0f0a !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.3) !important;
+    background: linear-gradient(135deg, #3E2723 0%, #4E3329 100%) !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .cta-contact:hover::before,
 .cta-primary:hover::before {
-    display: none !important;
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.cta-contact:active,
+.cta-primary:active {
+    transform: translateY(-1px) scale(0.98) !important;
 }
 
 /* Product Cards - Sharp, modern style */
@@ -3014,3 +3030,156 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
+
+/* ===== REVIEWS MARQUEE ANIMATION ===== */
+.customer-reviews-section .reviews-carousel-wrapper {
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    padding: 40px 0 !important;
+    position: relative !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    -webkit-overflow-scrolling: auto !important;
+    scroll-behavior: auto !important;
+}
+
+.customer-reviews-section .reviews-carousel-track {
+    display: flex !important;
+    gap: 24px !important;
+    animation: scroll-reviews 40s linear infinite !important;
+    width: max-content !important;
+    will-change: transform !important;
+}
+
+.customer-reviews-section .reviews-carousel-track:hover {
+    animation-play-state: paused !important;
+}
+
+@keyframes scroll-reviews {
+    0% {
+        transform: translateX(0) !important;
+    }
+    100% {
+        transform: translateX(-50%) !important;
+    }
+}
+
+.customer-reviews-section .customer-review-card {
+    min-width: 380px !important;
+    max-width: 380px !important;
+    flex-shrink: 0 !important;
+    background: var(--white) !important;
+    padding: 32px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 16px rgba(15,23,42,0.06) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.customer-reviews-section .customer-review-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.1) !important;
+}
+
+@media (max-width: 768px) {
+    .customer-reviews-section .customer-review-card {
+        min-width: 300px !important;
+        max-width: 300px !important;
+    }
+    
+    .customer-reviews-section .reviews-carousel-track {
+        animation: scroll-reviews 30s linear infinite !important;
+    }
+}
+
+
+/* Quantity Buy Now Buttons - Extra appealing */
+.quantity-cta {
+    background: linear-gradient(135deg, #2C1810 0%, #3E2723 100%) !important;
+    color: #F5F1E8 !important;
+    padding: 18px 48px !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    border: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 6px 20px rgba(44, 24, 16, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    width: 100% !important;
+}
+
+.quantity-cta::after {
+    content: '→' !important;
+    position: absolute !important;
+    right: 24px !important;
+    top: 50% !important;
+    transform: translateY(-50%) translateX(0) !important;
+    transition: transform 0.3s ease !important;
+    font-size: 1.3rem !important;
+}
+
+.quantity-cta:hover {
+    background: linear-gradient(135deg, #3E2723 0%, #4E3329 100%) !important;
+    transform: translateY(-4px) scale(1.03) !important;
+    box-shadow: 0 10px 30px rgba(44, 24, 16, 0.45), 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.quantity-cta:hover::after {
+    transform: translateY(-50%) translateX(5px) !important;
+}
+
+.quantity-cta:active {
+    transform: translateY(-2px) scale(1.01) !important;
+}
+
+/* Popular card button - same as others for consistency */
+.quantity-card.popular .quantity-cta {
+    background: linear-gradient(135deg, #2C1810 0%, #3E2723 100%) !important;
+    box-shadow: 0 6px 20px rgba(44, 24, 16, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.quantity-card.popular .quantity-cta:hover {
+    background: linear-gradient(135deg, #3E2723 0%, #4E3329 100%) !important;
+    box-shadow: 0 10px 30px rgba(44, 24, 16, 0.45), 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* Mobile Product Cards Layout */
+@media (max-width: 768px) {
+    .quantity-carousel-wrapper {
+        display: block !important;
+    }
+    
+    .carousel-nav {
+        display: none !important;
+    }
+    
+    .quantity-carousel {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: 16px !important;
+        padding: 0 20px !important;
+    }
+    
+    .quantity-card {
+        min-width: unset !important;
+        max-width: unset !important;
+        width: 100% !important;
+    }
+    
+    /* First two cards side by side */
+    .quantity-card[data-index="0"],
+    .quantity-card[data-index="1"] {
+        grid-column: span 1 !important;
+    }
+    
+    /* Family Pack spans full width */
+    .quantity-card[data-index="2"] {
+        grid-column: span 2 !important;
+    }
+}
