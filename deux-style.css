@@ -3321,7 +3321,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* Cart Button */
 .site-header .cart-btn {
-    display: none;
+    display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -3334,6 +3334,7 @@ h1, h2, h3, h4, h5, h6, p {
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    margin-left: 8px;
 }
 
 .site-header .cart-btn svg {
