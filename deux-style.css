@@ -3263,3 +3263,9 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 4px 8px !important;
     }
 }
+
+    
+    /* Fix Duo Pack subtitle to stay on one line */
+    .quantity-card[data-index="1"] .quantity-subtitle {
+        white-space: nowrap !important;
+    }
