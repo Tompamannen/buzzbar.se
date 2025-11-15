@@ -3293,7 +3293,7 @@ h1, h2, h3, h4, h5, h6, p {
     
     .our-story .story-grid-simple {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
         gap: 20px !important;
         padding: 0 !important;
     }
