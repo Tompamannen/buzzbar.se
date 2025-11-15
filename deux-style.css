@@ -3272,23 +3272,42 @@ h1, h2, h3, h4, h5, h6, p {
 
     
     /* Fix Our Story section spacing on mobile */
+    .our-story .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        max-width: 100% !important;
+    }
+    
+    .our-story .story-box-wrapper {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
     .our-story .story-headline-top {
         font-size: 1.5rem !important;
         line-height: 1.4 !important;
         margin-bottom: 24px !important;
-        padding: 0 8px !important;
+        padding: 0 !important;
+        max-width: 100% !important;
     }
     
     .our-story .story-grid-simple {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        padding: 0 !important;
+    }
+    
+    .our-story .story-content-simple {
+        padding: 0 !important;
+        max-width: 100% !important;
     }
     
     .our-story .story-content-simple p {
         font-size: 1rem !important;
         line-height: 1.7 !important;
         margin-bottom: 16px !important;
+        max-width: 100% !important;
     }
     
     .our-story .story-signature {
