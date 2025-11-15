@@ -166,32 +166,51 @@ body {
 /* Hero CTA Button Group */
 .hero-cta-group {
     display: flex !important;
-    gap: 16px !important;
+    gap: 20px !important;
     align-items: center !important;
     margin-top: 40px !important;
 }
 
 .hero-cta-group .cta-primary {
-    font-size: 0.95rem !important;
-    padding: 14px 32px !important;
+    font-size: 1rem !important;
+    padding: 18px 48px !important;
     margin-top: 0 !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.01em !important;
-    color: #000000 !important;
-    background: #e5e5e5 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: var(--cream) !important;
+    background: var(--espresso) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-cta-group .cta-primary:hover {
+    background: #1a0f0a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.3) !important;
 }
 
 .hero-cta-group .cta-secondary {
-    font-size: 0.95rem !important;
-    padding: 14px 32px !important;
+    font-size: 1rem !important;
+    padding: 18px 48px !important;
     margin-top: 0 !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.01em !important;
-    color: #000000 !important;
-    background: #d4d4d4 !important;
-    border: 2px solid #a3a3a3 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: var(--text) !important;
+    background: transparent !important;
+    border: 2px solid var(--text) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-cta-group .cta-secondary:hover {
+    background: var(--text) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) !important;
 }
 
 .hero-cta-group .cta-primary,
@@ -410,43 +429,36 @@ body {
 /* CTA Button - Minimal, clean */
 .cta-contact,
 .cta-primary {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9) !important;
-    color: var(--white) !important;
-    padding: 16px 40px !important;
-    border-radius: 12px !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.02em !important;
+    background: var(--espresso) !important;
+    color: var(--cream) !important;
+    padding: 14px 32px !important;
+    border-radius: 0 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
     border: none !important;
     transition: all 0.3s ease !important;
-    text-transform: none !important;
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3) !important;
+    text-transform: uppercase !important;
+    box-shadow: none !important;
     position: relative !important;
     overflow: hidden !important;
 }
 
 .cta-contact::before,
 .cta-primary::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: -100% !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent) !important;
-    transition: left 0.5s ease !important;
+    display: none !important;
 }
 
 .cta-contact:hover,
 .cta-primary:hover {
-    background: linear-gradient(135deg, #7c3aed, #5b21b6) !important;
-    transform: translateY(-3px) scale(1.02) !important;
-    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4) !important;
+    background: #1a0f0a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.3) !important;
 }
 
 .cta-contact:hover::before,
 .cta-primary:hover::before {
-    left: 100% !important;
+    display: none !important;
 }
 
 /* Product Cards - Sharp, modern style */
