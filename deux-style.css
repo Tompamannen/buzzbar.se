@@ -3320,12 +3320,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Mobile Cart Button */
-.mobile-cart-btn {
-    display: none !important;
+.site-header .mobile-cart-btn {
+    display: none;
 }
 
 @media (max-width: 768px) {
-    .mobile-cart-btn {
+    .site-header .mobile-cart-btn {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -3337,14 +3337,25 @@ h1, h2, h3, h4, h5, h6, p {
         cursor: pointer !important;
         transition: all 0.3s ease !important;
         margin-right: 8px !important;
+        flex-shrink: 0 !important;
+        order: 2 !important;
     }
     
-    .mobile-cart-btn:hover {
+    .site-header .hamburger-menu {
+        order: 3 !important;
+    }
+    
+    .site-header .mobile-cart-btn:hover {
         color: var(--caramel) !important;
         transform: scale(1.1) !important;
     }
     
-    .mobile-cart-btn svg {
+    .site-header .mobile-cart-btn svg {
         width: 24px !important;
         height: 24px !important;
+    }
+    
+    .site-header .header-inner {
+        display: flex !important;
+        align-items: center !important;
     }
