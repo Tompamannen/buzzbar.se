@@ -3152,8 +3152,10 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 768px) {
     .quantity-carousel-wrapper {
         display: block !important;
-        padding: 0 16px !important;
+        padding: 0 20px !important;
         overflow: visible !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
     
     .carousel-nav {
@@ -3167,6 +3169,8 @@ h1, h2, h3, h4, h5, h6, p {
         gap: 12px !important;
         padding: 0 !important;
         overflow: visible !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .quantity-card {
