@@ -3190,23 +3190,27 @@ h1, h2, h3, h4, h5, h6, p {
     
     /* Adjust card content for mobile */
     .quantity-card .quantity-visual {
-        padding: 8px !important;
+        padding: 4px !important;
     }
     
     .quantity-card .product-box {
-        transform: scale(0.65) !important;
+        transform: scale(0.45) !important;
     }
     
     .quantity-card .quantity-header h3 {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
     }
     
     .quantity-card .quantity-subtitle {
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
     }
     
     .quantity-cta {
-        padding: 14px 24px !important;
-        font-size: 0.9rem !important;
+        padding: 12px 20px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .quantity-card .quantity-amount {
+        font-size: 1.5rem !important;
     }
 }
