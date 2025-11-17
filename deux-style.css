@@ -3157,10 +3157,10 @@ h1, h2, h3, h4, h5, h6, p {
     .quantity-carousel-wrapper {
         display: block !important;
         padding: 0 !important;
-        overflow: visible !important;
+        overflow: hidden !important;
         margin: 0 !important;
-        width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     .carousel-nav {
@@ -3172,9 +3172,10 @@ h1, h2, h3, h4, h5, h6, p {
         grid-template-columns: 1fr 1fr !important;
         grid-template-rows: auto auto !important;
         gap: 8px !important;
-        padding: 0 8px !important;
+        padding: 0 12px !important;
         overflow: visible !important;
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
         margin: 0 auto !important;
     }
