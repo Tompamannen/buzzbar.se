@@ -2941,7 +2941,9 @@ h1, h2, h3, h4, h5, h6, p {
   height: 3px;
   background: var(--espresso);
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease;
+  transform-origin: center;
 }
 
 /* Hamburger animation when open */
@@ -2951,6 +2953,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .hamburger-menu.active .hamburger-line:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(3) {
