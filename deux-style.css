@@ -3150,8 +3150,8 @@ h1, h2, h3, h4, h5, h6, p {
 /* Mobile Product Cards Layout */
 @media (max-width: 768px) {
     .products-section .container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
     
     .quantity-carousel-wrapper {
@@ -3172,7 +3172,7 @@ h1, h2, h3, h4, h5, h6, p {
         grid-template-columns: 1fr 1fr !important;
         grid-template-rows: auto auto !important;
         gap: 12px !important;
-        padding: 0 20px !important;
+        padding: 0 !important;
         overflow: visible !important;
         width: 100% !important;
         max-width: 100% !important;
