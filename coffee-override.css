@@ -84,10 +84,10 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 24px !important;
 }
 
-/* Footer - Dark Coffee */
+/* Footer - Dark Green */
 footer,
 .footer {
-    background: linear-gradient(135deg, #3E2723, #2C1810) !important;
+    background: linear-gradient(135deg, #0f2419, #081510) !important;
     color: #FFFEFB !important;
 }
 

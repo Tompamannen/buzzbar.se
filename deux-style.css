@@ -678,9 +678,9 @@ p, .story-lede, .sc-sub, .nt-sub {
     border: 2px solid var(--cream) !important;
 }
 
-/* Footer - Dark espresso */
+/* Footer - Dark green */
 footer {
-    background: var(--espresso) !important;
+    background: linear-gradient(135deg, #0f2419, #081510) !important;
     color: var(--cream) !important;
     padding: 80px 0 40px !important;
 }
@@ -1406,6 +1406,14 @@ footer {
     align-self: end;
 }
 
+.quantity-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--espresso);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
 .quantity-card::before {
     content: '';
     position: absolute;
@@ -1603,13 +1611,6 @@ footer {
     50% { transform: translateY(-8px); }
 }
 
-.quantity-details {
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
 .quantity-amount {
     background: #1a4d2e;
     color: white;
@@ -1637,9 +1638,7 @@ footer {
     letter-spacing: 0.1em;
 }
 
-.quantity-price {
-    margin-bottom: 24px;
-}
+
 
 .price-amount {
     display: block;

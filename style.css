@@ -1265,7 +1265,7 @@ header.site-header {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--espresso), var(--dark-roast));
+    background: linear-gradient(135deg, #0f2419, #081510);
     color: var(--milk-white);
     padding: 100px 0 50px;
     position: relative;

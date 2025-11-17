@@ -76,7 +76,6 @@
         <a href="Science.html" class="nav-link">Science</a>
         <a href="Nutrition.html" class="nav-link">Nutrition</a>
         <a href="Our-Story.html" class="nav-link">Our Story</a>
-        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <!-- CTA -->
@@ -108,7 +107,6 @@
         <a href="Science.html" class="mobile-nav-link">Science</a>
         <a href="Nutrition.html" class="mobile-nav-link">Nutrition</a>
         <a href="Our-Story.html" class="mobile-nav-link">Our Story</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
         <a href="#products" class="mobile-nav-link mobile-cta">Buy Now</a>
       </nav>
     </div>
@@ -189,6 +187,7 @@
       
       <!-- 1 Box = 12 Bars -->
       <article class="quantity-card" data-index="0">
+        <span class="popular-badge" style="background: #FF8C42;">Try It Out</span>
         <div class="quantity-amount" data-number="12"></div>
         <div class="quantity-header">
           <h3>Starter Pack</h3>
@@ -200,7 +199,8 @@
           </div>
         </div>
         <div class="quantity-details">
-          <button class="quantity-cta cta-primary">Buy Now - $29</button>
+          <div class="quantity-price">$29</div>
+          <a href="Purchase.html?product=Starter Pack&price=29&quantity=12" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
         </div>
       </article>
 
@@ -218,12 +218,14 @@
           </div>
         </div>
         <div class="quantity-details">
-          <button class="quantity-cta cta-primary">Buy Now - $54</button>
+          <div class="quantity-price">$54 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($27/box)</span></div>
+          <a href="Purchase.html?product=Duo Pack&price=54&quantity=24" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
         </div>
       </article>
 
       <!-- 3 Boxes = 36 Bars -->
       <article class="quantity-card" data-index="2">
+        <span class="popular-badge" style="background: #4CAF50;">Best Value</span>
         <div class="quantity-amount" data-number="36"></div>
         <div class="quantity-header">
           <h3>Family Pack</h3>
@@ -235,7 +237,8 @@
           </div>
         </div>
         <div class="quantity-details">
-          <button class="quantity-cta cta-primary">Buy Now - $75</button>
+          <div class="quantity-price">$75 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($25/box)</span></div>
+          <a href="Purchase.html?product=Family Pack&price=75&quantity=36" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
         </div>
       </article>
 
@@ -1238,9 +1241,10 @@
         }
       }
       
+      // Removed preventDefault to allow links to work
       buyButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-          e.preventDefault();
+          // Don't prevent default - let the link navigate
           cartCount++;
           updateCartCount();
           
