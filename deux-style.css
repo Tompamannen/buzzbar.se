@@ -1345,9 +1345,9 @@ footer {
 /* Quantity Grid Wrapper */
 .products-section .quantity-carousel-wrapper {
     position: relative;
-    width: calc(100% + 80px);
-    max-width: none;
-    margin: 0 -40px 40px -40px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 40px 0;
     padding: 20px 0;
     left: 0;
     overflow: visible;
@@ -1358,10 +1358,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     position: relative;
-    max-width: none;
-    margin: 0;
+    max-width: 100%;
+    margin: 0 auto;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .quantity-card {
