@@ -262,19 +262,19 @@
 </section>
 
 <!-- ===== OUR STORY ===== -->
-<section id="our-story" class="our-story" data-fade-scope>
+<section id="our-story" class="our-story" data-fade-scope style="background: #F5F1E8; padding: 80px 20px;">
   <div class="container">
-    <div class="story-box-wrapper">
+    <div class="story-box-wrapper" style="max-width: 1400px; margin: 0 auto; background: #F5F1E8; padding: 150px 100px; border: 6px solid #2d5f3f; border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; box-sizing: border-box;">
       <h3 class="story-headline-top">Built by people who actually needed this.</h3>
       
-      <div class="story-grid-simple">
+      <div class="story-grid-simple" style="display: flex !important; flex-direction: row !important; align-items: center !important; gap: 50px !important;">
         <!-- LEFT: Photo -->
-        <div class="story-photo">
-          <img src="IMG_8401.JPG" alt="Vero founders" />
+        <div class="story-photo" style="flex: 0 0 520px !important; max-width: 520px !important;">
+          <img src="IMG_8401.JPG" alt="Vero founders" style="width: 100% !important; height: auto !important; border-radius: 12px !important;" />
         </div>
 
         <!-- RIGHT: Content -->
-        <div class="story-content-simple">
+        <div class="story-content-simple" style="flex: 1 !important;">
           <p>We started Vero because nothing out there really helped us focus. 
             Some bars tasted great, some gave a small lift — but none delivered that steady, clear energy we needed for work, training, or long days.</p>
           
@@ -1266,6 +1266,12 @@
       const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
       if (!hamburger || !mobileMenuOverlay) return;
+
+      // Reset menu state on page load
+      hamburger.classList.remove('active');
+      mobileMenuOverlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
 
       // Toggle menu
       hamburger.addEventListener('click', function() {

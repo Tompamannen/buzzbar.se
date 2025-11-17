@@ -3391,3 +3391,20 @@ h1, h2, h3, h4, h5, h6, p {
         display: flex !important;
         align-items: center !important;
     }
+
+
+/* Wavy Border Container for Our Story Section */
+.wavy-border-container {
+    position: relative !important;
+    background: #F5F1E8 !important;
+    padding: 60px 40px !important;
+    border: 6px solid #2d5f3f !important;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+@media (max-width: 768px) {
+    .wavy-border-container {
+        padding: 40px 24px !important;
+        border-radius: 155px 15px 125px 15px/15px 125px 15px 155px !important;
+    }
+}
