@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=36" />
-  <link rel="stylesheet" href="deux-style.css?v=31" />
+  <link rel="stylesheet" href="style.css?v=44" />
+  <link rel="stylesheet" href="deux-style.css?v=33" />
   <style>
     @keyframes scroll-reviews {
       0% { transform: translateX(0); }
@@ -40,77 +40,198 @@
     }
   </style>
 </head>
-<body>
+<body style="overflow-x: hidden;">
 
   <!-- Soft purple band behind transparent header -->
   <div class="page-top-gradient"></div>
 
-  <!-- ===== INTRODUCING BANNER ===== -->
-  <div class="introducing-banner" role="banner">
-    <div class="introducing-marquee">
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-      <span class="introducing-word">introducing</span>
-    </div>
-  </div>
-
   <!-- ===== NAVBAR (only once) ===== -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <!-- Brand (left) -->
-      <a href="#home" class="brand" aria-label="Vero — Home">
-        <span class="brand-line">
-          <span class="brand-word buzz">VERO</span>
-        </span>
-      </a>
+  <style>
+    .vero-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .vero-navbar--scrolled {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-color: transparent;
+    }
+    .vero-navbar__inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .vero-navbar__brand {
+      text-decoration: none;
+      color: #111827;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .vero-navbar__menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .vero-navbar__links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .vero-navbar__link {
+      text-decoration: none;
+      color: #111827;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 1.05rem;
+      padding-bottom: 2px;
+      position: relative;
+    }
+    .vero-navbar__link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #111827;
+      transition: width 0.2s ease;
+    }
+    .vero-navbar__link:hover::after {
+      width: 100%;
+    }
+    .vero-navbar__cta {
+      background-color: white;
+      color: black;
+      border-radius: 10em;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 1em 2em;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid black;
+      box-shadow: 0 0 0 0 black;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .vero-navbar__cta:hover {
+      transform: translateY(-4px) translateX(-2px);
+      box-shadow: 2px 5px 0 0 black;
+    }
+    .vero-navbar__cta:active {
+      transform: translateY(2px) translateX(1px);
+      box-shadow: 0 0 0 0 black;
+    }
+    .vero-navbar__toggle {
+      display: none;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+    .vero-navbar__toggle span {
+      height: 3px;
+      width: 100%;
+      background: #111827;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+    .vero-navbar__toggle--open span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .vero-navbar__toggle--open span:nth-child(2) {
+      opacity: 0;
+    }
+    .vero-navbar__toggle--open span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    @media (max-width: 768px) {
+      .vero-navbar__toggle {
+        display: flex;
+      }
+      .vero-navbar__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .vero-navbar__menu--open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .vero-navbar__links {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .vero-navbar__cta {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 
-      <!-- Main nav -->
-      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="Products.html" class="nav-link">Products</a>
-        <a href="Science.html" class="nav-link">Science</a>
-        <a href="Nutrition.html" class="nav-link">Nutrition</a>
-        <a href="Our-Story.html" class="nav-link">Our Story</a>
-      </nav>
-
-      <!-- CTA -->
-      <a href="#products" class="cta-contact">Buy Now</a>
-
-      <!-- Hamburger Menu Button (Mobile Only) -->
-      <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-
-      <!-- Cart Button (Mobile & Desktop) -->
-      <button class="cart-btn" aria-label="View cart">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="20" cy="21" r="1"></circle>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-        </svg>
-        <span class="cart-count">0</span>
-      </button>
+  <nav class="vero-navbar" id="veroNavbar">
+    <div class="vero-navbar__inner">
+      <a class="vero-navbar__brand" href="index.html">Vero</a>
+      
+      <div class="vero-navbar__toggle" id="veroToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="vero-navbar__menu" id="veroMenu">
+        <ul class="vero-navbar__links">
+          <li><a class="vero-navbar__link" href="index.html">Home</a></li>
+          <li><a class="vero-navbar__link" href="Products.html">About</a></li>
+          <li><a class="vero-navbar__link" href="Our-Story.html">Our Story</a></li>
+        </ul>
+        <a href="#products" class="vero-navbar__cta">Shop Now</a>
+      </div>
     </div>
+  </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-      <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
-        <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="Products.html" class="mobile-nav-link">Products</a>
-        <a href="Science.html" class="mobile-nav-link">Science</a>
-        <a href="Nutrition.html" class="mobile-nav-link">Nutrition</a>
-        <a href="Our-Story.html" class="mobile-nav-link">Our Story</a>
-        <a href="#products" class="mobile-nav-link mobile-cta">Buy Now</a>
-      </nav>
-    </div>
-  </header>
+  <script>
+    const toggle = document.getElementById("veroToggle");
+    const menu = document.getElementById("veroMenu");
+    const navbar = document.getElementById("veroNavbar");
+    
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("vero-navbar__toggle--open");
+      menu.classList.toggle("vero-navbar__menu--open");
+    });
+    
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add("vero-navbar--scrolled");
+      } else {
+        navbar.classList.remove("vero-navbar--scrolled");
+      }
+    });
+  </script>
 
 
  <!-- ===== HERO ===== -->
@@ -262,30 +383,22 @@
 </section>
 
 <!-- ===== OUR STORY ===== -->
-<section id="our-story" class="our-story" data-fade-scope style="background: #F5F1E8; padding: 80px 20px;">
-  <div class="container">
-    <div class="story-box-wrapper" style="max-width: 1400px; margin: 0 auto; background: #F5F1E8; padding: 150px 100px; border: 6px solid #2d5f3f; border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; box-sizing: border-box;">
-      <h3 class="story-headline-top">Built by people who actually needed this.</h3>
-      
-      <div class="story-grid-simple" style="display: flex !important; flex-direction: row !important; align-items: center !important; gap: 50px !important;">
-        <!-- LEFT: Photo -->
-        <div class="story-photo" style="flex: 0 0 520px !important; max-width: 520px !important;">
-          <img src="IMG_8401.JPG" alt="Vero founders" style="width: 100% !important; height: auto !important; border-radius: 12px !important;" />
-        </div>
-
-        <!-- RIGHT: Content -->
-        <div class="story-content-simple" style="flex: 1 !important;">
-          <p>We started Vero because nothing out there really helped us focus. 
-            Some bars tasted great, some gave a small lift — but none delivered that steady, clear energy we needed for work, training, or long days.</p>
-          
-          <p>So we made our own: simple ingredients, natural caffeine, and a smoother rise that actually feels good.</p>
-          
-          <p>Just three brothers trying to build something that genuinely helps.</p>
-          
-          <p class="story-signature">– Oliver, Tom & Charlie Wiseman<br>Co-founders, Vero</p>
+<section id="our-story" class="our-story" data-fade-scope style="background: white; padding: 0; min-height: auto; overflow-x: hidden; width: 100%;">
+  <!-- Content Section -->
+  <div style="padding: 100px 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; --s: 120px; --c1: #6ca700; --c2: #406102; --_g: radial-gradient(25% 25% at 25% 25%, var(--c1) 99%, rgba(0, 0, 0, 0) 101%); background: var(--_g) var(--s) var(--s) / calc(2 * var(--s)) calc(2 * var(--s)), var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)), radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) var(--s), repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%) calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);">
+    <section class="vero-polaroid-section">
+      <div class="vero-polaroid-stack">
+        <div class="vero-polaroid">
+          <div class="vero-polaroid-inner">
+            <div class="vero-polaroid-photo" style="background-image: url('IMG_8401.JPG'); background-size: cover; background-position: center;"></div>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="vero-story-frame">
+        <h2>Our Story</h2>
+        <p>Founded by three brothers who were tired of the crash, Vero was built on the idea that you don't need artificial boosts or empty promises. We get better, sharper, and yes—more energized—with the right ingredients.</p>
+      </div>
+    </section>
   </div>
 
   <!-- Founders section removed - see Our Story page -->
@@ -946,25 +1059,6 @@
 
   <!-- Auto-hide header on scroll down, show on scroll up -->
   <script>
-    // Hide bottom introducing banner when user scrolls
-    (function() {
-      const banner = document.querySelector('.introducing-banner');
-      let lastY = window.scrollY;
-      
-      window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        
-        // Hide banner when scrolling down, show when at top
-        if (y > 50 && y > lastY) {
-          banner.classList.add('hidden');
-        } else if (y < 10) {
-          banner.classList.remove('hidden');
-        }
-        
-        lastY = y;
-      }, { passive: true });
-    })();
-
     // Fade in elements on scroll
     (function() {
       const fadeElements = document.querySelectorAll('[data-fade-in]');

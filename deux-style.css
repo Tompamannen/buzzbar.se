@@ -172,45 +172,66 @@ body {
 }
 
 .hero-cta-group .cta-primary {
-    font-size: 1rem !important;
-    padding: 18px 48px !important;
-    margin-top: 0 !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: var(--cream) !important;
-    background: var(--espresso) !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    transition: all 0.3s ease !important;
+    background-color: white !important;
+    background: white !important;
+    background-image: none !important;
+    color: black !important;
+    border-radius: 10em !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    padding: 1em 2em !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    border: 1px solid black !important;
+    box-shadow: 0 0 0 0 black !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .hero-cta-group .cta-primary:hover {
-    background: #1a0f0a !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(44, 24, 16, 0.3) !important;
+    transform: translateY(-4px) translateX(-2px) !important;
+    box-shadow: 2px 5px 0 0 black !important;
+    background: white !important;
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+}
+
+.hero-cta-group .cta-primary:active {
+    transform: translateY(2px) translateX(1px) !important;
+    box-shadow: 0 0 0 0 black !important;
+    background: white !important;
+    background-color: white !important;
 }
 
 .hero-cta-group .cta-secondary {
-    font-size: 1rem !important;
-    padding: 18px 48px !important;
-    margin-top: 0 !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: var(--text) !important;
-    background: transparent !important;
-    border: 2px solid var(--text) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    transition: all 0.3s ease !important;
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10em !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    padding: 1em 2em !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    border: 1px solid black !important;
+    box-shadow: 0 0 0 0 black !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .hero-cta-group .cta-secondary:hover {
-    background: var(--text) !important;
-    color: var(--white) !important;
-    transform: translateY(-2px) !important;
+    transform: translateY(-4px) translateX(-2px) !important;
+    box-shadow: 2px 5px 0 0 black !important;
+    background: white !important;
+}
+
+.hero-cta-group .cta-secondary:active {
+    transform: translateY(2px) translateX(1px) !important;
+    box-shadow: 0 0 0 0 black !important;
 }
 
 .hero-cta-group .cta-primary,

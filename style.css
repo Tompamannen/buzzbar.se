@@ -452,62 +452,61 @@ header.site-header {
 }
 
 .cta-primary {
-    background: linear-gradient(135deg, var(--caramel), var(--coffee-orange));
-    color: var(--milk-white);
-    border: none;
-    padding: 18px 40px;
-    border-radius: var(--border-radius-fluid);
-    font-size: var(--font-size-base);
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.4s var(--curve-smooth);
-    box-shadow: var(--splash-shadow);
-    position: relative;
-    overflow: hidden;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.cta-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s var(--curve-smooth);
-}
-
-.cta-primary:hover::before {
-    left: 100%;
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10em !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    padding: 1em 2em !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    border: 1px solid black !important;
+    box-shadow: 0 0 0 0 black !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    background: white !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .cta-primary:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: var(--float-shadow);
-    background: linear-gradient(135deg, var(--coffee-orange), var(--caramel));
+    transform: translateY(-4px) translateX(-2px) !important;
+    box-shadow: 2px 5px 0 0 black !important;
+    background: white !important;
+}
+
+.cta-primary:active {
+    transform: translateY(2px) translateX(1px) !important;
+    box-shadow: 0 0 0 0 black !important;
 }
 
 .cta-secondary {
-    background: transparent;
-    color: var(--espresso);
-    border: 2px solid var(--espresso);
-    padding: 16px 36px;
-    border-radius: var(--border-radius-fluid);
-    font-size: var(--font-size-base);
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.4s var(--curve-smooth);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10em !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    padding: 1em 2em !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    border: 1px solid black !important;
+    box-shadow: 0 0 0 0 black !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    background: white !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .cta-secondary:hover {
-    background: var(--espresso);
-    color: var(--milk-white);
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: var(--drip-shadow);
+    transform: translateY(-4px) translateX(-2px) !important;
+    box-shadow: 2px 5px 0 0 black !important;
+    background: white !important;
+}
+
+.cta-secondary:active {
+    transform: translateY(2px) translateX(1px) !important;
+    box-shadow: 0 0 0 0 black !important;
 }
 
 .hero-stats {
@@ -6547,4 +6546,126 @@ h1, h2, h3,
   .review-role {
     font-size: 0.8rem;
   }
+}
+
+/* Polaroid styles moved to inline in index.html */
+
+/* ===== Our Story: polaroid + text layout ===== */
+.vero-polaroid-section {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  color: #2b1b23;
+}
+
+@media (max-width: 900px) {
+  .vero-polaroid-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+}
+
+.vero-polaroid-stack {
+  position: relative;
+  width: 260px;
+  height: 320px;
+  flex: 0 0 auto;
+}
+
+.vero-polaroid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f8f3e6;
+  border: 3px solid #111;
+  padding: 15px 15px 40px 15px;
+  box-sizing: border-box;
+  z-index: 3;
+  transform: translate(12px, 12px) rotate(6deg);
+}
+
+.vero-polaroid::before,
+.vero-polaroid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f8f3e6;
+  border: 3px solid #111;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.vero-polaroid::before {
+  transform: translate(-12px, -12px) rotate(-6deg);
+}
+
+.vero-polaroid::after {
+  transform: translate(12px, 12px) rotate(6deg);
+}
+
+.vero-polaroid-inner {
+  width: 100%;
+  height: 100%;
+  background: #f8f3e6;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.vero-polaroid-photo {
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+  border: 2px solid #111;
+  box-sizing: border-box;
+}
+
+.vero-story-frame {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.vero-story-frame::before {
+  content: "";
+  position: absolute;
+  inset: -12px -14px auto auto;
+  height: 100%;
+  background: #d9b862;
+  border: 3px solid #111;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.vero-story-frame h2,
+.vero-story-frame p {
+  position: relative;
+  z-index: 2;
+}
+
+.vero-story-frame h2 {
+  display: inline-block;
+  background: #f8f3e6;
+  border: 3px solid #111;
+  padding: 1rem 1.25rem 0.5rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.vero-story-frame p {
+  background: #f8f3e6;
+  border: 3px solid #111;
+  border-top: none;
+  padding: 1rem 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
