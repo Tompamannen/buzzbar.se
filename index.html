@@ -6,7 +6,7 @@
   <title>Vero – Natural Energy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Belanosima:wght@400;600;700&family=Caveat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=44" />
   <link rel="stylesheet" href="deux-style.css?v=33" />
   <style>
@@ -122,6 +122,11 @@
       box-shadow: 0 0 0 0 black;
       text-decoration: none;
       display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      will-change: transform;
     }
     .vero-navbar__cta:hover {
       transform: translateY(-4px) translateX(-2px);
@@ -206,7 +211,9 @@
       <div class="vero-navbar__menu" id="veroMenu">
         <ul class="vero-navbar__links">
           <li><a class="vero-navbar__link" href="index.html">Home</a></li>
-          <li><a class="vero-navbar__link" href="Products.html">About</a></li>
+          <li><a class="vero-navbar__link" href="Products.html">Products</a></li>
+          <li><a class="vero-navbar__link" href="Science.html">Science</a></li>
+          <li><a class="vero-navbar__link" href="Nutrition.html">Nutrition</a></li>
           <li><a class="vero-navbar__link" href="Our-Story.html">Our Story</a></li>
         </ul>
         <a href="#products" class="vero-navbar__cta">Shop Now</a>
@@ -382,53 +389,7 @@
   </div>
 </section>
 
-<!-- ===== OUR STORY ===== -->
-<section id="our-story" class="our-story" data-fade-scope style="background: white; padding: 0; min-height: auto; overflow-x: hidden; width: 100%;">
-  <!-- Content Section -->
-  <div style="padding: 100px 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; --s: 120px; --c1: #6ca700; --c2: #406102; --_g: radial-gradient(25% 25% at 25% 25%, var(--c1) 99%, rgba(0, 0, 0, 0) 101%); background: var(--_g) var(--s) var(--s) / calc(2 * var(--s)) calc(2 * var(--s)), var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)), radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) var(--s), repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%) calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);">
-    <section class="vero-polaroid-section">
-      <div class="vero-polaroid-stack">
-        <div class="vero-polaroid">
-          <div class="vero-polaroid-inner">
-            <div class="vero-polaroid-photo" style="background-image: url('IMG_8401.JPG'); background-size: cover; background-position: center;"></div>
-          </div>
-        </div>
-      </div>
-      <div class="vero-story-frame">
-        <h2>Our Story</h2>
-        <p>Founded by three brothers who were tired of the crash, Vero was built on the idea that you don't need artificial boosts or empty promises. We get better, sharper, and yes—more energized—with the right ingredients.</p>
-      </div>
-    </section>
-  </div>
-
-  <!-- Founders section removed - see Our Story page -->
-  <div class="container founders-row" data-fade-scope style="display: none;">
-    <article class="founder-card" data-founder-name="Tom Wiseman" data-founder-role="Co-Founder" data-founder-story="Tom is the product tinkerer, constantly iterating on taste and nutrition profiles. From testing early batches in the family kitchen to partnering with European co-packers, he focuses on building bars that feel as good as they taste.">
-      <div class="founder-avatar"><span>TW</span></div>
-      <h3>Tom Wiseman</h3>
-      <p class="role">Co-Founder</p>
-      <blockquote>“Build something we want to use daily.”</blockquote>
-    </article>
-
-    <article class="founder-card" data-founder-name="Charlie Wiseman" data-founder-role="Co-Founder" data-founder-story="Charlie spent a decade leading high-intensity teams before co-founding Vero. He obsesses over workflow-friendly nutrition and turned his commute cravings into the blueprint for our Focus blend.">
-      <div class="founder-avatar"><span>CW</span></div>
-      <h3>Charlie Wiseman</h3>
-      <p class="role">Co-Founder</p>
-      <blockquote>“No jitters. No crash. Great taste.”</blockquote>
-    </article>
-
-    <article class="founder-card" data-founder-name="Oliver Wiseman" data-founder-role="Co-Founder" data-founder-story="Oliver is the storyteller and community builder. He guides the Vero brand, connecting with early adopters, nutritionists, and sleep scientists to make sure every bar feels like a smarter choice.">
-      <div class="founder-avatar"><span>OW</span></div>
-      <h3>Oliver Wiseman</h3>
-      <p class="role">Co-Founder</p>
-      <blockquote>“Good energy should feel effortless.”</blockquote>
-    </article>
-  </div>
-</section>
-
-
-  
- <!-- ===== SCIENCE (Curve Only) ===== -->
+<!-- ===== SCIENCE (Curve Only) ===== -->
 <section id="science" class="science-section home-curve-only" data-fade-scope>
   <div class="container">
     <div class="sc-header">
@@ -469,6 +430,51 @@
   </div>
 
 </section>
+
+<!-- ===== OUR STORY ===== -->
+<section id="our-story" class="our-story" data-fade-scope style="background: white; padding: 0; min-height: auto; overflow-x: hidden; width: 100%;">
+  <!-- Content Section -->
+  <div style="padding: 100px 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; --s: 120px; --c1: #6ca700; --c2: #406102; --_g: radial-gradient(25% 25% at 25% 25%, var(--c1) 99%, rgba(0, 0, 0, 0) 101%); background: var(--_g) var(--s) var(--s) / calc(2 * var(--s)) calc(2 * var(--s)), var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)), radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) var(--s), repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%) calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);">
+    <section class="vero-polaroid-section">
+      <div class="vero-story-frame">
+        <h2>Who is VERO?</h2>
+        <p>Vero began when we realized we couldn't keep up. Long study nights, heavy training, early mornings, and dark Swedish winters left us exhausted. Coffee wasn't enough. Energy drinks made us feel worse. One late winter evening, we admitted it: There has to be a better way. So we created it. We wanted clean energy that actually lasts—something real that matches the ambition of the people who take it. Today, Vero is more than a bar. It's the energy we always needed, and the energy we believe the world deserves. For the late-night thinkers, early risers, athletes, dreamers, and anyone who refuses to slow down… We are VERO.</p>
+      </div>
+      <div class="vero-polaroid-stack">
+        <div class="vero-polaroid">
+          <div class="vero-polaroid-inner">
+            <div class="vero-polaroid-photo" style="background-image: url('polaroid-photo_eoqlc85fvvq9ah2xz3je-removebg-preview.png'); background-size: cover; background-position: center;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Founders section removed - see Our Story page -->
+  <div class="container founders-row" data-fade-scope style="display: none;">
+    <article class="founder-card" data-founder-name="Tom Wiseman" data-founder-role="Co-Founder" data-founder-story="Tom is the product tinkerer, constantly iterating on taste and nutrition profiles. From testing early batches in the family kitchen to partnering with European co-packers, he focuses on building bars that feel as good as they taste.">
+      <div class="founder-avatar"><span>TW</span></div>
+      <h3>Tom Wiseman</h3>
+      <p class="role">Co-Founder</p>
+      <blockquote>“Build something we want to use daily.”</blockquote>
+    </article>
+
+    <article class="founder-card" data-founder-name="Charlie Wiseman" data-founder-role="Co-Founder" data-founder-story="Charlie spent a decade leading high-intensity teams before co-founding Vero. He obsesses over workflow-friendly nutrition and turned his commute cravings into the blueprint for our Focus blend.">
+      <div class="founder-avatar"><span>CW</span></div>
+      <h3>Charlie Wiseman</h3>
+      <p class="role">Co-Founder</p>
+      <blockquote>“No jitters. No crash. Great taste.”</blockquote>
+    </article>
+
+    <article class="founder-card" data-founder-name="Oliver Wiseman" data-founder-role="Co-Founder" data-founder-story="Oliver is the storyteller and community builder. He guides the Vero brand, connecting with early adopters, nutritionists, and sleep scientists to make sure every bar feels like a smarter choice.">
+      <div class="founder-avatar"><span>OW</span></div>
+      <h3>Oliver Wiseman</h3>
+      <p class="role">Co-Founder</p>
+      <blockquote>“Good energy should feel effortless.”</blockquote>
+    </article>
+  </div>
+</section>
+
 <!-- ===== NUTRITION SECTION REMOVED ===== -->
 <section id="nutrition" class="nt-section" style="display: none;">
   <div class="container">
