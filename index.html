@@ -4,6 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vero – Natural Energy</title>
+  
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWFPL9ZW9R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JWFPL9ZW9R', {
+      'send_page_view': true,
+      'anonymize_ip': true
+    });
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Belanosima:wght@400;600;700&family=Caveat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
@@ -110,8 +123,8 @@
       width: 100%;
     }
     .vero-navbar__cta {
-      background-color: white;
-      color: black;
+      background-color: #10B981;
+      color: white;
       border-radius: 10em;
       font-size: 17px;
       font-weight: 600;
@@ -131,6 +144,8 @@
     .vero-navbar__cta:hover {
       transform: translateY(-4px) translateX(-2px);
       box-shadow: 2px 5px 0 0 black;
+      background-color: #ff8c5a;
+      color: black;
     }
     .vero-navbar__cta:active {
       transform: translateY(2px) translateX(1px);
@@ -216,7 +231,7 @@
           <li><a class="vero-navbar__link" href="Nutrition.html">Nutrition</a></li>
           <li><a class="vero-navbar__link" href="Our-Story.html">Our Story</a></li>
         </ul>
-        <a href="#products" class="vero-navbar__cta">Shop Now</a>
+        <a href="#products" class="vero-navbar__cta">Get Energized</a>
       </div>
     </div>
   </nav>
@@ -391,8 +406,8 @@
 
 <!-- ===== SCIENCE (Curve Only) ===== -->
 <section id="science" class="science-section home-curve-only" data-fade-scope>
-  <div class="container">
-    <div class="sc-header">
+  <div class="container" style="display: flex; align-items: center; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+    <div class="sc-header" style="flex: 1; text-align: left; margin: 0;">
       <span class="sc-badge">Science</span>
       <h2 class="sc-title">The curve, not just the caffeine</h2>
       <p class="sc-sub">
@@ -400,7 +415,7 @@
       </p>
     </div>
 
-    <figure class="curve">
+    <figure class="curve" style="flex: 1; margin: 0;">
       <p style="font-size:0.85rem;color:#64748b;margin-bottom:8px;">
         Illustrative only – curves show the <em>idea</em>, not lab data.
       </p>
@@ -443,7 +458,7 @@
       <div class="vero-polaroid-stack">
         <div class="vero-polaroid">
           <div class="vero-polaroid-inner">
-            <div class="vero-polaroid-photo" style="background-image: url('polaroid-photo_eoqlc85fvvq9ah2xz3je-removebg-preview.png'); background-size: cover; background-position: center;"></div>
+            <div class="vero-polaroid-photo" style="background-image: url('IMG_8401.JPG'); background-size: cover; background-position: 63% 50%; transform: rotate(6deg) translateX(13px) translateY(5px);"></div>
           </div>
         </div>
       </div>

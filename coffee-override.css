@@ -22,13 +22,13 @@ body {
     background: #F9F5F0 !important;
 }
 
-/* All Buttons - Coffee Orange Gradient */
+/* All Buttons - Vibrant Green Gradient */
 .cta-primary,
 .cta-contact,
 .nav-button,
 button.cta-primary,
 a.cta-primary {
-    background: linear-gradient(135deg, #D97917, #E67635) !important;
+    background: linear-gradient(135deg, #10B981, #22C55E) !important;
     color: #FFFEFB !important;
     border-radius: 60px !important;
     border: none !important;

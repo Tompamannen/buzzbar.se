@@ -450,8 +450,8 @@ body {
 /* CTA Button - Appealing and enticing */
 .cta-contact,
 .cta-primary {
-    background: linear-gradient(135deg, #2C1810 0%, #3E2723 100%) !important;
-    color: #F5F1E8 !important;
+    background: linear-gradient(135deg, #10B981 0%, #22C55E 100%) !important;
+    color: #FFFEFB !important;
     padding: 16px 40px !important;
     border-radius: 8px !important;
     font-size: 1rem !important;
@@ -460,7 +460,7 @@ body {
     border: none !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     text-transform: uppercase !important;
-    box-shadow: 0 4px 16px rgba(44, 24, 16, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1) !important;
     position: relative !important;
     overflow: hidden !important;
     cursor: pointer !important;
@@ -482,9 +482,9 @@ body {
 
 .cta-contact:hover,
 .cta-primary:hover {
-    background: linear-gradient(135deg, #3E2723 0%, #4E3329 100%) !important;
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
     transform: translateY(-3px) scale(1.02) !important;
-    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .cta-contact:hover::before,
