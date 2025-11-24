@@ -452,8 +452,8 @@ header.site-header {
 }
 
 .cta-primary {
-    background-color: white !important;
-    color: black !important;
+    background-color: rgba(255, 208, 116) !important;
+    color: #1d1d1f !important;
     border-radius: 10em !important;
     font-size: 17px !important;
     font-weight: 600 !important;
@@ -464,7 +464,6 @@ header.site-header {
     box-shadow: 0 0 0 0 black !important;
     text-decoration: none !important;
     display: inline-block !important;
-    background: white !important;
     text-transform: none !important;
     letter-spacing: normal !important;
     -webkit-font-smoothing: antialiased !important;
@@ -477,7 +476,6 @@ header.site-header {
 .cta-primary:hover {
     transform: translateY(-4px) translateX(-2px) !important;
     box-shadow: 2px 5px 0 0 black !important;
-    background: white !important;
 }
 
 .cta-primary:active {
@@ -489,9 +487,6 @@ header.site-header {
     background-color: white !important;
     color: black !important;
     border-radius: 10em !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    backface-visibility: hidden !important;
     font-size: 17px !important;
     font-weight: 600 !important;
     padding: 1em 2em !important;
@@ -501,7 +496,6 @@ header.site-header {
     box-shadow: 0 0 0 0 black !important;
     text-decoration: none !important;
     display: inline-block !important;
-    background: white !important;
     text-transform: none !important;
     letter-spacing: normal !important;
 }
@@ -509,7 +503,6 @@ header.site-header {
 .cta-secondary:hover {
     transform: translateY(-4px) translateX(-2px) !important;
     box-shadow: 2px 5px 0 0 black !important;
-    background: white !important;
 }
 
 .cta-secondary:active {

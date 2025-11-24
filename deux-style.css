@@ -172,11 +172,11 @@ body {
 }
 
 .hero-cta-group .cta-primary {
-    background-color: white !important;
-    background: white !important;
+    background-color: rgba(255, 208, 116) !important;
+    background: rgba(255, 208, 116) !important;
     background-image: none !important;
     color: black !important;
-    border-radius: 10em !important;
+    border-radius: 12px !important;
     font-size: 17px !important;
     font-weight: 600 !important;
     padding: 1em 2em !important;
@@ -193,8 +193,8 @@ body {
 .hero-cta-group .cta-primary:hover {
     transform: translateY(-4px) translateX(-2px) !important;
     box-shadow: 2px 5px 0 0 black !important;
-    background: white !important;
-    background-color: white !important;
+    background: #065f46 !important;
+    background-color: #065f46 !important;
     background-image: none !important;
     color: black !important;
 }
@@ -202,21 +202,21 @@ body {
 .hero-cta-group .cta-primary:active {
     transform: translateY(2px) translateX(1px) !important;
     box-shadow: 0 0 0 0 black !important;
-    background: white !important;
-    background-color: white !important;
+    background: #065f46 !important;
+    background-color: #065f46 !important;
 }
 
 .hero-cta-group .cta-secondary {
-    background-color: white !important;
+    background-color: transparent !important;
     color: black !important;
-    border-radius: 10em !important;
+    border-radius: 12px !important;
     font-size: 17px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     padding: 1em 2em !important;
     cursor: pointer !important;
     transition: all 0.3s ease-in-out !important;
-    border: 1px solid black !important;
-    box-shadow: 0 0 0 0 black !important;
+    border: 2px solid rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
     text-decoration: none !important;
     display: inline-block !important;
     text-transform: none !important;
@@ -224,14 +224,14 @@ body {
 }
 
 .hero-cta-group .cta-secondary:hover {
-    transform: translateY(-4px) translateX(-2px) !important;
-    box-shadow: 2px 5px 0 0 black !important;
-    background: white !important;
+    transform: translateY(-2px) !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .hero-cta-group .cta-secondary:active {
-    transform: translateY(2px) translateX(1px) !important;
-    box-shadow: 0 0 0 0 black !important;
+    transform: translateY(0px) !important;
+    background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .hero-cta-group .cta-primary,
@@ -450,8 +450,8 @@ body {
 /* CTA Button - Appealing and enticing */
 .cta-contact,
 .cta-primary {
-    background: linear-gradient(135deg, #10B981 0%, #22C55E 100%) !important;
-    color: #FFFEFB !important;
+    background: rgba(255, 208, 116) !important;
+    color: #1d1d1f !important;
     padding: 16px 40px !important;
     border-radius: 8px !important;
     font-size: 1rem !important;
@@ -482,7 +482,7 @@ body {
 
 .cta-contact:hover,
 .cta-primary:hover {
-    background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+    background: rgba(255, 208, 116) !important;
     transform: translateY(-3px) scale(1.02) !important;
     box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
@@ -1375,62 +1375,79 @@ footer {
 }
 
 .quantity-carousel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
     position: relative;
     max-width: 100%;
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
+    flex-wrap: nowrap;
 }
 
 .quantity-card {
-    background: linear-gradient(to bottom, #ffffff, #fafafa);
-    border-radius: 16px;
-    padding: 60px 40px;
-    border: 2px solid rgba(139, 92, 246, 0.1);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
+    border-radius: 24px;
+    position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0) !important;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 380px;
+    max-width: 380px;
+    margin: 0 !important;
+    vertical-align: top;
+    align-self: flex-start !important;
+    top: 0 !important;
+}
+
+.quantity-card-inner {
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    border-radius: 20px;
+    width: 100%;
+    flex: 1;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
-    gap: 20px;
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-    min-height: 650px;
+    gap: 16px;
+    padding: 32px 28px;
 }
 
-.quantity-card > .quantity-amount {
+.quantity-card-inner .quantity-amount {
     grid-column: 1;
     grid-row: 1;
     margin: 0;
     align-self: start;
 }
 
-.quantity-card > .quantity-header {
+.quantity-card-inner .quantity-header {
     grid-column: 2;
     grid-row: 1;
     margin: 0;
     align-self: center;
 }
 
-.quantity-card > .quantity-visual {
+.quantity-card-inner .quantity-visual {
     grid-column: 1 / -1;
     grid-row: 2;
 }
 
-.quantity-card > .quantity-details {
+.quantity-card-inner .quantity-details {
     grid-column: 1 / -1;
     grid-row: 3;
     margin-top: 60px;
     align-self: end;
 }
 
-.quantity-price {
-    font-size: 2rem;
+.quantity-card-inner .quantity-price {
+    font-size: 2.5rem;
     font-weight: 700;
-    color: var(--espresso);
+    color: #000000;
     margin-bottom: 16px;
     text-align: center;
 }
@@ -1456,20 +1473,24 @@ footer {
 }
 
 .quantity-card:hover {
-    background: linear-gradient(to bottom, #ffffff, #f8f7ff);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
     transform: translateY(-8px);
     box-shadow: 0 25px 50px rgba(139, 92, 246, 0.15);
     z-index: 10;
 }
 
 .quantity-card.active {
-    background: linear-gradient(to bottom, #faf8ff, #f3f0ff);
-    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
+    box-shadow: 0 20px 60px rgba(255, 208, 116, 0.3);
+    transform: translateY(0) !important;
 }
 
 .quantity-card.popular {
-    border-left: 2px solid rgba(139, 92, 246, 0.2);
-    border-right: 2px solid rgba(139, 92, 246, 0.2);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
+    transform: translateY(0) !important;
 }
 
 .quantity-card.prev,
@@ -1479,12 +1500,17 @@ footer {
 
 /* Popular Card */
 .quantity-card.popular {
-    border: 3px solid #8b5cf6;
-    box-shadow: 0 20px 50px rgba(139, 92, 246, 0.25);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
+    box-shadow: 0 20px 50px rgba(255, 208, 116, 0.3);
+    transform: translateY(0) !important;
 }
 
 .quantity-card.popular.active {
-    box-shadow: 0 25px 60px rgba(139, 92, 246, 0.35);
+    background: linear-gradient(135deg, rgba(255, 208, 116, 1) 0%, rgba(255, 180, 80, 0.9) 50%, rgba(255, 208, 116, 1) 100%);
+    padding: 50px 4px 4px 4px;
+    box-shadow: 0 25px 60px rgba(255, 208, 116, 0.4);
+    transform: translateY(0) !important;
 }
 
 /* Carousel Navigation */
@@ -1528,18 +1554,18 @@ footer {
 
 .popular-badge {
     position: absolute;
-    top: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-    color: white;
-    padding: 6px 20px;
-    border-radius: 50px;
-    font-size: 12px;
+    top: 16px;
+    left: 24px;
+    background: transparent;
+    color: #000000;
+    padding: 0;
+    border-radius: 0;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+    letter-spacing: 0.1em;
+    font-style: italic;
+    text-shadow: none;
     z-index: 10;
 }
 
@@ -1550,17 +1576,17 @@ footer {
     align-self: flex-start;
 }
 
-.quantity-header h3 {
+.quantity-card-inner .quantity-header h3 {
     font-size: 1.8rem;
-    color: var(--espresso);
+    color: #000000;
     margin-bottom: 10px;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-.quantity-subtitle {
+.quantity-card-inner .quantity-subtitle {
     font-size: 1.1rem;
-    color: #7c3aed;
+    color: #000000;
     font-weight: 700;
     text-align: left;
     margin: 0;
@@ -1632,31 +1658,33 @@ footer {
     50% { transform: translateY(-8px); }
 }
 
-.quantity-amount {
-    background: #1a4d2e;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
-    text-align: center;
+.quantity-card-inner .quantity-amount {
+    background: transparent;
+    color: #000000;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
     display: inline-block;
     align-self: flex-start;
     line-height: 1.1;
 }
 
-.quantity-amount::before {
+.quantity-card-inner .quantity-amount::before {
     content: attr(data-number);
     display: block;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 2px;
+    color: #000000;
 }
 
-.quantity-amount::after {
+.quantity-card-inner .quantity-amount::after {
     content: 'BARS';
     display: block;
-    font-size: 1rem;
+    font-size: 0.75rem;
     letter-spacing: 0.1em;
+    color: #000000;
 }
 
 

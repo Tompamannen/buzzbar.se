@@ -123,9 +123,9 @@
       width: 100%;
     }
     .vero-navbar__cta {
-      background-color: #10B981;
-      color: white;
-      border-radius: 10em;
+      background-color: rgba(255, 208, 116);
+      color: #1d1d1f;
+      border-radius: 12px;
       font-size: 17px;
       font-weight: 600;
       padding: 1em 2em;
@@ -135,17 +135,10 @@
       box-shadow: 0 0 0 0 black;
       text-decoration: none;
       display: inline-block;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      will-change: transform;
     }
     .vero-navbar__cta:hover {
       transform: translateY(-4px) translateX(-2px);
       box-shadow: 2px 5px 0 0 black;
-      background-color: #ff8c5a;
-      color: black;
     }
     .vero-navbar__cta:active {
       transform: translateY(2px) translateX(1px);
@@ -264,11 +257,12 @@
         <!-- LEFT: Catchy Text -->
         <div class="hero-text-side">
           <h1 class="hero-headline"><span class="headline-main">Energy that feels</span> <span class="headline-script">Good.</span></h1>
-          <p class="hero-subtext">Real Energy. No Crash, No Nonsense</p>
+          <p class="hero-subtext" style="color: black; font-weight: 600;">The Clean Caffeinated Protein Bar.</p>
           <div class="hero-cta-group">
             <a href="#products" class="cta-primary">Get Vero</a>
             <a href="Products.html" class="cta-secondary">Learn More</a>
           </div>
+          <p style="margin-top: 0.75rem; font-size: 1.1rem; opacity: 0.85;">Real Energy. No Crash, No Nonsense</p>
         </div>
         
         <!-- RIGHT: Product Visual Only -->
@@ -330,58 +324,64 @@
       
       <!-- 1 Box = 12 Bars -->
       <article class="quantity-card" data-index="0">
-        <span class="popular-badge" style="background: #FF8C42;">Try It Out</span>
-        <div class="quantity-amount" data-number="12"></div>
-        <div class="quantity-header">
-          <h3>Starter Pack</h3>
-          <p class="quantity-subtitle">1 Box</p>
-        </div>
-        <div class="quantity-visual">
-          <div class="product-box">
-            <span class="box-label">12 bars</span>
+        <span class="popular-badge">Try It Out</span>
+        <div class="quantity-card-inner">
+          <div class="quantity-amount" data-number="12"></div>
+          <div class="quantity-header">
+            <h3>Starter Pack</h3>
+            <p class="quantity-subtitle">1 Box</p>
           </div>
-        </div>
-        <div class="quantity-details">
-          <div class="quantity-price">$29</div>
-          <a href="Purchase.html?product=Starter Pack&price=29&quantity=12" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          <div class="quantity-visual">
+            <div class="product-box">
+              <span class="box-label">12 bars</span>
+            </div>
+          </div>
+          <div class="quantity-details">
+            <div class="quantity-price">$29</div>
+            <a href="Purchase.html?product=Starter Pack&price=29&quantity=12" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          </div>
         </div>
       </article>
 
       <!-- 2 Boxes = 24 Bars (Most Popular) -->
       <article class="quantity-card popular active" data-index="1">
         <span class="popular-badge">Most Popular</span>
-        <div class="quantity-amount" data-number="24"></div>
-        <div class="quantity-header">
-          <h3>Duo Pack</h3>
-          <p class="quantity-subtitle">2 Boxes</p>
-        </div>
-        <div class="quantity-visual">
-          <div class="product-box">
-            <span class="box-label">12 bars</span>
+        <div class="quantity-card-inner">
+          <div class="quantity-amount" data-number="24"></div>
+          <div class="quantity-header">
+            <h3>Duo Pack</h3>
+            <p class="quantity-subtitle">2 Boxes</p>
           </div>
-        </div>
-        <div class="quantity-details">
-          <div class="quantity-price">$54 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($27/box)</span></div>
-          <a href="Purchase.html?product=Duo Pack&price=54&quantity=24" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          <div class="quantity-visual">
+            <div class="product-box">
+              <span class="box-label">12 bars</span>
+            </div>
+          </div>
+          <div class="quantity-details">
+            <div class="quantity-price">$54 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($27/box)</span></div>
+            <a href="Purchase.html?product=Duo Pack&price=54&quantity=24" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          </div>
         </div>
       </article>
 
       <!-- 3 Boxes = 36 Bars -->
       <article class="quantity-card" data-index="2">
-        <span class="popular-badge" style="background: #4CAF50;">Best Value</span>
-        <div class="quantity-amount" data-number="36"></div>
-        <div class="quantity-header">
-          <h3>Family Pack</h3>
-          <p class="quantity-subtitle">3 Boxes</p>
-        </div>
-        <div class="quantity-visual">
-          <div class="product-box">
-            <span class="box-label">12 bars</span>
+        <span class="popular-badge">Best Value</span>
+        <div class="quantity-card-inner">
+          <div class="quantity-amount" data-number="36"></div>
+          <div class="quantity-header">
+            <h3>Family Pack</h3>
+            <p class="quantity-subtitle">3 Boxes</p>
           </div>
-        </div>
-        <div class="quantity-details">
-          <div class="quantity-price">$75 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($25/box)</span></div>
-          <a href="Purchase.html?product=Family Pack&price=75&quantity=36" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          <div class="quantity-visual">
+            <div class="product-box">
+              <span class="box-label">12 bars</span>
+            </div>
+          </div>
+          <div class="quantity-details">
+            <div class="quantity-price">$75 <span style="font-size: 0.85em; color: #666; font-weight: 500;">($25/box)</span></div>
+            <a href="Purchase.html?product=Family Pack&price=75&quantity=36" class="quantity-cta cta-primary" style="text-decoration: none; display: block;">Select Pack</a>
+          </div>
         </div>
       </article>
 
